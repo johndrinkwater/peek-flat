@@ -1,6 +1,6 @@
 {
   "parent": "item/block_item",
   "textures": {
-    "base": "block_item/smithing_table"
+    "base": "item/smithing_table"
   }
 }

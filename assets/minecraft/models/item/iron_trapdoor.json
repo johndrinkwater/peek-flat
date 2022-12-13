@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "block_item/iron_trapdoor"
+    "layer0": "item/iron_trapdoor"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/block_item_button_template",
   "textures": {
-    "base": "block_item/warped_planks"
+    "base": "item/warped_planks"
   }
 }

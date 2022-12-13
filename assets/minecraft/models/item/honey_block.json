@@ -1,6 +1,6 @@
 {
   "parent": "item/block_item",
   "textures": {
-    "base": "block_item/honey_block"
+    "base": "item/honey_block"
   }
 }

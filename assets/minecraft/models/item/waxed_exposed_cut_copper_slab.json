@@ -1,7 +1,7 @@
 {
   "parent": "item/block_item_slab_overlay_template",
   "textures": {
-    "base": "block_item/exposed_cut_copper",
-    "overlay": "block_item/waxed_exposed_copper_overlay"
+    "base": "item/exposed_cut_copper",
+    "overlay": "item/waxed_exposed_copper_overlay"
   }
 }

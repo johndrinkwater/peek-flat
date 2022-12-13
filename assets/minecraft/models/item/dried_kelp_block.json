@@ -1,6 +1,6 @@
 {
   "parent": "item/block_item",
   "textures": {
-    "base": "block_item/dried_kelp_block"
+    "base": "item/dried_kelp_block"
   }
 }

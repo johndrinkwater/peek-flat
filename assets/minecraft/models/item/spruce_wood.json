@@ -1,6 +1,6 @@
 {
   "parent": "item/block_item",
   "textures": {
-    "base": "block_item/spruce_wood"
+    "base": "item/spruce_wood"
   }
 }

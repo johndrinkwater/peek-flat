@@ -1,7 +1,7 @@
 {
   "parent": "item/block_item_overlay",
   "textures": {
-    "base": "block_item/note_block",
-    "overlay": "block_item/jukebox_overlay"
+    "base": "item/note_block",
+    "overlay": "item/jukebox_overlay"
   }
 }

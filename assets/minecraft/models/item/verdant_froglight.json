@@ -1,6 +1,6 @@
 {
   "parent": "item/block_item",
   "textures": {
-    "base": "block_item/verdant_froglight"
+    "base": "item/verdant_froglight"
   }
 }

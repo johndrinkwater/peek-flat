@@ -1,7 +1,7 @@
 {
   "parent": "item/block_item_overlay_tinted",
   "textures": {
-    "base": "block_item/dirt",
-    "overlay": "block_item/grass_block_overlay"
+    "base": "item/dirt",
+    "overlay": "item/grass_block_overlay"
   }
 }

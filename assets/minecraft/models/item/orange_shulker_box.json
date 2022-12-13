@@ -1,6 +1,6 @@
 {
   "parent": "item/block_item",
   "textures": {
-    "base": "block_item/orange_shulker_box"
+    "base": "item/orange_shulker_box"
   }
 }

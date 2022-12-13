@@ -1,7 +1,7 @@
 {
   "parent": "item/block_item_overlay",
   "textures": {
-    "base": "block_item/sandstone",
-    "overlay": "block_item/chiseled_sandstone_overlay"
+    "base": "item/sandstone",
+    "overlay": "item/chiseled_sandstone_overlay"
   }
 }

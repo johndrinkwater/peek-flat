@@ -1,6 +1,6 @@
 {
   "parent": "item/block_item",
   "textures": {
-    "base": "block_item/orange_wool"
+    "base": "item/orange_wool"
   }
 }

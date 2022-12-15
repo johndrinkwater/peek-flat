@@ -1,5 +1,6 @@
 .DS_Store
 *.kra~
 *.png~
-shadow.png
 references
+krita/old/
+*.png-autosave.kra

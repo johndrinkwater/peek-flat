@@ -22,19 +22,19 @@ YouTuber TheDerpyWhale made a [comprehensive video for this pack](https://youtu.
 
 Here's a few shots of it in action (they may not be entirely up-to-date):
 
-![](Screenshots/inventory.png)
+![](screenshots/inventory.png)
 
-![](Screenshots/crater.png)
+![](screenshots/crater.png)
 
-![](Screenshots/mine.png)
+![](screenshots/mine.png)
 
-![](Screenshots/home.png)
+![](screenshots/home.png)
 
-![](Screenshots/glow.png)
+![](screenshots/glow.png)
 
-Alternatively, here's a very long list of every item in the pack:
+Alternatively, here's a very long list of every item in the pack (not up to date):
 
-![](Screenshots/long.png)
+![](screenshots/long.png)
 
 Installation
 ------------

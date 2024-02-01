@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/purple_terracotta"
-  }
+  "parent": "minecraft:block/purple_terracotta",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/purple_terracotta"
+    }
+  ]
 }

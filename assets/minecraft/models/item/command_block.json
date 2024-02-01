@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/command_block"
-  }
+  "parent": "minecraft:block/command_block",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/command_block"
+    }
+  ]
 }

@@ -1,6 +1,11 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "block_item/daylight_detector"
-  }
+  "parent": "minecraft:block/daylight_detector",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/daylight_detector"
+    }
+  ]
 }

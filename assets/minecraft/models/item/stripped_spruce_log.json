@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/stripped_spruce_log"
-  }
+  "parent": "minecraft:block/stripped_spruce_log",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/stripped_spruce_log"
+    }
+  ]
 }

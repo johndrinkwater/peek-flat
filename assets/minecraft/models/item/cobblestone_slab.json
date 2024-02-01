@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_slab_template",
-  "textures": {
-    "base": "block_item/cobblestone"
-  }
+  "parent": "minecraft:block/cobblestone_slab",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/cobblestone_slab"
+    }
+  ]
 }

@@ -1,6 +1,11 @@
 {
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "item/jungle_fence"
-  }
+  "parent": "minecraft:block/jungle_fence_inventory",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/jungle_fence"
+    }
+  ]
 }

@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/dried_kelp_block"
-  }
+  "parent": "minecraft:block/dried_kelp_block",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/dried_kelp_block"
+    }
+  ]
 }

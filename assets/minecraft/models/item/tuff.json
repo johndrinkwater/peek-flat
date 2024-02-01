@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/tuff"
-  }
+  "parent": "minecraft:block/tuff",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/tuff"
+    }
+  ]
 }

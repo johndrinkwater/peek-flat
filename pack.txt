@@ -1,0 +1,6 @@
+﻿* Example resource pack with Peek custom model data
+
+This uses images from https://github.com/ThePotatoKing55/2D-block-texture-pack
+Which has the CC-BY-4.0 licence, which means you can reuse the images
+themselves as you want, as long as you include the licence and a note to say
+who made it.

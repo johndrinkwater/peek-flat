@@ -1,0 +1,7 @@
+{
+  "parent": "peek_flat/block_item_overlay_tinted",
+  "textures": {
+    "base": "item/peek_flat_dirt",
+    "overlay": "item/peek_flat_grass_block_overlay"
+  }
+}

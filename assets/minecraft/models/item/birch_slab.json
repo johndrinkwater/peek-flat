@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_slab_template",
-  "textures": {
-    "base": "block_item/birch_planks"
-  }
+  "parent": "minecraft:block/birch_slab",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/birch_slab"
+    }
+  ]
 }

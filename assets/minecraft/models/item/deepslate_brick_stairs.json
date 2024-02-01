@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_stairs_template",
-  "textures": {
-    "base": "block_item/deepslate_bricks"
-  }
+  "parent": "minecraft:block/deepslate_brick_stairs",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/deepslate_brick_stairs"
+    }
+  ]
 }

@@ -1,6 +1,11 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "item/spore_blossom"
-  }
+  "parent": "minecraft:block/spore_blossom",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/spore_blossom"
+    }
+  ]
 }

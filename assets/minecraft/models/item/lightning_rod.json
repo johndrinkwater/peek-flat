@@ -1,6 +1,11 @@
 {
-  "parent": "item/handheld_rod",
-  "textures": {
-    "layer0": "item/lightning_rod"
-  }
+  "parent": "minecraft:block/lightning_rod",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/lightning_rod"
+    }
+  ]
 }

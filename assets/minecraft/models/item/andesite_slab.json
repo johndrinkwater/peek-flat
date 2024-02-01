@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_slab_template",
-  "textures": {
-    "base": "block_item/andesite"
-  }
+  "parent": "minecraft:block/andesite_slab",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/andesite_slab"
+    }
+  ]
 }

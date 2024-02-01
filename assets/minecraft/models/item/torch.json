@@ -1,6 +1,14 @@
 {
-  "parent": "item/handheld_rod",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "item/torch"
-  }
+    "layer0": "minecraft:block/torch"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/torch"
+    }
+  ]
 }

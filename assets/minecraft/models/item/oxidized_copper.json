@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/oxidized_copper"
-  }
+  "parent": "minecraft:block/oxidized_copper",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/oxidized_copper"
+    }
+  ]
 }

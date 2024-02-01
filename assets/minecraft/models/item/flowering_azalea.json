@@ -1,6 +1,11 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "item/flowering_azalea"
-  }
+  "parent": "minecraft:block/flowering_azalea",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/flowering_azalea"
+    }
+  ]
 }

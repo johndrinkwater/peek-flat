@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/fire_coral_block"
-  }
+  "parent": "minecraft:block/fire_coral_block",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/fire_coral_block"
+    }
+  ]
 }

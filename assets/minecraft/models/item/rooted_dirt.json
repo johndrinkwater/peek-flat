@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay",
-  "textures": {
-    "base": "block_item/dirt",
-    "overlay": "block_item/rooted_dirt_overlay"
-  }
+  "parent": "minecraft:block/rooted_dirt",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/rooted_dirt"
+    }
+  ]
 }

@@ -1,6 +1,11 @@
 {
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "item/birch_fence"
-  }
+  "parent": "minecraft:block/birch_fence_inventory",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/birch_fence"
+    }
+  ]
 }

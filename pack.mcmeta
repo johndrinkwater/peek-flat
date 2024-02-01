@@ -1,6 +1,7 @@
 {
-    "pack": {
-        "pack_format": 7,
-        "description": "2D Blocks (WIP)\nBy §eThePotatoKing55"
-    }
+"pack":{
+"pack_format":22,
+"supported_formats":{"min_inclusive":22,"max_inclusive":22},
+"description":"§BPeek flat shulker icons\n§2%VERSION% §8•§7 by §6johndrinkwater"
+}
 }

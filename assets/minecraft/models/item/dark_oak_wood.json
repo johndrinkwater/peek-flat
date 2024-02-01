@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/dark_oak_wood"
-  }
+  "parent": "minecraft:block/dark_oak_wood",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/dark_oak_wood"
+    }
+  ]
 }

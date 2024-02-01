@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_slab_overlay_template",
-  "textures": {
-    "base": "block_item/sandstone",
-    "overlay": "block_item/cut_sandstone_overlay"
-  }
+  "parent": "minecraft:block/cut_sandstone_slab",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/cut_sandstone_slab"
+    }
+  ]
 }

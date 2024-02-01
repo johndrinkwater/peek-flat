@@ -1,0 +1,6 @@
+{
+  "parent": "peek_flat/block_item_stairs_template",
+  "textures": {
+    "base": "item/peek_flat_polished_diorite"
+  }
+}

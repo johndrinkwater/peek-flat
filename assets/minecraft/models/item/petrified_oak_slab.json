@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_slab_overlay_template",
-  "textures": {
-    "base": "block_item/oak_planks",
-    "overlay": "block_item/petrified_oak_overlay"
-  }
+  "parent": "minecraft:block/petrified_oak_slab",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/petrified_oak_slab"
+    }
+  ]
 }

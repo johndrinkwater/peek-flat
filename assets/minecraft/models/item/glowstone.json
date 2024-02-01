@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/glowstone"
-  }
+  "parent": "minecraft:block/glowstone",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/glowstone"
+    }
+  ]
 }

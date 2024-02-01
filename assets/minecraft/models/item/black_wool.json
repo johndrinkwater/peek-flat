@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/black_wool"
-  }
+  "parent": "minecraft:block/black_wool",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/black_wool"
+    }
+  ]
 }

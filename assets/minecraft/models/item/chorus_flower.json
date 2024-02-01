@@ -1,6 +1,11 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "item/chorus_flower"
-  }
+  "parent": "minecraft:block/chorus_flower",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/chorus_flower"
+    }
+  ]
 }

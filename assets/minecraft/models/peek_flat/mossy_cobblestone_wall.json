@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "item/peek_flat_mossy_cobblestone_wall"
+  }
+}

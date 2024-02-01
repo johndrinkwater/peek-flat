@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay",
-  "textures": {
-    "base": "block_item/red_sandstone",
-    "overlay": "block_item/smooth_red_sandstone_overlay"
-  }
+  "parent": "minecraft:block/smooth_red_sandstone",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/smooth_red_sandstone"
+    }
+  ]
 }

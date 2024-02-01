@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/purple_concrete_powder"
-  }
+  "parent": "minecraft:block/purple_concrete_powder",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/purple_concrete_powder"
+    }
+  ]
 }

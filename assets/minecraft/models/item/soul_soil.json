@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/soul_soil"
-  }
+  "parent": "minecraft:block/soul_soil",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/soul_soil"
+    }
+  ]
 }

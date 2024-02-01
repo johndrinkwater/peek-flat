@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay",
-  "textures": {
-    "base": "block_item/blackstone",
-    "overlay": "block_item/gilded_blackstone_overlay"
-  }
+  "parent": "minecraft:block/gilded_blackstone",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/gilded_blackstone"
+    }
+  ]
 }

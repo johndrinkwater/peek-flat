@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay",
-  "textures": {
-    "base": "block_item/piston",
-    "overlay": "block_item/sticky_piston_overlay"
-  }
+  "parent": "minecraft:block/sticky_piston_inventory",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/sticky_piston"
+    }
+  ]
 }

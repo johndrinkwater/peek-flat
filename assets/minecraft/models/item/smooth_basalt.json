@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/smooth_basalt"
-  }
+  "parent": "minecraft:block/smooth_basalt",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/smooth_basalt"
+    }
+  ]
 }

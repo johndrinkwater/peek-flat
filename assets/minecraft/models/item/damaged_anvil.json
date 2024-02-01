@@ -1,6 +1,11 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "block_item/damaged_anvil"
-  }
+  "parent": "minecraft:block/damaged_anvil",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/damaged_anvil"
+    }
+  ]
 }

@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_stairs_template",
-  "textures": {
-    "base": "block_item/smooth_quartz"
-  }
+  "parent": "minecraft:block/smooth_quartz_stairs",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/smooth_quartz_stairs"
+    }
+  ]
 }

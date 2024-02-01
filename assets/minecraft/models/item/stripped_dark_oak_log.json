@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/stripped_dark_oak_log"
-  }
+  "parent": "minecraft:block/stripped_dark_oak_log",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/stripped_dark_oak_log"
+    }
+  ]
 }

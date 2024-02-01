@@ -1,6 +1,11 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "item/dragon_egg"
-  }
+  "parent": "minecraft:block/dragon_egg",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/dragon_egg"
+    }
+  ]
 }

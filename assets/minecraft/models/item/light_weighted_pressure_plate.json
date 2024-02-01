@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_pressure_plate_template",
-  "textures": {
-    "base": "block_item/gold_block"
-  }
+  "parent": "minecraft:block/light_weighted_pressure_plate",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/light_weighted_pressure_plate"
+    }
+  ]
 }

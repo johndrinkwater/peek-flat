@@ -1,6 +1,11 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "block_item/spruce_leaves"
-  }
+  "parent": "minecraft:block/spruce_leaves",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/spruce_leaves"
+    }
+  ]
 }

@@ -1,6 +1,11 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "block_item/iron_trapdoor"
-  }
+  "parent": "minecraft:block/iron_trapdoor_bottom",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/iron_trapdoor"
+    }
+  ]
 }

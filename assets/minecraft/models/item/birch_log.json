@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/birch_log"
-  }
+  "parent": "minecraft:block/birch_log",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/birch_log"
+    }
+  ]
 }

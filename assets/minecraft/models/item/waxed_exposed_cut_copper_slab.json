@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_slab_overlay_template",
-  "textures": {
-    "base": "block_item/exposed_cut_copper",
-    "overlay": "block_item/waxed_copper_overlay"
-  }
+  "parent": "minecraft:block/exposed_cut_copper_slab",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/waxed_exposed_cut_copper_slab"
+    }
+  ]
 }

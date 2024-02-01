@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_carpet_template",
-  "textures": {
-    "base": "block_item/yellow_wool"
-  }
+  "parent": "minecraft:block/yellow_carpet",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/yellow_carpet"
+    }
+  ]
 }

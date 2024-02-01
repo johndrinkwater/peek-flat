@@ -1,0 +1,7 @@
+{
+  "parent": "peek_flat/block_item_stairs_overlay_template",
+  "textures": {
+    "base": "item/peek_flat_red_sandstone",
+    "overlay": "item/peek_flat_smooth_red_sandstone_overlay"
+  }
+}

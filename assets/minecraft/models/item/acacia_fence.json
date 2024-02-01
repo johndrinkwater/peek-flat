@@ -1,6 +1,11 @@
 {
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "item/acacia_fence"
-  }
+  "parent": "minecraft:block/acacia_fence_inventory",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/acacia_fence"
+    }
+  ]
 }

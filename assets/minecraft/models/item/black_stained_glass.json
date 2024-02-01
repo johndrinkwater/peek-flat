@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/black_stained_glass"
-  }
+  "parent": "minecraft:block/black_stained_glass",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/black_stained_glass"
+    }
+  ]
 }

@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/light_gray_wool"
-  }
+  "parent": "minecraft:block/light_gray_wool",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/light_gray_wool"
+    }
+  ]
 }

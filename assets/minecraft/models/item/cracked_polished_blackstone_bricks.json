@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay",
-  "textures": {
-    "base": "block_item/polished_blackstone_bricks",
-    "overlay": "block_item/cracked_polished_blackstone_brick_overlay"
-  }
+  "parent": "minecraft:block/cracked_polished_blackstone_bricks",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/cracked_polished_blackstone_bricks"
+    }
+  ]
 }

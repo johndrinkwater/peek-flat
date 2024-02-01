@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_slab_template",
-  "textures": {
-    "base": "block_item/smooth_stone"
-  }
+  "parent": "minecraft:block/smooth_stone_slab",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/smooth_stone_slab"
+    }
+  ]
 }

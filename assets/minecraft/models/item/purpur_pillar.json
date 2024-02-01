@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay",
-  "textures": {
-    "base": "block_item/purpur_block",
-    "overlay": "block_item/purpur_pillar_overlay"
-  }
+  "parent": "minecraft:block/purpur_pillar",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/purpur_pillar"
+    }
+  ]
 }

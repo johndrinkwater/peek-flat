@@ -1,6 +1,11 @@
 {
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "item/brick_wall"
-  }
+  "parent": "minecraft:block/brick_wall_inventory",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/brick_wall"
+    }
+  ]
 }

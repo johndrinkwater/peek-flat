@@ -1,6 +1,14 @@
 {
-  "parent": "item/generated",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "item/white_stained_glass_pane"
-  }
+    "layer0": "minecraft:block/white_stained_glass"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/white_stained_glass_pane"
+    }
+  ]
 }

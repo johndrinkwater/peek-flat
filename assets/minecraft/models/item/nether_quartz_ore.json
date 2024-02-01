@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay",
-  "textures": {
-    "base": "block_item/netherrack",
-    "overlay": "block_item/nether_quartz_ore_overlay"
-  }
+  "parent": "minecraft:block/nether_quartz_ore",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/nether_quartz_ore"
+    }
+  ]
 }

@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/packed_ice"
-  }
+  "parent": "minecraft:block/packed_ice",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/packed_ice"
+    }
+  ]
 }

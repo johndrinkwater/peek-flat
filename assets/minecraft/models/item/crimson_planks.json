@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/crimson_planks"
-  }
+  "parent": "minecraft:block/crimson_planks",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/crimson_planks"
+    }
+  ]
 }

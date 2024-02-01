@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_stairs_template",
-  "textures": {
-    "base": "block_item/red_sandstone"
-  }
+  "parent": "minecraft:block/red_sandstone_stairs",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/red_sandstone_stairs"
+    }
+  ]
 }

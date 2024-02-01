@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/warped_stem"
-  }
+  "parent": "minecraft:block/warped_stem",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/warped_stem"
+    }
+  ]
 }

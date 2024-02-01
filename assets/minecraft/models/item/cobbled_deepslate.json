@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/cobbled_deepslate"
-  }
+  "parent": "minecraft:block/cobbled_deepslate",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/cobbled_deepslate"
+    }
+  ]
 }

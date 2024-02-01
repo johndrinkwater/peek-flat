@@ -1,6 +1,14 @@
 {
-  "parent": "item/generated",
+  "parent": "item/chest",
   "textures": {
-    "layer0": "block_item/ender_chest"
-  }
+    "particle": "block/obsidian"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/ender_chest"
+    }
+  ]
 }

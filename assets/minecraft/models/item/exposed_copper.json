@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/exposed_copper"
-  }
+  "parent": "minecraft:block/exposed_copper",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/exposed_copper"
+    }
+  ]
 }

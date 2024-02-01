@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay_tinted",
-  "textures": {
-    "base": "block_item/pumpkin",
-    "overlay": "block_item/carved_pumpkin_overlay"
-  }
+  "parent": "minecraft:block/carved_pumpkin",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/carved_pumpkin"
+    }
+  ]
 }

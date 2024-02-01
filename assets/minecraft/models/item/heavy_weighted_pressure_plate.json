@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_pressure_plate_template",
-  "textures": {
-    "base": "block_item/iron_block"
-  }
+  "parent": "minecraft:block/heavy_weighted_pressure_plate",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/heavy_weighted_pressure_plate"
+    }
+  ]
 }

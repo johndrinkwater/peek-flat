@@ -1,6 +1,14 @@
 {
-  "parent": "item/block_item",
+  "parent": "minecraft:item/template_shulker_box",
   "textures": {
-    "base": "block_item/orange_shulker_box"
-  }
+    "particle": "minecraft:block/orange_shulker_box"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/orange_shulker_box"
+    }
+  ]
 }

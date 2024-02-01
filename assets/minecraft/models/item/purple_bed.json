@@ -1,6 +1,14 @@
 {
-  "parent": "item/generated",
+  "parent": "minecraft:item/template_bed",
   "textures": {
-    "layer0": "item/purple_bed"
-  }
+    "particle": "minecraft:block/purple_wool"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/purple_bed"
+    }
+  ]
 }

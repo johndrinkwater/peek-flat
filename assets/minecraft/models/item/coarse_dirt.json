@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/coarse_dirt"
-  }
+  "parent": "minecraft:block/coarse_dirt",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/coarse_dirt"
+    }
+  ]
 }

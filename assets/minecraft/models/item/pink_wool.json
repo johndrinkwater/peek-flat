@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/pink_wool"
-  }
+  "parent": "minecraft:block/pink_wool",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/pink_wool"
+    }
+  ]
 }

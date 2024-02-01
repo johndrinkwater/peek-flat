@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay",
-  "textures": {
-    "base": "block_item/smooth_quartz",
-    "overlay": "block_item/quartz_pillar_overlay"
-  }
+  "parent": "minecraft:block/quartz_pillar",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/quartz_pillar"
+    }
+  ]
 }

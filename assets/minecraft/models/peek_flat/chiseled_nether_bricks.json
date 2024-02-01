@@ -1,0 +1,7 @@
+{
+  "parent": "peek_flat/block_item_overlay",
+  "textures": {
+    "base": "item/peek_flat_nether_bricks",
+    "overlay": "item/peek_flat_chiseled_nether_brick_overlay"
+  }
+}

@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay",
-  "textures": {
-    "base": "block_item/cut_copper",
-    "overlay": "block_item/waxed_copper_overlay"
-  }
+  "parent": "minecraft:block/cut_copper",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/waxed_cut_copper"
+    }
+  ]
 }

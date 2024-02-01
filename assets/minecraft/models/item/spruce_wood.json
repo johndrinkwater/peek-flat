@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/spruce_wood"
-  }
+  "parent": "minecraft:block/spruce_wood",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/spruce_wood"
+    }
+  ]
 }

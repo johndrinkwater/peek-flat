@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/orange_concrete"
-  }
+  "parent": "minecraft:block/orange_concrete",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/orange_concrete"
+    }
+  ]
 }

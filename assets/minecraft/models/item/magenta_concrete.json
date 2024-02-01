@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/magenta_concrete"
-  }
+  "parent": "minecraft:block/magenta_concrete",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/magenta_concrete"
+    }
+  ]
 }

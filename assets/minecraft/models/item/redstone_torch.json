@@ -1,6 +1,14 @@
 {
-  "parent": "item/handheld_rod",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "item/redstone_torch"
-  }
+    "layer0": "minecraft:block/redstone_torch"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/redstone_torch"
+    }
+  ]
 }

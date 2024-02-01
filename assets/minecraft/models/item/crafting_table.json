@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/crafting_table"
-  }
+  "parent": "minecraft:block/crafting_table",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/crafting_table"
+    }
+  ]
 }

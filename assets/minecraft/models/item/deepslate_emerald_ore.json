@@ -1,7 +1,11 @@
 {
-  "parent": "item/block_item_overlay",
-  "textures": {
-    "base": "block_item/deepslate",
-    "overlay": "block_item/emerald_ore_overlay"
-  }
+  "parent": "minecraft:block/deepslate_emerald_ore",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/deepslate_emerald_ore"
+    }
+  ]
 }

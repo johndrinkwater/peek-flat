@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item_carpet_template",
-  "textures": {
-    "base": "block_item/brown_wool"
-  }
+  "parent": "minecraft:block/brown_carpet",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/brown_carpet"
+    }
+  ]
 }

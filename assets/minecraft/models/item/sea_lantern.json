@@ -1,6 +1,11 @@
 {
-  "parent": "item/block_item",
-  "textures": {
-    "base": "block_item/sea_lantern"
-  }
+  "parent": "minecraft:block/sea_lantern",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/sea_lantern"
+    }
+  ]
 }

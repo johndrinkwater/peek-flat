@@ -1,6 +1,11 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "block_item/oak_leaves"
-  }
+  "parent": "minecraft:block/oak_leaves",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/oak_leaves"
+    }
+  ]
 }

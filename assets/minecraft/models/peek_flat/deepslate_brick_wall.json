@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "item/peek_flat_deepslate_brick_wall"
+  }
+}

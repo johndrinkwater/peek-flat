@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/deepslate_tile_wall_inventory",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/deepslate_tile_wall"
+    }
+  ]
+}

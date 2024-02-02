@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/blackstone_wall_inventory",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/blackstone_wall"
+    }
+  ]
+}

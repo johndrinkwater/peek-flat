@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/stripped_mangrove_wood",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/stripped_mangrove_wood"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/ochre_froglight",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/ochre_froglight"
+    }
+  ]
+}

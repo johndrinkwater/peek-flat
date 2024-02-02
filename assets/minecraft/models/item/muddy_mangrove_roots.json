@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/muddy_mangrove_roots",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/muddy_mangrove_roots"
+    }
+  ]
+}

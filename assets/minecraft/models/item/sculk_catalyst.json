@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/sculk_catalyst",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/sculk_catalyst"
+    }
+  ]
+}

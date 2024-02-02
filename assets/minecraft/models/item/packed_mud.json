@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/packed_mud",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/packed_mud"
+    }
+  ]
+}

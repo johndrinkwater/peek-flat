@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/mangrove_leaves",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/mangrove_leaves"
+    }
+  ]
+}

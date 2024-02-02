@@ -1,2 +1,6 @@
 .DS_Store
 TODO
+*.kra
+*.kra~
+*.png~
+shadow.png

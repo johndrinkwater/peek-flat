@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/crimson_fence_gate",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/crimson_fence_gate"
+    }
+  ]
+}

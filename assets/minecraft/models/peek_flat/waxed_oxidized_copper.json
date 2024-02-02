@@ -1,0 +1,7 @@
+{
+  "parent": "peek_flat/block_item_overlay",
+  "textures": {
+    "base": "item/peek_flat_oxidized_copper",
+    "overlay": "item/peek_flat_waxed_oxidized_copper_overlay"
+  }
+}

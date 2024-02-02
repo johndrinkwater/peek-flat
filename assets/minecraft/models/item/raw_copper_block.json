@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/raw_copper_block",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/raw_copper_block"
+    }
+  ]
+}

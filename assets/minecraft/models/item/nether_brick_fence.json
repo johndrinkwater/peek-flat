@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/nether_brick_fence_inventory",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/nether_brick_fence"
+    }
+  ]
+}

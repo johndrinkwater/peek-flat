@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/black_glazed_terracotta",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/black_glazed_terracotta"
+    }
+  ]
+}

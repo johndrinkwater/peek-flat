@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cartography_table",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/cartography_table"
+    }
+  ]
+}

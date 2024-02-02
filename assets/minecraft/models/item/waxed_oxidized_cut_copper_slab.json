@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/oxidized_cut_copper_slab",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/waxed_oxidized_cut_copper_slab"
+    }
+  ]
+}

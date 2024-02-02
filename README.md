@@ -25,7 +25,7 @@ Alternatively, here's a very long list of every item in the pack:
 Installation
 ------------
 
-[Follow this link](https://github.com/johndrinkwater/peek-flat/releases/latest) and download the latest release’s file. Just put it in your `resourcepacks` folder (`%AppData%\.minecraft\resourcepacks` on Windows, `~/Library/Application Support/minecraft/resourcepacks` on macOS, or `~/.minecraft/resourcepacks` on Linux) and apply it in-game.
+[Download from GitHub](https://github.com/johndrinkwater/peek-flat/releases/latest) or get it from [CurseForge](https://www.curseforge.com/minecraft/texture-packs/peek-flat-shulker-icons) and download the latest release’s file. Just put it in your `resourcepacks` folder (`%AppData%\.minecraft\resourcepacks` on Windows, `~/Library/Application Support/minecraft/resourcepacks` on macOS, or `~/.minecraft/resourcepacks` on Linux) and apply it in-game.
 
 Feedback
 --------
@@ -35,5 +35,5 @@ If you find any issues or have suggestions, make a new issue [here](https://gith
 Other Stuff
 -----------
 
-This work heavily builds upon https://github.com/ThePotatoKing55/2D-block-texture-pack
-which was inspired by stiw91's [Flat - 2D Items](https://www.planetminecraft.com/texture-pack/flat-4806298/)
+This work heavily builds upon https://github.com/ThePotatoKing55/2D-block-texture-pack and https://github.com/Thanos1716/2d-block-item-resourcepack
+which were inspired by stiw91's [Flat - 2D Items](https://www.planetminecraft.com/texture-pack/flat-4806298/)

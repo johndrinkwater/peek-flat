@@ -1,6 +1,7 @@
 {
-  "parent": "peek_flat/block_item",
+  "parent": "peek_flat/block_item_overlay",
   "textures": {
-    "base": "item/peek_flat_suspicious_gravel"
+    "base": "item/peek_flat_gravel",
+    "overlay": "item/peek_flat_suspicious_gravel_overlay"
   }
 }

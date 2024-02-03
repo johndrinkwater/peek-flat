@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/suspicious_sand_0",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/suspicious_sand"
+    }
+  ]
+}

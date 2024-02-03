@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cherry_slab",
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1702
+      },
+      "model": "peek_flat/cherry_slab"
+    }
+  ]
+}

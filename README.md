@@ -18,7 +18,7 @@ Here's a shot of it in action:
 
 ![](Screenshots/example.png)
 
-Alternatively, here's a very long list of every item in the pack:
+Alternatively, here's a very long list of every item in the pack (not up to date):
 
 ![](Screenshots/long.png)
 

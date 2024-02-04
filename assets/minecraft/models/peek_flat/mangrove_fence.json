@@ -1,6 +1,6 @@
 {
-  "parent": "item/handheld",
+  "parent": "peek_flat/block_item_fence_template",
   "textures": {
-    "layer0": "item/peek_flat_mangrove_fence"
+    "base": "item/peek_flat_mangrove_planks"
   }
 }

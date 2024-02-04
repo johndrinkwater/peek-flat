@@ -1,0 +1,6 @@
+{
+  "parent": "peek_flat/block_item_skull_template",
+  "textures": {
+    "base": "item/skull_skeleton"
+  }
+}

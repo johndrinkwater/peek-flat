@@ -1,6 +1,6 @@
 {
-  "parent": "item/handheld",
+  "parent": "peek_flat/block_item_wall_template",
   "textures": {
-    "layer0": "item/peek_flat_polished_deepslate_wall"
+    "base": "item/peek_flat_polished_deepslate"
   }
 }

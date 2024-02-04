@@ -1,6 +1,7 @@
 {
-  "parent": "item/handheld",
+  "parent": "peek_flat/block_item_wall_mossy_template",
   "textures": {
-    "layer0": "item/peek_flat_mossy_cobblestone_wall"
+    "base": "item/peek_flat_cobblestone",
+    "overlay": "item/peek_flat_mossy_cobblestone_overlay"
   }
 }

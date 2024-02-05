@@ -2,7 +2,7 @@
     "parent": "builtin/entity",
     "gui_light": "front",
     "textures": {
-        "particle": "break/shield"
+        "particle": "block/dark_oak_planks"
     },
     "display": {
         "fixed": {

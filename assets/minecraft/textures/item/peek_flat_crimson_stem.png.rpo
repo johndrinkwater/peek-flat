@@ -1,0 +1,4 @@
+{
+	condition: "jdwpeekflat.animatedTextures",
+	fallback: "assets/minecraft/textures/item/peek_flat_crimson_stem_static.png"
+}

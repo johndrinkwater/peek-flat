@@ -16,7 +16,12 @@ Preview
 
 Here's a shot of it in action:
 
-![](Screenshots/example.png)
+![Various supported blocks shown](Screenshots/example.png)
+
+Enabling and disabling parts of the resourcepack with [respackopts](https://www.curseforge.com/minecraft/mc-mods/respackopts)
+![](Screenshots/example-respackopts.png)
+
+![Emissive yet static textures or animations without a glow](Screenshots/example-respactopts-emissive-animation.png)
 
 Alternatively, here's a very long list of every item in the pack (not up to date):
 
@@ -37,3 +42,5 @@ Other Stuff
 
 This work heavily builds upon https://github.com/ThePotatoKing55/2D-block-texture-pack and https://github.com/Thanos1716/2d-block-item-resourcepack
 which were inspired by stiw91's [Flat - 2D Items](https://www.planetminecraft.com/texture-pack/flat-4806298/)
+
+Optional dependency on [Respackopts](https://www.curseforge.com/minecraft/mc-mods/respackopts), which exposes settings to disable animations and emissive textures

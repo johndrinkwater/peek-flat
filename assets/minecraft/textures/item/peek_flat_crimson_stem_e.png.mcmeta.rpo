@@ -1,0 +1,4 @@
+{
+	condition: "animatedTextures",
+	fallback: "assets/minecraft/textures/item/peek_flat_e_static.png.mcmeta"
+}

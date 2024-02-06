@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/brick_wall_inventory",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/brick_wall"
-    }
-  ]
-}
+{"parent":"minecraft:block/brick_wall_inventory","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/brick_wall"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/brick_wall"}]}

@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/white_wool",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/white_wool"
-    }
-  ]
-}
+{"parent":"minecraft:block/white_wool","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/white_wool"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/white_wool"}]}

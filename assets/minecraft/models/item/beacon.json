@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/beacon",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/beacon"
-    }
-  ]
-}
+{"parent":"minecraft:block/beacon","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/beacon"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/beacon"}]}

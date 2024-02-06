@@ -1,14 +1,1 @@
-{
-  "parent": "minecraft:item/template_shulker_box",
-  "textures": {
-    "particle": "minecraft:block/yellow_shulker_box"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/yellow_shulker_box"
-    }
-  ]
-}
+{"parent":"minecraft:item/template_shulker_box","textures":{"particle":"minecraft:block/yellow_shulker_box"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/yellow_shulker_box"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/yellow_shulker_box"}]}

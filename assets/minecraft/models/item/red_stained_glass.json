@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/red_stained_glass",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/red_stained_glass"
-    }
-  ]
-}
+{"parent":"minecraft:block/red_stained_glass","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/red_stained_glass"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/red_stained_glass"}]}

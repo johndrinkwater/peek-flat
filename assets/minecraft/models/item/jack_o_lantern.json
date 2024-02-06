@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/jack_o_lantern",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/jack_o_lantern"
-    }
-  ]
-}
+{"parent":"minecraft:block/jack_o_lantern","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/jack_o_lantern"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/jack_o_lantern"}]}

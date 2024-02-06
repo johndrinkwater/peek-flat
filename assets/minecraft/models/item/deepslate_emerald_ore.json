@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/deepslate_emerald_ore",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/deepslate_emerald_ore"
-    }
-  ]
-}
+{"parent":"minecraft:block/deepslate_emerald_ore","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/deepslate_emerald_ore"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/deepslate_emerald_ore"}]}

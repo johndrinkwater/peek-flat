@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/crying_obsidian",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/crying_obsidian"
-    }
-  ]
-}
+{"parent":"minecraft:block/crying_obsidian","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/crying_obsidian"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/crying_obsidian"}]}

@@ -1,14 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:block/ladder"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/ladder"
-    }
-  ]
-}
+{"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:block/ladder"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/ladder"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/ladder"}]}

@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/melon",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/melon"
-    }
-  ]
-}
+{"parent":"minecraft:block/melon","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/melon"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/melon"}]}

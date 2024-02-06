@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/bedrock",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/bedrock"
-    }
-  ]
-}
+{"parent":"minecraft:block/bedrock","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/bedrock"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/bedrock"}]}

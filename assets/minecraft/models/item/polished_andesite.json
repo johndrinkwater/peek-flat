@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/polished_andesite",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/polished_andesite"
-    }
-  ]
-}
+{"parent":"minecraft:block/polished_andesite","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/polished_andesite"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/polished_andesite"}]}

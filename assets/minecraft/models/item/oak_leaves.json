@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/oak_leaves",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/oak_leaves"
-    }
-  ]
-}
+{"parent":"minecraft:block/oak_leaves","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/oak_leaves"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/oak_leaves"}]}

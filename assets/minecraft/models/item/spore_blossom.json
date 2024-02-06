@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/spore_blossom",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/spore_blossom"
-    }
-  ]
-}
+{"parent":"minecraft:block/spore_blossom","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/spore_blossom"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/spore_blossom"}]}

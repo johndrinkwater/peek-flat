@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/anvil",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/anvil"
-    }
-  ]
-}
+{"parent":"minecraft:block/anvil","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/anvil"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/anvil"}]}

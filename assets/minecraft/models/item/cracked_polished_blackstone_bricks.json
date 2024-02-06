@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/cracked_polished_blackstone_bricks",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/cracked_polished_blackstone_bricks"
-    }
-  ]
-}
+{"parent":"minecraft:block/cracked_polished_blackstone_bricks","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/cracked_polished_blackstone_bricks"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/cracked_polished_blackstone_bricks"}]}

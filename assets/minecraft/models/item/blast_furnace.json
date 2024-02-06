@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/blast_furnace",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/blast_furnace"
-    }
-  ]
-}
+{"parent":"minecraft:block/blast_furnace","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/blast_furnace"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/blast_furnace"}]}

@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/end_rod",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/end_rod"
-    }
-  ]
-}
+{"parent":"minecraft:block/end_rod","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/end_rod"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/end_rod"}]}

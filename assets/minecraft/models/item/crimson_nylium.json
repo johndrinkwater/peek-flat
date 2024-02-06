@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/crimson_nylium",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/crimson_nylium"
-    }
-  ]
-}
+{"parent":"minecraft:block/crimson_nylium","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/crimson_nylium"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/crimson_nylium"}]}

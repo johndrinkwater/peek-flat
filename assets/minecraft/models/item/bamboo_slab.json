@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/bamboo_slab",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/bamboo_slab"
-    }
-  ]
-}
+{"parent":"minecraft:block/bamboo_slab","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/bamboo_slab"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/bamboo_slab"}]}

@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/flowering_azalea",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/flowering_azalea"
-    }
-  ]
-}
+{"parent":"minecraft:block/flowering_azalea","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/flowering_azalea"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/flowering_azalea"}]}

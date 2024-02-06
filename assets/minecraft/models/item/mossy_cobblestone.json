@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/mossy_cobblestone",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/mossy_cobblestone"
-    }
-  ]
-}
+{"parent":"minecraft:block/mossy_cobblestone","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/mossy_cobblestone"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/mossy_cobblestone"}]}

@@ -1,14 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:block/frogspawn"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/frogspawn"
-    }
-  ]
-}
+{"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:block/frogspawn"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/frogspawn"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/frogspawn"}]}

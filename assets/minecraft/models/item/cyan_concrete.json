@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/cyan_concrete",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/cyan_concrete"
-    }
-  ]
-}
+{"parent":"minecraft:block/cyan_concrete","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/cyan_concrete"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/cyan_concrete"}]}

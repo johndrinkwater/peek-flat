@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/daylight_detector",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/daylight_detector"
-    }
-  ]
-}
+{"parent":"minecraft:block/daylight_detector","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/daylight_detector"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/daylight_detector"}]}

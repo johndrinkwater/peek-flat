@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/target",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/target"
-    }
-  ]
-}
+{"parent":"minecraft:block/target","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/target"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/target"}]}

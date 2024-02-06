@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/spruce_leaves",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/spruce_leaves"
-    }
-  ]
-}
+{"parent":"minecraft:block/spruce_leaves","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/spruce_leaves"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/spruce_leaves"}]}

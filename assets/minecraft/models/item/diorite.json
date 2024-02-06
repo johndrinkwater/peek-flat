@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/diorite",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/diorite"
-    }
-  ]
-}
+{"parent":"minecraft:block/diorite","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/diorite"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/diorite"}]}

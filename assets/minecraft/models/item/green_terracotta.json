@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/green_terracotta",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/green_terracotta"
-    }
-  ]
-}
+{"parent":"minecraft:block/green_terracotta","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/green_terracotta"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/green_terracotta"}]}

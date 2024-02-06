@@ -1,14 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:block/tripwire_hook"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/tripwire_hook"
-    }
-  ]
-}
+{"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:block/tripwire_hook"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/tripwire_hook"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/tripwire_hook"}]}

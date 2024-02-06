@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/crimson_trapdoor_bottom",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/crimson_trapdoor"
-    }
-  ]
-}
+{"parent":"minecraft:block/crimson_trapdoor_bottom","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/crimson_trapdoor"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/crimson_trapdoor"}]}

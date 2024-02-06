@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/bee_nest",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/bee_nest"
-    }
-  ]
-}
+{"parent":"minecraft:block/bee_nest","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/bee_nest"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/bee_nest"}]}

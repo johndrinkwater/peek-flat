@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/tnt",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/tnt"
-    }
-  ]
-}
+{"parent":"minecraft:block/tnt","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/tnt"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/tnt"}]}

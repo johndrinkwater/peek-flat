@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/birch_button_inventory",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/birch_button"
-    }
-  ]
-}
+{"parent":"minecraft:block/birch_button_inventory","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/birch_button"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/birch_button"}]}

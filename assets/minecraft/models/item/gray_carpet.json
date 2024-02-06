@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/gray_carpet",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/gray_carpet"
-    }
-  ]
-}
+{"parent":"minecraft:block/gray_carpet","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/gray_carpet"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/gray_carpet"}]}

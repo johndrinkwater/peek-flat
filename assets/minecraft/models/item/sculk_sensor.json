@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/sculk_sensor_inactive",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/sculk_sensor"
-    }
-  ]
-}
+{"parent":"minecraft:block/sculk_sensor_inactive","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/sculk_sensor"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/sculk_sensor"}]}

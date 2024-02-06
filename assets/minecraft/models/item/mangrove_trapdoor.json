@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/mangrove_trapdoor_bottom",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/mangrove_trapdoor"
-    }
-  ]
-}
+{"parent":"minecraft:block/mangrove_trapdoor_bottom","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/mangrove_trapdoor"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/mangrove_trapdoor"}]}

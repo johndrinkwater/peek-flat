@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/stripped_cherry_log",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/stripped_cherry_log"
-    }
-  ]
-}
+{"parent":"minecraft:block/stripped_cherry_log","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/stripped_cherry_log"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/stripped_cherry_log"}]}

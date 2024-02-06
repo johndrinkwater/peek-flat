@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/mangrove_planks",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/mangrove_planks"
-    }
-  ]
-}
+{"parent":"minecraft:block/mangrove_planks","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/mangrove_planks"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/mangrove_planks"}]}

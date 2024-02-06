@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/cactus",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/cactus"
-    }
-  ]
-}
+{"parent":"minecraft:block/cactus","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/cactus"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/cactus"}]}

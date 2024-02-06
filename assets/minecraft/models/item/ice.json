@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/ice",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/ice"
-    }
-  ]
-}
+{"parent":"minecraft:block/ice","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/ice"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/ice"}]}

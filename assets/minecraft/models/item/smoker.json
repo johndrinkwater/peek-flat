@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/smoker",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/smoker"
-    }
-  ]
-}
+{"parent":"minecraft:block/smoker","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/smoker"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/smoker"}]}

@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/soul_soil",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/soul_soil"
-    }
-  ]
-}
+{"parent":"minecraft:block/soul_soil","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/soul_soil"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/soul_soil"}]}

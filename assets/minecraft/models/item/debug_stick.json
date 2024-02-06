@@ -1,14 +1,1 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "minecraft:item/stick"
-  },
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/debug_stick"
-    }
-  ]
-}
+{"parent":"minecraft:item/handheld","textures":{"layer0":"minecraft:item/stick"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/debug_stick"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/debug_stick"}]}

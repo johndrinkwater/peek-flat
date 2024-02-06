@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/exposed_cut_copper_stairs",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/exposed_cut_copper_stairs"
-    }
-  ]
-}
+{"parent":"minecraft:block/exposed_cut_copper_stairs","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/exposed_cut_copper_stairs"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/exposed_cut_copper_stairs"}]}

@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/dirt",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/dirt"
-    }
-  ]
-}
+{"parent":"minecraft:block/dirt","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/dirt"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/dirt"}]}

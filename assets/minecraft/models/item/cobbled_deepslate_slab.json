@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/cobbled_deepslate_slab",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/cobbled_deepslate_slab"
-    }
-  ]
-}
+{"parent":"minecraft:block/cobbled_deepslate_slab","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/cobbled_deepslate_slab"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/cobbled_deepslate_slab"}]}

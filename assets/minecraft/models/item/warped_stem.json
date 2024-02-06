@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/warped_stem",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/warped_stem"
-    }
-  ]
-}
+{"parent":"minecraft:block/warped_stem","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/warped_stem"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/warped_stem"}]}

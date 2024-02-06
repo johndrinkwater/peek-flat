@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/packed_mud",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/packed_mud"
-    }
-  ]
-}
+{"parent":"minecraft:block/packed_mud","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/packed_mud"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/packed_mud"}]}

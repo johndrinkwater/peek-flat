@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/oxidized_copper",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/waxed_oxidized_copper"
-    }
-  ]
-}
+{"parent":"minecraft:block/oxidized_copper","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/waxed_oxidized_copper"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/waxed_oxidized_copper"}]}

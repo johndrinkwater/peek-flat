@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/carved_pumpkin",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/carved_pumpkin"
-    }
-  ]
-}
+{"parent":"minecraft:block/carved_pumpkin","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/carved_pumpkin"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/carved_pumpkin"}]}

@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/crafting_table",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/crafting_table"
-    }
-  ]
-}
+{"parent":"minecraft:block/crafting_table","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/crafting_table"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/crafting_table"}]}

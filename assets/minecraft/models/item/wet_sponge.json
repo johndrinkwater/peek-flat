@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/wet_sponge",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/wet_sponge"
-    }
-  ]
-}
+{"parent":"minecraft:block/wet_sponge","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/wet_sponge"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/wet_sponge"}]}

@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/smooth_sandstone_stairs",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/smooth_sandstone_stairs"
-    }
-  ]
-}
+{"parent":"minecraft:block/smooth_sandstone_stairs","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/smooth_sandstone_stairs"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/smooth_sandstone_stairs"}]}

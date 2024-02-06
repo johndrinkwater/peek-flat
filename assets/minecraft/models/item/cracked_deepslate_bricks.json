@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/cracked_deepslate_bricks",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/cracked_deepslate_bricks"
-    }
-  ]
-}
+{"parent":"minecraft:block/cracked_deepslate_bricks","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/cracked_deepslate_bricks"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/cracked_deepslate_bricks"}]}

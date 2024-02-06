@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/mushroom_stem_inventory",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/mushroom_stem"
-    }
-  ]
-}
+{"parent":"minecraft:block/mushroom_stem_inventory","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/mushroom_stem"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/mushroom_stem"}]}

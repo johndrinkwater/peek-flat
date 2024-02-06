@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/lectern",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/lectern"
-    }
-  ]
-}
+{"parent":"minecraft:block/lectern","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/lectern"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/lectern"}]}

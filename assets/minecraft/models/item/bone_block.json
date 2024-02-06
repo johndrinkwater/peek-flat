@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/bone_block",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/bone_block"
-    }
-  ]
-}
+{"parent":"minecraft:block/bone_block","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/bone_block"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/bone_block"}]}

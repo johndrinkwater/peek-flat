@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/raw_gold_block",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/raw_gold_block"
-    }
-  ]
-}
+{"parent":"minecraft:block/raw_gold_block","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/raw_gold_block"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/raw_gold_block"}]}

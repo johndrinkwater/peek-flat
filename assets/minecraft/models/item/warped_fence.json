@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/warped_fence_inventory",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/warped_fence"
-    }
-  ]
-}
+{"parent":"minecraft:block/warped_fence_inventory","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/warped_fence"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/warped_fence"}]}

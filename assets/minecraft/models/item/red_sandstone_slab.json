@@ -1,11 +1,1 @@
-{
-  "parent": "minecraft:block/red_sandstone_slab",
-  "overrides": [
-    {
-      "predicate": {
-        "custom_model_data": 1702
-      },
-      "model": "peek_flat/red_sandstone_slab"
-    }
-  ]
-}
+{"parent":"minecraft:block/red_sandstone_slab","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/red_sandstone_slab"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/red_sandstone_slab"}]}

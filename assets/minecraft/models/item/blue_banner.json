@@ -1,0 +1,1 @@
+{"parent": "minecraft:item/template_banner","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/template_banner"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/template_banner"}]}

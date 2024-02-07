@@ -1,0 +1,1 @@
+{"parent":"minecraft:block/exposed_chiseled_copper","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/exposed_chiseled_copper"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/exposed_chiseled_copper"}]}

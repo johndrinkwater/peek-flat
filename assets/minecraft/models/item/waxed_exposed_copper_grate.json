@@ -1,0 +1,1 @@
+{"parent":"minecraft:block/exposed_copper_grate","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/exposed_copper_grate"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/exposed_copper_grate"}]}

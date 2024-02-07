@@ -3,7 +3,7 @@
   "display": {
     "fixed":{
       "rotation": [ 0, 180, 0 ],
-      "translation": [ 0, 4, 0.45 ],
+      "translation": [ 0, 4, 0.35 ],
       "scale": [ 1.0, 1.0, 0.2 ]
     }
   }

@@ -1,0 +1,1 @@
+{"parent":"minecraft:block/oxidized_copper_trapdoor_bottom","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/oxidized_copper_trapdoor"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/oxidized_copper_trapdoor"}]}

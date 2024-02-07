@@ -1,0 +1,1 @@
+{"parent":"minecraft:block/tuff_brick_stairs","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/tuff_brick_stairs"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/tuff_brick_stairs"}]}

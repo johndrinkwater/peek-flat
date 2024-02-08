@@ -1,4 +1,0 @@
-{
-	condition: "animatedTextures",
-	fallback: "assets/minecraft/textures/item/peek_flat_redstone_torch_static.png"
-}

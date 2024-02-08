@@ -1,1 +1,0 @@
-{"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:block/torch"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/torch"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/torch"}]}

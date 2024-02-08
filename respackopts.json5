@@ -2,7 +2,6 @@
     'id': 'jdwpeekflat',
     'version': 12,
     'conf': {
-		'optifineEmissiveTextures': true,
 		'animatedTextures': true
 	}
 }

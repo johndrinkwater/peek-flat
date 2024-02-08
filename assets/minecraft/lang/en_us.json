@@ -1,7 +1,5 @@
 {
 	"rpo.jdwpeekflat": "Peek Flat Shulker Icons",
-	"rpo.jdwpeekflat.optifineEmissiveTextures": "Enable emissive textures",
-	"rpo.jdwpeekflat.optifineEmissiveTextures.tooltip": "Ores and such glow in the dark",
 	"rpo.jdwpeekflat.animatedTextures": "Enable animated textures",
 	"rpo.jdwpeekflat.animatedTextures.tooltip": "Crying obsidian, nether wood, end rods, and other misc items"
 }

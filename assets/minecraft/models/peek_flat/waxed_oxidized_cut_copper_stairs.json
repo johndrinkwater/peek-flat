@@ -2,6 +2,6 @@
   "parent": "peek_flat/block_item_stairs_overlay_template",
   "textures": {
     "base": "item/peek_flat_oxidized_cut_copper",
-    "overlay": "item/peek_flat_waxed_oxidized_copper_overlay"
+    "overlay": "item/peek_flat_waxed_copper_overlay"
   }
 }

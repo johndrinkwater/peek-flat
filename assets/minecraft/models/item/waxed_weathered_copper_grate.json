@@ -1,1 +1,1 @@
-{"parent":"minecraft:block/weathered_copper_grate","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/weathered_copper_grate"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/weathered_copper_grate"}]}
+{"parent":"minecraft:block/weathered_copper_grate","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/waxed_weathered_copper_grate"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/waxed_weathered_copper_grate"}]}

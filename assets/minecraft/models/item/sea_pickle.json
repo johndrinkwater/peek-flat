@@ -1,0 +1,1 @@
+{"parent":"minecraft:item/generated","textures": {"layer0": "minecraft:item/sea_pickle"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/sea_pickle"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/sea_pickle"}]}

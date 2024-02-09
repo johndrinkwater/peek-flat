@@ -1,0 +1,1 @@
+{"parent":"minecraft:item/weathered_copper_door","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/waxed_weathered_copper_door"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/waxed_weathered_copper_door"}]}

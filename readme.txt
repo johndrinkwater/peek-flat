@@ -1,4 +1,4 @@
-﻿Peek flat shulker icons v0.5
+﻿Peek flat shulker icons v0.8
 1.20.4
 By johndrinkwater
 With contributions from

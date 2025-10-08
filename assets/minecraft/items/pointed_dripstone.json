@@ -1,1 +1,14 @@
-{"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:item/pointed_dripstone"},"display":{"thirdperson_righthand":{"rotation":[0,100,0],"translation":[-1,-1,0],"scale":[0.9,0.9,0.9]},"firstperson_righthand":{"rotation":[0,100,0],"translation":[0,-2,0],"scale":[0.9,0.9,0.9]}},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/pointed_dripstone"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/pointed_dripstone"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/pointed_dripstone"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/pointed_dripstone"
+    }
+  }
+}

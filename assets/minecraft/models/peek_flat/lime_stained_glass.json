@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_lime_stained_glass"
+    "base": "item/peek_flat_lime_stained_glass",
+    "particle": "item/peek_flat_lime_stained_glass"
   }
 }

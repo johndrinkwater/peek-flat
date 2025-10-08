@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_jigsaw"
+    "base": "item/peek_flat_jigsaw",
+    "particle": "item/peek_flat_jigsaw"
   }
 }

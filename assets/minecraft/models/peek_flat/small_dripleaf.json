@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_small_dripleaf"
+    "layer0": "item/peek_flat_small_dripleaf",
+    "particle": "item/peek_flat_small_dripleaf"
   }
 }

@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_stripped_warped_hyphae"
+    "base": "item/peek_flat_stripped_warped_hyphae",
+    "particle": "item/peek_flat_stripped_warped_hyphae"
   }
 }

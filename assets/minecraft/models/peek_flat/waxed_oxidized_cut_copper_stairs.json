@@ -1,7 +1,7 @@
 {
-  "parent": "peek_flat/block_item_stairs_overlay_template",
+  "parent": "peek_flat/block_item_stairs_template",
   "textures": {
-    "base": "item/peek_flat_oxidized_cut_copper",
-    "overlay": "item/peek_flat_waxed_copper_overlay"
+    "base": "item/peek_flat_waxed_oxidized_cut_copper",
+    "particle": "item/peek_flat_waxed_oxidized_cut_copper"
   }
 }

@@ -1,5 +1,5 @@
-﻿Peek flat shulker icons v0.9
-1.21
+﻿Peek flat shulker icons v1.0
+1.21.9
 By johndrinkwater
 With contributions from
 * ThePotatoKing55,	https://github.com/ThePotatoKing55/2D-block-texture-pack

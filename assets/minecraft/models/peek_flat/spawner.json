@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_spawner"
+    "layer0": "item/peek_flat_spawner",
+    "particle": "item/peek_flat_spawner"
   }
 }

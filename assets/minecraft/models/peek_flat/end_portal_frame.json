@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_end_portal_frame"
+    "layer0": "item/peek_flat_end_portal_frame",
+    "particle": "item/peek_flat_end_portal_frame"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "peek_flat/block_item_button_template",
+  "textures": {
+    "base": "item/peek_flat_pale_oak_planks",
+    "particle": "item/peek_flat_pale_oak_planks"
+  }
+}

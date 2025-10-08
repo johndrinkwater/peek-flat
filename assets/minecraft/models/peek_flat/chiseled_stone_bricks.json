@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_chiseled_stone_bricks"
+    "base": "item/peek_flat_chiseled_stone_brick",
+    "particle": "item/peek_flat_chiseled_stone_brick"
   }
 }

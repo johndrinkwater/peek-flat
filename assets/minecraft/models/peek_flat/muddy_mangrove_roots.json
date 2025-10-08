@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_muddy_mangrove_roots"
+    "base": "item/peek_flat_muddy_mangrove_roots",
+    "particle": "item/peek_flat_muddy_mangrove_roots"
   }
 }

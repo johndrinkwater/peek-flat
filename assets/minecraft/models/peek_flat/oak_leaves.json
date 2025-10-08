@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "peek_flat/block_item_tinted",
   "textures": {
-    "layer0": "item/peek_flat_oak_leaves"
+    "base": "item/peek_flat_oak_leaves",
+    "particle": "item/peek_flat_oak_leaves"
   }
 }

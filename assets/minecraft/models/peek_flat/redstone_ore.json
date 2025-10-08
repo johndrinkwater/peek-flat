@@ -2,6 +2,7 @@
   "parent": "peek_flat/block_item_overlay",
   "textures": {
     "base": "item/peek_flat_stone",
-    "overlay": "item/peek_flat_redstone_ore_overlay"
+    "overlay": "item/peek_flat_redstone_ore_overlay",
+    "particle": "item/peek_flat_stone"
   }
 }

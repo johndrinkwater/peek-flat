@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/dragon_egg","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/dragon_egg"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/dragon_egg"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/dragon_egg"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/dragon_egg"
+    }
+  }
+}

@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item_slab_template",
   "textures": {
-    "base": "item/peek_flat_cut_copper"
+    "base": "item/peek_flat_cut_copper",
+    "particle": "item/peek_flat_cut_copper"
   }
 }

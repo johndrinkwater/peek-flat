@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/spruce_button_inventory","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/spruce_button"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/spruce_button"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/spruce_button"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/spruce_button_inventory"
+    }
+  }
+}

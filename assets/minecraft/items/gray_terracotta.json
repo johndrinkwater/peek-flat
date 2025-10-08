@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/gray_terracotta","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/gray_terracotta"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/gray_terracotta"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/gray_terracotta"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/gray_terracotta"
+    }
+  }
+}

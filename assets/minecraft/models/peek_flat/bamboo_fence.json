@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item_fence_template",
   "textures": {
-    "base": "item/peek_flat_bamboo_planks"
+    "base": "item/peek_flat_bamboo_planks",
+    "particle": "item/peek_flat_bamboo_planks"
   }
 }

@@ -1,1 +1,14 @@
-{"parent":"item/amethyst_bud","textures":{"layer0":"minecraft:block/medium_amethyst_bud"},"display":{"fixed":{"translation":[0,6,0]}},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/medium_amethyst_bud"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/medium_amethyst_bud"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/medium_amethyst_bud"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/medium_amethyst_bud"
+    }
+  }
+}

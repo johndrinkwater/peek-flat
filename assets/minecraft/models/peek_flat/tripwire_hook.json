@@ -1,6 +1,7 @@
 {
-  "parent": "item/handheld_rod",
+  "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_tripwire_hook"
+    "layer0": "item/peek_flat_tripwire_hook",
+    "particle": "item/peek_flat_tripwire_hook"
   }
 }

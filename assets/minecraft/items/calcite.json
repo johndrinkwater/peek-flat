@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/calcite","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/calcite"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/calcite"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/calcite"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/calcite"
+    }
+  }
+}

@@ -1,1 +1,14 @@
-{"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:block/blue_stained_glass"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/blue_stained_glass_pane"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/blue_stained_glass_pane"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/blue_stained_glass_pane"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/blue_stained_glass_pane"
+    }
+  }
+}

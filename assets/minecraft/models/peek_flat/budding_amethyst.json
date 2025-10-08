@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_budding_amethyst"
+    "base": "item/peek_flat_budding_amethyst",
+    "particle": "item/peek_flat_budding_amethyst"
   }
 }

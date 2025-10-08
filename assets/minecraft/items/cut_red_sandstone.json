@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/cut_red_sandstone","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/cut_red_sandstone"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/cut_red_sandstone"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/cut_red_sandstone"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/cut_red_sandstone"
+    }
+  }
+}

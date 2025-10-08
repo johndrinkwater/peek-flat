@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/calibrated_sculk_sensor_inactive","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/calibrated_sculk_sensor"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/calibrated_sculk_sensor"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/calibrated_sculk_sensor"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/calibrated_sculk_sensor_inactive"
+    }
+  }
+}

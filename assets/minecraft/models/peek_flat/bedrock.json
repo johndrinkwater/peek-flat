@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_bedrock"
+    "base": "item/peek_flat_bedrock",
+    "particle": "item/peek_flat_bedrock"
   }
 }

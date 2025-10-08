@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/polished_basalt","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/polished_basalt"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/polished_basalt"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/polished_basalt"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/polished_basalt"
+    }
+  }
+}

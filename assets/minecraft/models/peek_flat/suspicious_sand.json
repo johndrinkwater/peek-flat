@@ -2,6 +2,7 @@
   "parent": "peek_flat/block_item_overlay",
   "textures": {
     "base": "item/peek_flat_sand",
-    "overlay": "item/peek_flat_suspicious_sand_overlay"
+    "overlay": "item/peek_flat_suspicious_sand_overlay",
+    "particle": "item/peek_flat_sand"
   }
 }

@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_amethyst_cluster"
+    "layer0": "item/peek_flat_amethyst_cluster",
+    "particle": "item/peek_flat_amethyst_cluster"
   }
 }

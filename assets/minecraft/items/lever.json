@@ -1,1 +1,14 @@
-{"parent":"minecraft:item/generated","textures":{"layer0":"minecraft:block/lever"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/lever"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/lever"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/lever"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/lever"
+    }
+  }
+}

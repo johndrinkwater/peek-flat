@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/bamboo_stairs","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/bamboo_stairs"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/bamboo_stairs"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/bamboo_stairs"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/bamboo_stairs"
+    }
+  }
+}

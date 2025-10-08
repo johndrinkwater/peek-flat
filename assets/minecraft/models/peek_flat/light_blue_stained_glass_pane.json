@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_light_blue_stained_glass_pane"
+    "layer0": "item/peek_flat_light_blue_stained_glass_pane",
+    "particle": "item/peek_flat_light_blue_stained_glass_pane"
   }
 }

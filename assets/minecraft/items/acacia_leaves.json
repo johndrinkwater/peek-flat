@@ -1,1 +1,26 @@
-{"parent":"minecraft:block/acacia_leaves","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/acacia_leaves"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/acacia_leaves"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/acacia_leaves",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -12012264
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/acacia_leaves",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -12012264
+        }
+      ]
+    }
+  }
+}

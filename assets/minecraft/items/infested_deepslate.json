@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/deepslate","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/infested_deepslate"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/infested_deepslate"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/infested_deepslate"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/deepslate"
+    }
+  }
+}

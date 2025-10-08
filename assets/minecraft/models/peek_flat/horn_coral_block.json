@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_horn_coral_block"
+    "base": "item/peek_flat_horn_coral_block",
+    "particle": "item/peek_flat_horn_coral_block"
   }
 }

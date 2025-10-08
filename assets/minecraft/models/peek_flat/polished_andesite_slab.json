@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item_slab_template",
   "textures": {
-    "base": "item/peek_flat_polished_andesite"
+    "base": "item/peek_flat_polished_andesite",
+    "particle": "item/peek_flat_polished_andesite"
   }
 }

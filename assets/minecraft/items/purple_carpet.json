@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/purple_carpet","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/purple_carpet"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/purple_carpet"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/purple_carpet"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/purple_carpet"
+    }
+  }
+}

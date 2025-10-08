@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item_stairs_template",
   "textures": {
-    "base": "item/peek_flat_dark_prismarine"
+    "base": "item/peek_flat_dark_prismarine",
+    "particle": "item/peek_flat_dark_prismarine"
   }
 }

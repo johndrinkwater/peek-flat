@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/exposed_copper_grate","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/exposed_copper_grate"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/exposed_copper_grate"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/exposed_copper_grate"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/exposed_copper_grate"
+    }
+  }
+}

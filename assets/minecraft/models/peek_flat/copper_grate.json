@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "peek_flat/block_item",
   "textures": {
-    "layer0": "item/peek_flat_copper_grate"
+    "base": "item/peek_flat_copper_grate",
+    "particle": "item/peek_flat_copper_grate"
   }
 }

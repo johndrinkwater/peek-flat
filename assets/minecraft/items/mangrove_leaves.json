@@ -1,1 +1,26 @@
-{"parent":"minecraft:block/mangrove_leaves","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/mangrove_leaves"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/mangrove_leaves"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/mangrove_leaves",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -7158200
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/mangrove_leaves",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -7158200
+        }
+      ]
+    }
+  }
+}

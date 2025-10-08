@@ -2,6 +2,7 @@
   "parent": "peek_flat/block_item_overlay",
   "textures": {
     "base": "item/peek_flat_chiseled_copper",
-    "overlay": "item/peek_flat_waxed_copper_overlay"
+    "overlay": "item/peek_flat_waxed_copper_overlay",
+    "particle": "item/peek_flat_chiseled_copper"
   }
 }

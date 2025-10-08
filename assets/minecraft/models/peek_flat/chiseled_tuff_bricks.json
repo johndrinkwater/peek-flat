@@ -1,7 +1,8 @@
 {
   "parent": "peek_flat/block_item_overlay",
   "textures": {
-    "base": "item/peek_flat_polished_tuff",
-    "overlay": "item/peek_flat_chiseled_tuff_brick_overlay"
+    "base": "item/peek_flat_tuff_brick",
+    "overlay": "item/peek_flat_chiseled_tuff_brick_overlay",
+    "particle": "item/peek_flat_tuff_brick"
   }
 }

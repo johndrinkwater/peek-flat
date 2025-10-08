@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_grindstone"
+    "layer0": "item/peek_flat_grindstone",
+    "particle": "item/peek_flat_grindstone"
   }
 }

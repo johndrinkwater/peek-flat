@@ -1,12 +1,7 @@
 {
-  "parent": "item/handheld",
-  "display": {
-    "head": {
-      "rotation": [0, 90, 0],
-      "translation": [0, 10, -10]
-    }
-  },
+  "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_end_rod"
+    "layer0": "item/peek_flat_end_rod",
+    "particle": "item/peek_flat_end_rod"
   }
 }

@@ -2,6 +2,7 @@
   "parent": "peek_flat/block_item_overlay",
   "textures": {
     "base": "item/peek_flat_smooth_quartz",
-    "overlay": "item/peek_flat_quartz_bricks_overlay"
+    "overlay": "item/peek_flat_quartz_brick_overlay",
+    "particle": "item/peek_flat_smooth_quartz"
   }
 }

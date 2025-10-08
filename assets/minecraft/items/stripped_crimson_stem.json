@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/stripped_crimson_stem","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/stripped_crimson_stem"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/stripped_crimson_stem"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/stripped_crimson_stem"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/stripped_crimson_stem"
+    }
+  }
+}

@@ -1,1 +1,70 @@
-{"parent":"minecraft:block/beehive","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/beehive"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/beehive"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:select",
+      "block_state_property": "honey_level",
+      "cases": [
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "peek_flat/beehive_5"
+          },
+          "when": "5"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "peek_flat/beehive_4"
+          },
+          "when": "4"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "peek_flat/beehive_3"
+          },
+          "when": "3"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "peek_flat/beehive_2"
+          },
+          "when": "2"
+        },
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "peek_flat/beehive_1"
+          },
+          "when": "1"
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:model",
+        "model": "peek_flat/beehive"
+      },
+      "property": "minecraft:block_state"
+    },
+    "on_false": {
+      "type": "minecraft:select",
+      "block_state_property": "honey_level",
+      "cases": [
+        {
+          "model": {
+            "type": "minecraft:model",
+            "model": "minecraft:block/beehive_honey"
+          },
+          "when": "5"
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:model",
+        "model": "minecraft:block/beehive_empty"
+      },
+      "property": "minecraft:block_state"
+    }
+  }
+}

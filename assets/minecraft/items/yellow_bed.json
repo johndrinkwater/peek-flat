@@ -1,1 +1,18 @@
-{"parent":"minecraft:item/template_bed","textures":{"particle":"minecraft:block/yellow_wool"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/yellow_bed"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/yellow_bed"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/yellow_bed"
+    },
+    "on_false": {
+      "type": "minecraft:special",
+      "base": "minecraft:item/yellow_bed",
+      "model": {
+        "type": "minecraft:bed",
+        "texture": "minecraft:yellow"
+      }
+    }
+  }
+}

@@ -1,12 +1,7 @@
 {
-  "parent": "item/handheld_rod",
-  "display": {
-    "head": {
-      "rotation": [0, 90, -135],
-      "translation": [7, 3, 0]
-    }
-  },
+  "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_lightning_rod"
+    "layer0": "item/peek_flat_lightning_rod",
+    "particle": "item/peek_flat_lightning_rod"
   }
 }

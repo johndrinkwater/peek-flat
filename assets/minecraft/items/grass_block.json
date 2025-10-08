@@ -1,1 +1,28 @@
-{"parent":"minecraft:block/grass_block","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/grass_block"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/grass_block"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/grass_block",
+      "tints": [
+        {
+          "type": "minecraft:grass",
+          "downfall": 1,
+          "temperature": 0.5
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/grass_block",
+      "tints": [
+        {
+          "type": "minecraft:grass",
+          "downfall": 1,
+          "temperature": 0.5
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_decorated_pot"
+    "layer0": "item/peek_flat_decorated_pot",
+    "particle": "item/peek_flat_decorated_pot"
   }
 }

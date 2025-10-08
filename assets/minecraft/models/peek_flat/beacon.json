@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_beacon"
+    "layer0": "item/peek_flat_beacon",
+    "particle": "item/peek_flat_beacon"
   }
 }

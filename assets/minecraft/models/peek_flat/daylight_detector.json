@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_daylight_detector"
+    "layer0": "item/peek_flat_daylight_detector",
+    "particle": "item/peek_flat_daylight_detector"
   }
 }

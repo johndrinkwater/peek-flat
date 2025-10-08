@@ -1,1 +1,26 @@
-{"parent":"minecraft:block/birch_leaves","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/birch_leaves"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/birch_leaves"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/birch_leaves",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -8345771
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/birch_leaves",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -8345771
+        }
+      ]
+    }
+  }
+}

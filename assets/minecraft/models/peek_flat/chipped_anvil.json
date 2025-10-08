@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_chipped_anvil"
+    "layer0": "item/peek_flat_chipped_anvil",
+    "particle": "item/peek_flat_chipped_anvil"
   }
 }

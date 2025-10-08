@@ -1,1 +1,67 @@
-{"parent":"item/chest","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/trapped_chest"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/trapped_chest"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "cases": [
+        {
+          "model": {
+            "type": "minecraft:special",
+            "base": "minecraft:item/trapped_chest",
+            "model": {
+              "type": "minecraft:chest",
+              "texture": "minecraft:christmas"
+            }
+          },
+          "when": [
+            "12-24",
+            "12-25",
+            "12-26"
+          ]
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:special",
+        "base": "minecraft:item/trapped_chest",
+        "model": {
+          "type": "minecraft:chest",
+          "texture": "minecraft:trapped"
+        }
+      },
+      "pattern": "MM-dd",
+      "property": "minecraft:local_time",
+      "model": "peek_flat/trapped_chest"
+    },
+    "on_false": {
+      "type": "minecraft:select",
+      "cases": [
+        {
+          "model": {
+            "type": "minecraft:special",
+            "base": "minecraft:item/trapped_chest",
+            "model": {
+              "type": "minecraft:chest",
+              "texture": "minecraft:christmas"
+            }
+          },
+          "when": [
+            "12-24",
+            "12-25",
+            "12-26"
+          ]
+        }
+      ],
+      "fallback": {
+        "type": "minecraft:special",
+        "base": "minecraft:item/trapped_chest",
+        "model": {
+          "type": "minecraft:chest",
+          "texture": "minecraft:trapped"
+        }
+      },
+      "pattern": "MM-dd",
+      "property": "minecraft:local_time"
+    }
+  }
+}

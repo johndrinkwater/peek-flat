@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/sculk_shrieker","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/sculk_shrieker"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/sculk_shrieker"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/sculk_shrieker"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/sculk_shrieker"
+    }
+  }
+}

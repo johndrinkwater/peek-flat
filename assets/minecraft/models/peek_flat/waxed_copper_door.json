@@ -1,6 +1,0 @@
-{
-  "parent": "peek_flat/block_item_copper_door_overlay_template",
-  "textures": {
-    "base": "minecraft:item/copper_door"
-  }
-}

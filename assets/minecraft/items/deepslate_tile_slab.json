@@ -1,1 +1,14 @@
-{"parent":"minecraft:block/deepslate_tile_slab","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/deepslate_tile_slab"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/deepslate_tile_slab"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/deepslate_tile_slab"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/deepslate_tile_slab"
+    }
+  }
+}

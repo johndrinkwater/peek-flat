@@ -1,6 +1,7 @@
 {
   "parent": "peek_flat/block_item_pressure_plate_template",
   "textures": {
-    "base": "item/peek_flat_warped_planks"
+    "base": "item/peek_flat_warped_planks",
+    "particle": "item/peek_flat_warped_planks"
   }
 }

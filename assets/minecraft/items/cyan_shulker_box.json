@@ -1,1 +1,18 @@
-{"parent":"minecraft:item/template_shulker_box","textures":{"particle":"minecraft:block/cyan_shulker_box"},"overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/cyan_shulker_box"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/cyan_shulker_box"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/cyan_shulker_box"
+    },
+    "on_false": {
+      "type": "minecraft:special",
+      "base": "minecraft:item/cyan_shulker_box",
+      "model": {
+        "type": "minecraft:shulker_box",
+        "texture": "minecraft:shulker_cyan"
+      }
+    }
+  }
+}

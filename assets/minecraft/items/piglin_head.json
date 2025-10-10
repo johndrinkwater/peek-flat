@@ -1,0 +1,22 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:special",
+      "base": "peek_flat/template_skull",
+      "model": {
+        "type": "minecraft:head",
+        "kind": "piglin"
+      }
+    },
+    "on_false": {
+      "type": "minecraft:special",
+      "base": "minecraft:item/template_skull",
+      "model": {
+        "type": "minecraft:head",
+        "kind": "piglin"
+      }
+    }
+  }
+}

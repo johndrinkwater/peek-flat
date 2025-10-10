@@ -574,15 +574,6 @@ done
 
 # UNIQUES
 
-# SKULLS
-# --------
-# TODO this has changed a bit.
-# This includes player heads, mob heads, etc
-
-for h in creeper_head.json dragon_head.json piglin_head.json player_head.json skeleton_skull.json wither_skeleton_skull.json zombie_head.json ; do
-REFERENCE="${h%.*}"
-# printf 'Skipping file: %s\n' "${h}"
-done
 
 # MISC
 # ---------
@@ -665,6 +656,23 @@ MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/conduit\" | del( .on_true.base ) | {\"model\": . } " $g > $DESTIN$g
 jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$g
 printf 'Adjusting file: %s\n' "${g}"
+done
+
+# SKULLS
+# ---------
+# This includes player heads, mob heads, etc
+
+# Dragon head is the only one we skip a loop block for, because I doubt they’ll ever add more heads like this. (shush about piglins)
+h="dragon_head.json"
+REFERENCE="${h%.*}"
+MATERIAL=$REFERENCE
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$h
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model.model, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/dragon_head\" | del (.on_true.kind) | {\"model\": . } " $h > $DESTIN$h
+
+jq -c ". | .display.fixed.translation[2] = 0.33 | .display.fixed.scale[2] = 0.22" ../models/item/template_skull.json > $DESTIN../models/peek_flat/template_skull.json
+for h in player_head.json skeleton_skull.json wither_skeleton_skull.json creeper_head.json zombie_head.json piglin_head.json; do
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.base |= sub(\"minecraft:item\"; \"peek_flat\") | {\"model\": . } " $h > $DESTIN$h
+printf 'Adjusting file: %s\n' "${h}"
 done
 
 # then finish with ./zip_release, right? no, gotta increment release fields.

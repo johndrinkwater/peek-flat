@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/stripped_poplar_wood"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/stripped_poplar_wood"
+    }
+  }
+}

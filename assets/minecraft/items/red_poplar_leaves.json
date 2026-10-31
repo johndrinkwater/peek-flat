@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/red_poplar_leaves"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/red_poplar_leaves"
+    }
+  }
+}

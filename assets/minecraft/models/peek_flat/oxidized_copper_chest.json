@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/peek_flat_oxidized_copper_chest",
+    "particle": "item/peek_flat_oxidized_copper_chest"
+  }
+}

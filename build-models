@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROJET="peek-flat/"
-VERSIN="1.21.9"
+VERSIN="26.3"
 ASSETN="assets-from-$VERSIN"
 ORIGIN="$ASSETN/assets/minecraft/items/"
 DESTIN="assets/minecraft/items/"
@@ -594,7 +594,7 @@ done
 for b in black_shulker_box.json blue_shulker_box.json brown_shulker_box.json cyan_shulker_box.json gray_shulker_box.json green_shulker_box.json light_blue_shulker_box.json light_gray_shulker_box.json lime_shulker_box.json magenta_shulker_box.json orange_shulker_box.json pink_shulker_box.json purple_shulker_box.json red_shulker_box.json shulker_box.json white_shulker_box.json yellow_shulker_box.json ; do
 REFERENCE="${b%.*}"
 MATERIAL=$REFERENCE
-jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/$REFERENCE\" | {\"model\": . } " $b > $DESTIN$b
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/$REFERENCE\" | del(.on_true.transformation) | {\"model\": . } " $b > $DESTIN$b
 jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"item/peek_flat_${REFERENCE}\", \"particle\": \"item/peek_flat_${REFERENCE}\" } }" > $DESTIN../models/peek_flat/$b
 printf 'Adjusting file: %s\n' "${b}"
 done
@@ -604,7 +604,7 @@ done
 # ---------
 # > ender_chest, chest, trapped_chest need detailed changes
 
-for c in ender_chest.json trapped_chest.json chest.json decorated_pot.json ; do
+for c in ender_chest.json trapped_chest.json chest.json decorated_pot.json copper_chest.json exposed_copper_chest.json weathered_copper_chest.json oxidized_copper_chest.json ; do
 REFERENCE="${c%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/$REFERENCE\" | {\"model\": . } " $c > $DESTIN$c
@@ -624,7 +624,7 @@ done
 for b in black_bed.json blue_bed.json brown_bed.json cyan_bed.json gray_bed.json green_bed.json light_blue_bed.json light_gray_bed.json lime_bed.json magenta_bed.json orange_bed.json pink_bed.json purple_bed.json red_bed.json white_bed.json yellow_bed.json ; do
 REFERENCE="${b%.*}"
 MATERIAL=$REFERENCE
-jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/$REFERENCE\" | {\"model\": . } " $b > $DESTIN$b
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/$REFERENCE\" | del(.on_true.models) | {\"model\": . } " $b > $DESTIN$b
 jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"item/peek_flat_${REFERENCE}\", \"particle\": \"item/peek_flat_${REFERENCE}\" } }" > $DESTIN../models/peek_flat/$b
 printf 'Adjusting file: %s\n' "${b}"
 done
@@ -668,10 +668,11 @@ REFERENCE="${h%.*}"
 MATERIAL=$REFERENCE
 jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$h
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model.model, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/dragon_head\" | del (.on_true.kind) | {\"model\": . } " $h > $DESTIN$h
+printf 'Adjusting file: %s\n' "${h}"
 
-jq -c ". | .display.fixed.translation[2] = 0.33 | .display.fixed.scale[2] = 0.22" ../models/item/template_skull.json > $DESTIN../models/peek_flat/template_skull.json
+# We no longer adjust template skull but instead change the transform on the calling objects; fewer stages to cause matrix confusion
 for h in player_head.json skeleton_skull.json wither_skeleton_skull.json creeper_head.json zombie_head.json piglin_head.json; do
-jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.base |= sub(\"minecraft:item\"; \"peek_flat\") | {\"model\": . } " $h > $DESTIN$h
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.base |= sub(\"minecraft:item\"; \"peek_flat\") | .on_true.transformation.right_rotation[1]=180 | .on_true.transformation.scale[2]=0.5 | .on_true.transformation.translation[1]=0.25 | .on_true.transformation.translation[2]=0.58 | {\"model\": . } " $h > $DESTIN$h
 printf 'Adjusting file: %s\n' "${h}"
 done
 

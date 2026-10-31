@@ -7,12 +7,41 @@
       "model": "peek_flat/light_gray_bed"
     },
     "on_false": {
-      "type": "minecraft:special",
-      "base": "minecraft:item/light_gray_bed",
-      "model": {
-        "type": "minecraft:bed",
-        "texture": "minecraft:light_gray"
-      }
+      "type": "minecraft:composite",
+      "models": [
+        {
+          "type": "minecraft:model",
+          "model": "minecraft:block/light_gray_bed_head"
+        },
+        {
+          "type": "minecraft:model",
+          "model": "minecraft:block/light_gray_bed_foot",
+          "transformation": {
+            "left_rotation": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "right_rotation": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "translation": [
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      ]
     }
   }
 }

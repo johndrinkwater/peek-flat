@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/light_blue_wool_stairs"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/light_blue_wool_stairs"
+    }
+  }
+}

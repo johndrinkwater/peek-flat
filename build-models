@@ -330,6 +330,24 @@ jq -n "{ \"parent\": \"peek_flat/block_item_slab_template\", \"textures\": { \"b
 printf 'Adjusting file: %s\n' "${s}"
 done
 
+# wool
+for s in black_wool_slab.json blue_wool_slab.json brown_wool_slab.json cyan_wool_slab.json gray_wool_slab.json green_wool_slab.json light_blue_wool_slab.json light_gray_wool_slab.json lime_wool_slab.json magenta_wool_slab.json orange_wool_slab.json pink_wool_slab.json purple_wool_slab.json red_wool_slab.json white_wool_slab.json yellow_wool_slab.json ; do
+REFERENCE="${s%.*}"
+MATERIAL=$( echo $REFERENCE | sed 's/_slab//' )
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | {\"model\": . } " $s > $DESTIN$s
+jq -n "{ \"parent\": \"peek_flat/block_item_slab_template\", \"textures\": { \"base\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$s
+printf 'Adjusting file: %s\n' "${s}"
+done
+
+# concrete
+for s in black_concrete_slab.json blue_concrete_slab.json brown_concrete_slab.json cyan_concrete_slab.json gray_concrete_slab.json green_concrete_slab.json light_blue_concrete_slab.json light_gray_concrete_slab.json lime_concrete_slab.json magenta_concrete_slab.json orange_concrete_slab.json pink_concrete_slab.json purple_concrete_slab.json red_concrete_slab.json white_concrete_slab.json yellow_concrete_slab.json ; do
+REFERENCE="${s%.*}"
+MATERIAL=$( echo $REFERENCE | sed 's/_slab//' )
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | {\"model\": . } " $s > $DESTIN$s
+jq -n "{ \"parent\": \"peek_flat/block_item_slab_template\", \"textures\": { \"base\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$s
+printf 'Adjusting file: %s\n' "${s}"
+done
+
 # overlay slabs
 # To avoid a bunch of unique groupings, I just crop cut, mossy etc from the same one.
 for s in cut_red_sandstone_slab.json petrified_oak_slab.json cut_sandstone_slab.json mossy_cobblestone_slab.json mossy_stone_brick_slab.json quartz_slab.json smooth_sandstone_slab.json smooth_red_sandstone_slab.json ; do
@@ -375,6 +393,24 @@ done
 for s in acacia_stairs.json bamboo_stairs.json birch_stairs.json cherry_stairs.json crimson_stairs.json dark_oak_stairs.json jungle_stairs.json mangrove_stairs.json oak_stairs.json pale_oak_stairs.json spruce_stairs.json warped_stairs.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' | sed 's/$/_planks/' )
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | {\"model\": . } " $s > $DESTIN$s
+jq -n "{ \"parent\": \"peek_flat/block_item_stairs_template\", \"textures\": { \"base\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$s
+printf 'Adjusting file: %s\n' "${s}"
+done
+
+# wool
+for s in black_wool_stairs.json blue_wool_stairs.json brown_wool_stairs.json cyan_wool_stairs.json gray_wool_stairs.json green_wool_stairs.json light_blue_wool_stairs.json light_gray_wool_stairs.json lime_wool_stairs.json magenta_wool_stairs.json orange_wool_stairs.json pink_wool_stairs.json purple_wool_stairs.json red_wool_stairs.json white_wool_stairs.json yellow_wool_stairs.json ; do
+REFERENCE="${s%.*}"
+MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' )
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | {\"model\": . } " $s > $DESTIN$s
+jq -n "{ \"parent\": \"peek_flat/block_item_stairs_template\", \"textures\": { \"base\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$s
+printf 'Adjusting file: %s\n' "${s}"
+done
+
+# concrete
+for s in black_concrete_stairs.json blue_concrete_stairs.json brown_concrete_stairs.json cyan_concrete_stairs.json gray_concrete_stairs.json green_concrete_stairs.json light_blue_concrete_stairs.json light_gray_concrete_stairs.json lime_concrete_stairs.json magenta_concrete_stairs.json orange_concrete_stairs.json pink_concrete_stairs.json purple_concrete_stairs.json red_concrete_stairs.json white_concrete_stairs.json yellow_concrete_stairs.json ; do
+REFERENCE="${s%.*}"
+MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | {\"model\": . } " $s > $DESTIN$s
 jq -n "{ \"parent\": \"peek_flat/block_item_stairs_template\", \"textures\": { \"base\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$s
 printf 'Adjusting file: %s\n' "${s}"
@@ -653,7 +689,7 @@ done
 for g in conduit.json ; do
 REFERENCE="${g%.*}"
 MATERIAL=$REFERENCE
-jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/conduit\" | del( .on_true.base ) | {\"model\": . } " $g > $DESTIN$g
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/conduit\" | del( .on_true.base ) | del(.on_true.transformation) | {\"model\": . } " $g > $DESTIN$g
 jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$g
 printf 'Adjusting file: %s\n' "${g}"
 done

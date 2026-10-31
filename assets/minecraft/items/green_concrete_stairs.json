@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/green_concrete_stairs"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/green_concrete_stairs"
+    }
+  }
+}

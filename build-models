@@ -158,6 +158,14 @@ jq -n "{ \"parent\": \"peek_flat/block_item_overlay\", \"textures\": { \"base\":
 printf 'Adjusting file: %s\n' "${w}"
 done
 
+for w in waxed_copper_chest.json waxed_exposed_copper_chest.json waxed_weathered_copper_chest.json waxed_oxidized_copper_chest.json ; do
+REFERENCE="${w%.*}"
+MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true: { \"type\": \"minecraft:model\", \"model\": \"peek_flat/${REFERENCE}\" }, on_false: .model } | {\"model\": . } " $w > $DESTIN$w
+jq -n "{ \"parent\": \"peek_flat/block_item_overlay\", \"textures\": { \"base\": \"item/peek_flat_${MATERIAL}\", \"overlay\": \"item/peek_flat_waxed_copper_overlay\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$w
+printf 'Adjusting file: %s\n' "${w}"
+done
+
 # INFESTED
 # ------
 

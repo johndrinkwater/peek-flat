@@ -1,0 +1,18 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/waxed_exposed_copper_chest"
+    },
+    "on_false": {
+      "type": "minecraft:special",
+      "base": "minecraft:item/exposed_copper_chest",
+      "model": {
+        "type": "minecraft:chest",
+        "texture": "minecraft:copper_exposed"
+      }
+    }
+  }
+}

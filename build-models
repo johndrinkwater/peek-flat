@@ -11,17 +11,13 @@ DESTIN="assets/minecraft/items/"
 # "https://piston-meta.mojang.com/v1/packages/113cf6b7b169de516477f83a63e64c6f57f4597e/27.json"
 # "https://piston-data.mojang.com/v1/objects/ce92fd8d1b2460c41ceda07ae7b3fe863a80d045/client.jar"
 
-# XXXXX This only needs to run for "new" releases that have changes
-#
 # read -r clientjar <<< "`jq -c '.downloads.client.url' ~/.minecraft/versions/$VERSIN/$VERSIN.json`"
 # mkdir $ASSETN
 # cd $ASSETN
 # eval wget $clientjar
 # unzip client.jar 'assets/minecraft/items/*' 'assets/minecraft/models/*' 'assets/minecraft/textures/*'
 
-#	Need to work through a system to do every block, and remove that from the list. A python script maybe?
-#
-#	do we just maintain a paired list of textures?
+# Need to work through a system to do every block, and remove that from the list. A python script maybe?
 
 printf 'Running update script for ‘%s’\n' "${VERSIN}"
 cd $ORIGIN

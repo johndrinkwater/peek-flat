@@ -1,0 +1,71 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek_flat/straw_bed"
+    },
+    "on_false": {
+      "type": "minecraft:composite",
+      "models": [
+        {
+          "type": "minecraft:model",
+          "model": "minecraft:block/straw_bed_head",
+          "transformation": {
+            "left_rotation": [
+              0,
+              1,
+              0,
+              -0
+            ],
+            "right_rotation": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "translation": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "type": "minecraft:model",
+          "model": "minecraft:block/straw_bed_foot",
+          "transformation": {
+            "left_rotation": [
+              0,
+              1,
+              0,
+              -0
+            ],
+            "right_rotation": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "translation": [
+              1,
+              0,
+              2
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

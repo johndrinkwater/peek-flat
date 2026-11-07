@@ -1,4 +1,7 @@
 {
+	"textures": {
+		"particle": "#base"
+	},
 	"gui_light": "front",
 	"display": {
 		"ground": {

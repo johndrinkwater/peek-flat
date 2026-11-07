@@ -1,7 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_shroomlight",
-    "particle": "item/peek_flat_shroomlight"
+    "base": "item/peek_flat_shroomlight"
   }
 }

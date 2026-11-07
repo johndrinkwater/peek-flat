@@ -1,7 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_calcite",
-    "particle": "item/peek_flat_calcite"
+    "base": "item/peek_flat_calcite"
   }
 }

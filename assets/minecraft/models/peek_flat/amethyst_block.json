@@ -1,7 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_amethyst_block",
-    "particle": "item/peek_flat_amethyst_block"
+    "base": "item/peek_flat_amethyst_block"
   }
 }

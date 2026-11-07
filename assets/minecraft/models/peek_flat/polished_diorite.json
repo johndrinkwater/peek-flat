@@ -1,7 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_polished_diorite",
-    "particle": "item/peek_flat_polished_diorite"
+    "base": "item/peek_flat_polished_diorite"
   }
 }

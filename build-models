@@ -605,9 +605,9 @@ done
 
 for p in glass_pane.json black_stained_glass_pane.json blue_stained_glass_pane.json brown_stained_glass_pane.json cyan_stained_glass_pane.json gray_stained_glass_pane.json green_stained_glass_pane.json light_blue_stained_glass_pane.json light_gray_stained_glass_pane.json lime_stained_glass_pane.json magenta_stained_glass_pane.json orange_stained_glass_pane.json pink_stained_glass_pane.json purple_stained_glass_pane.json red_stained_glass_pane.json white_stained_glass_pane.json yellow_stained_glass_pane.json ; do
 REFERENCE="${p%.*}"
-MATERIAL=$REFERENCE
+MATERIAL=$( echo $REFERENCE | sed 's/_pane//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item\"; \"peek_flat\") | {\"model\": . } " $p > $DESTIN$p
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$p
+jq -n "{ \"parent\": \"peek_flat/block_item_glass_pane_template\", \"textures\": { \"base\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$p
 printf 'Adjusting file: %s\n' "${p}"
 done
 

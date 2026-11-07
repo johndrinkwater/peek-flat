@@ -599,8 +599,7 @@ for s in glass.json tinted_glass.json black_stained_glass.json blue_stained_glas
 REFERENCE="${s%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek_flat/block_item\", \"textures\": { \"base\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$s
-# jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$s
+jq -n "{ \"parent\": \"peek_flat/block_item_glass_template\", \"textures\": { \"base\": \"item/peek_flat_${MATERIAL}\", \"particle\": \"item/peek_flat_${MATERIAL}\" } }" > $DESTIN../models/peek_flat/$s
 printf 'Adjusting file: %s\n' "${s}"
 done
 

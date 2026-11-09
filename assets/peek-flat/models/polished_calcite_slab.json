@@ -1,0 +1,7 @@
+{
+  "parent": "peek-flat:block_item_slab_template",
+  "textures": {
+    "base": "peek-flat:item/polished_calcite",
+    "particle": "peek-flat:item/polished_calcite"
+  }
+}

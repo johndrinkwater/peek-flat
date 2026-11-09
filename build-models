@@ -44,7 +44,7 @@ cd $ORIGIN
 # ------
 # printf 'Tackling ores.\n'
 
-for o in raw_copper_block.json raw_gold_block.json raw_iron_block.json coal_block.json diamond_block.json emerald_block.json gold_block.json iron_block.json lapis_block.json redstone_block.json netherite_block.json ; do
+for o in coal_block.json diamond_block.json emerald_block.json gold_block.json iron_block.json lapis_block.json netherite_block.json raw_copper_block.json raw_gold_block.json raw_iron_block.json redstone_block.json ; do
 REFERENCE="${o%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $o > $DESTIN$o
@@ -71,7 +71,7 @@ done
 # ------
 # printf 'Tackling blocks.\n'
 
-for b in amethyst_block.json budding_amethyst.json ancient_debris.json andesite.json bedrock.json jigsaw.json blackstone.json blue_ice.json bone_block.json basalt.json smooth_basalt.json polished_basalt.json bookshelf.json bricks.json calcite.json clay.json barrel.json note_block.json composter.json crafter.json obsidian.json crying_obsidian.json reinforced_deepslate.json dropper.json dispenser.json dried_kelp_block.json observer.json cobblestone.json cobbled_deepslate.json coarse_dirt.json dirt.json dark_prismarine.json deepslate.json deepslate_bricks.json deepslate_tiles.json dripstone_block.json diorite.json end_stone.json end_stone_bricks.json glowstone.json granite.json ice.json lodestone.json mud.json cinnabar.json cinnabar_bricks.json polished_cinnabar.json sulfur.json sulfur_bricks.json polished_sulfur.json potent_sulfur.json mud_bricks.json packed_mud.json magma_block.json nether_bricks.json netherrack.json packed_ice.json polished_andesite.json polished_blackstone.json chiseled_sulfur.json chiseled_stone_bricks.json chiseled_polished_blackstone.json polished_blackstone_bricks.json polished_diorite.json polished_deepslate.json polished_granite.json polished_tuff.json purpur_block.json prismarine.json prismarine_bricks.json pumpkin.json red_nether_bricks.json redstone_lamp.json red_sandstone.json sandstone.json stone.json stone_bricks.json smooth_quartz.json smooth_stone.json sand.json red_sand.json soul_sand.json soul_soil.json gravel.json shroomlight.json tuff.json tuff_bricks.json nether_wart_block.json warped_wart_block.json red_mushroom_block.json brown_mushroom_block.json mushroom_stem.json piston.json honey_block.json honeycomb_block.json heavy_core.json sponge.json wet_sponge.json crafting_table.json smithing_table.json fletching_table.json cartography_table.json loom.json blast_furnace.json furnace.json smoker.json hay_block.json slime_block.json copper_block.json exposed_copper.json weathered_copper.json oxidized_copper.json cut_copper.json exposed_cut_copper.json weathered_cut_copper.json oxidized_cut_copper.json chiseled_cinnabar.json chiseled_copper.json exposed_chiseled_copper.json weathered_chiseled_copper.json oxidized_chiseled_copper.json copper_bulb.json exposed_copper_bulb.json oxidized_copper_bulb.json weathered_copper_bulb.json copper_grate.json exposed_copper_grate.json oxidized_copper_grate.json weathered_copper_grate.json melon.json moss_block.json pale_moss_block.json tnt.json respawn_anchor.json ochre_froglight.json pearlescent_froglight.json verdant_froglight.json sea_lantern.json vault.json trial_spawner.json brain_coral_block.json bubble_coral_block.json dead_brain_coral_block.json dead_bubble_coral_block.json dead_fire_coral_block.json dead_horn_coral_block.json dead_tube_coral_block.json fire_coral_block.json horn_coral_block.json tube_coral_block.json structure_block.json command_block.json chain_command_block.json repeating_command_block.json sculk.json sculk_catalyst.json mangrove_roots.json muddy_mangrove_roots.json chiseled_bookshelf.json chiseled_resin_bricks.json resin_block.json resin_bricks.json snow_block.json ; do
+for b in amethyst_block.json ancient_debris.json andesite.json barrel.json basalt.json bedrock.json blackstone.json blast_furnace.json blue_ice.json bone_block.json bookshelf.json brain_coral_block.json bricks.json brown_mushroom_block.json bubble_coral_block.json budding_amethyst.json calcite.json cartography_table.json chain_command_block.json chiseled_bookshelf.json chiseled_cinnabar.json chiseled_copper.json chiseled_polished_blackstone.json chiseled_resin_bricks.json chiseled_stone_bricks.json chiseled_sulfur.json cinnabar.json cinnabar_bricks.json clay.json coarse_dirt.json cobbled_deepslate.json cobblestone.json command_block.json composter.json copper_block.json copper_bulb.json copper_grate.json crafter.json crafting_table.json crying_obsidian.json cut_copper.json dark_prismarine.json dead_brain_coral_block.json dead_bubble_coral_block.json dead_fire_coral_block.json dead_horn_coral_block.json dead_tube_coral_block.json deepslate.json deepslate_bricks.json deepslate_tiles.json diorite.json dirt.json dispenser.json dried_kelp_block.json dripstone_block.json dropper.json end_stone.json end_stone_bricks.json exposed_chiseled_copper.json exposed_copper.json exposed_copper_bulb.json exposed_copper_grate.json exposed_cut_copper.json fire_coral_block.json fletching_table.json furnace.json glowstone.json granite.json gravel.json hay_block.json heavy_core.json honey_block.json honeycomb_block.json horn_coral_block.json ice.json jigsaw.json lodestone.json loom.json magma_block.json mangrove_roots.json melon.json moss_block.json mud.json mud_bricks.json muddy_mangrove_roots.json mushroom_stem.json nether_bricks.json nether_wart_block.json netherrack.json note_block.json observer.json obsidian.json ochre_froglight.json oxidized_chiseled_copper.json oxidized_copper.json oxidized_copper_bulb.json oxidized_copper_grate.json oxidized_cut_copper.json packed_ice.json packed_mud.json pale_moss_block.json pearlescent_froglight.json piston.json polished_andesite.json polished_basalt.json polished_blackstone.json polished_blackstone_bricks.json polished_cinnabar.json polished_deepslate.json polished_diorite.json polished_granite.json polished_sulfur.json polished_tuff.json potent_sulfur.json prismarine.json prismarine_bricks.json pumpkin.json purpur_block.json red_mushroom_block.json red_nether_bricks.json red_sand.json red_sandstone.json redstone_lamp.json reinforced_deepslate.json repeating_command_block.json resin_block.json resin_bricks.json respawn_anchor.json sand.json sandstone.json sculk.json sculk_catalyst.json sea_lantern.json shroomlight.json slime_block.json smithing_table.json smoker.json smooth_basalt.json smooth_quartz.json smooth_stone.json snow_block.json soul_sand.json soul_soil.json sponge.json stone.json stone_bricks.json structure_block.json sulfur.json sulfur_bricks.json tnt.json trial_spawner.json tube_coral_block.json tuff.json tuff_bricks.json vault.json verdant_froglight.json warped_wart_block.json weathered_chiseled_copper.json weathered_copper.json weathered_copper_bulb.json weathered_copper_grate.json weathered_cut_copper.json wet_sponge.json ; do
 REFERENCE="${b%.*}"
 	# Just no, we’re not having that for our files.
 MATERIAL=$( echo $REFERENCE | sed 's/bricks/brick/' | sed 's/tiles/tile/' | sed 's/sulfur/sulphur/' )
@@ -86,7 +86,7 @@ jq -n "{ \"parent\": \"peek_flat/block_item\", \"textures\": { \"base\": \"item/
 printf 'Adjusting file: %s\n' "${b}"
 done
 
-for b in mossy_cobblestone.json mossy_stone_bricks.json quartz_block.json quartz_bricks.json quartz_pillar.json purpur_pillar.json chiseled_deepslate.json chiseled_nether_bricks.json gilded_blackstone.json carved_pumpkin.json jack_o_lantern.json chiseled_quartz_block.json chiseled_red_sandstone.json chiseled_sandstone.json chiseled_tuff.json chiseled_tuff_bricks.json smooth_red_sandstone.json smooth_sandstone.json cracked_deepslate_bricks.json cracked_deepslate_tiles.json suspicious_gravel.json suspicious_sand.json cracked_nether_bricks.json cracked_polished_blackstone_bricks.json cracked_stone_bricks.json crimson_nylium.json warped_nylium.json sticky_piston.json jukebox.json cut_sandstone.json cut_red_sandstone.json ; do
+for b in carved_pumpkin.json chiseled_deepslate.json chiseled_nether_bricks.json chiseled_quartz_block.json chiseled_red_sandstone.json chiseled_sandstone.json chiseled_tuff.json chiseled_tuff_bricks.json cracked_deepslate_bricks.json cracked_deepslate_tiles.json cracked_nether_bricks.json cracked_polished_blackstone_bricks.json cracked_stone_bricks.json crimson_nylium.json cut_red_sandstone.json cut_sandstone.json gilded_blackstone.json jack_o_lantern.json jukebox.json mossy_cobblestone.json mossy_stone_bricks.json purpur_pillar.json quartz_block.json quartz_bricks.json quartz_pillar.json smooth_red_sandstone.json smooth_sandstone.json sticky_piston.json suspicious_gravel.json suspicious_sand.json warped_nylium.json ; do
 REFERENCE="${b%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/bricks/brick/' | sed 's/_block//' | sed 's/tiles/tile/' )
 MMATERIAL=$( echo $MATERIAL | sed 's/mossy_//' | sed 's/chiseled_//' | sed 's/cracked_//' | sed 's/smooth_//' | sed 's/cut_//' | sed 's/gilded_//' | sed 's/suspicious_//')
@@ -133,7 +133,7 @@ done
 
 ## GRASS BLOCK NEEDS TINTED
 # TODO I lazily put all of these into tinted, when only grass_block requires it
-for b in dirt_path.json farmland.json rooted_dirt.json mycelium.json grass_block.json podzol.json ; do
+for b in dirt_path.json farmland.json grass_block.json mycelium.json podzol.json rooted_dirt.json ; do
 REFERENCE="${b%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_block//' )
 MMATERIAL="dirt"
@@ -146,7 +146,7 @@ done
 # ------
 # Waxed copper, special case all these items as they use overlay templates
 
-for w in waxed_copper_block.json waxed_exposed_copper.json waxed_weathered_copper.json waxed_oxidized_copper.json waxed_cut_copper.json waxed_exposed_cut_copper.json waxed_weathered_cut_copper.json waxed_oxidized_cut_copper.json waxed_copper_grate.json waxed_exposed_copper_grate.json waxed_oxidized_copper_grate.json waxed_weathered_copper_grate.json waxed_chiseled_copper.json waxed_exposed_chiseled_copper.json waxed_weathered_chiseled_copper.json waxed_oxidized_chiseled_copper.json waxed_copper_bulb.json waxed_exposed_copper_bulb.json waxed_oxidized_copper_bulb.json waxed_weathered_copper_bulb.json ; do
+for w in waxed_chiseled_copper.json waxed_copper_block.json waxed_copper_bulb.json waxed_copper_grate.json waxed_cut_copper.json waxed_exposed_chiseled_copper.json waxed_exposed_copper.json waxed_exposed_copper_bulb.json waxed_exposed_copper_grate.json waxed_exposed_cut_copper.json waxed_oxidized_chiseled_copper.json waxed_oxidized_copper.json waxed_oxidized_copper_bulb.json waxed_oxidized_copper_grate.json waxed_oxidized_cut_copper.json waxed_weathered_chiseled_copper.json waxed_weathered_copper.json waxed_weathered_copper_bulb.json waxed_weathered_copper_grate.json waxed_weathered_cut_copper.json ; do
 REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | .on_true.model |= sub(\"_inventory\"; \"\") | .on_true.model |= sub(\"\/\"; \"\/waxed_\") | {\"model\": . } " $w > $DESTIN$w
@@ -154,7 +154,7 @@ jq -n "{ \"parent\": \"peek_flat/block_item_overlay\", \"textures\": { \"base\":
 printf 'Adjusting file: %s\n' "${w}"
 done
 
-for w in waxed_copper_chest.json waxed_exposed_copper_chest.json waxed_weathered_copper_chest.json waxed_oxidized_copper_chest.json ; do
+for w in waxed_copper_chest.json waxed_exposed_copper_chest.json waxed_oxidized_copper_chest.json waxed_weathered_copper_chest.json ; do
 REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true: { \"type\": \"minecraft:model\", \"model\": \"peek_flat/${REFERENCE}\" }, on_false: .model } | {\"model\": . } " $w > $DESTIN$w
@@ -244,7 +244,7 @@ done
 # LEAVES
 # ------
 
-for l in acacia_leaves.json azalea_leaves.json birch_leaves.json cherry_leaves.json dark_oak_leaves.json flowering_azalea_leaves.json jungle_leaves.json mangrove_leaves.json oak_leaves.json pale_oak_leaves.json spruce_leaves.json orange_poplar_leaves.json yellow_poplar_leaves.json red_poplar_leaves.json; do
+for l in acacia_leaves.json azalea_leaves.json birch_leaves.json cherry_leaves.json dark_oak_leaves.json flowering_azalea_leaves.json jungle_leaves.json mangrove_leaves.json oak_leaves.json pale_oak_leaves.json spruce_leaves.json orange_poplar_leaves.json yellow_poplar_leaves.json red_poplar_leaves.json ; do
 REFERENCE="${l%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model , on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | {\"model\": . } " $l > $DESTIN$l
@@ -267,7 +267,7 @@ done
 # ------
 # printf 'Tackling fences.\n'
 
-for f in acacia_fence.json bamboo_fence.json birch_fence.json cherry_fence.json crimson_fence.json dark_oak_fence.json jungle_fence.json mangrove_fence.json nether_brick_fence.json oak_fence.json pale_oak_fence.json poplar_fence.json spruce_fence.json warped_fence.json; do
+for f in acacia_fence.json bamboo_fence.json birch_fence.json cherry_fence.json crimson_fence.json dark_oak_fence.json jungle_fence.json mangrove_fence.json nether_brick_fence.json oak_fence.json pale_oak_fence.json poplar_fence.json spruce_fence.json warped_fence.json ; do
 [ -f "$f" ] || break
 REFERENCE="${f%.*}"
 PLANK=$( echo $REFERENCE | sed 's/_fence/_planks/' )
@@ -297,7 +297,7 @@ done
 # ------
 # printf 'Tackling walls.\n'
 # mossy walls need a different peek_flat template, but they have the _same_ redirect file style.
-for w in andesite_wall.json blackstone_wall.json brick_wall.json cinnabar_brick_wall.json cinnabar_wall.json cobbled_deepslate_wall.json cobblestone_wall.json deepslate_brick_wall.json deepslate_tile_wall.json diorite_wall.json end_stone_brick_wall.json granite_wall.json mud_brick_wall.json nether_brick_wall.json polished_blackstone_brick_wall.json polished_blackstone_wall.json polished_cinnabar_wall.json polished_deepslate_wall.json polished_sulfur_wall.json polished_tuff_wall.json prismarine_wall.json red_nether_brick_wall.json red_sandstone_wall.json resin_brick_wall.json sandstone_wall.json sulfur_brick_wall.json sulfur_wall.json stone_brick_wall.json tuff_brick_wall.json tuff_wall.json; do
+for w in andesite_wall.json blackstone_wall.json brick_wall.json cinnabar_brick_wall.json cinnabar_wall.json cobbled_deepslate_wall.json cobblestone_wall.json deepslate_brick_wall.json deepslate_tile_wall.json diorite_wall.json end_stone_brick_wall.json granite_wall.json mud_brick_wall.json nether_brick_wall.json polished_blackstone_brick_wall.json polished_blackstone_wall.json polished_cinnabar_wall.json polished_deepslate_wall.json polished_sulfur_wall.json polished_tuff_wall.json prismarine_wall.json red_nether_brick_wall.json red_sandstone_wall.json resin_brick_wall.json sandstone_wall.json stone_brick_wall.json sulfur_brick_wall.json sulfur_wall.json tuff_brick_wall.json tuff_wall.json ; do
 REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_wall//' | sed 's/sulfur/sulphur/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $w > $DESTIN$w
@@ -305,7 +305,7 @@ jq -n "{ \"parent\": \"peek_flat/block_item_wall_template\", \"textures\": { \"b
 printf 'Adjusting file: %s\n' "${w}"
 done
 
-for w in mossy_cobblestone_wall.json mossy_stone_brick_wall.json; do
+for w in mossy_cobblestone_wall.json mossy_stone_brick_wall.json ; do
 REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_wall//' | sed 's/mossy_//')
 MMATERIAL=$( echo $REFERENCE | sed 's/_wall//' )
@@ -317,7 +317,7 @@ done
 # SLABS
 # ------
 
-for s in andesite_slab.json bamboo_mosaic_slab.json blackstone_slab.json brick_slab.json cinnabar_slab.json cinnabar_brick_slab.json cobbled_deepslate_slab.json cobblestone_slab.json cut_copper_slab.json dark_prismarine_slab.json deepslate_brick_slab.json deepslate_tile_slab.json diorite_slab.json end_stone_brick_slab.json exposed_cut_copper_slab.json granite_slab.json mud_brick_slab.json nether_brick_slab.json purpur_slab.json oxidized_cut_copper_slab.json polished_andesite_slab.json polished_blackstone_brick_slab.json polished_blackstone_slab.json polished_cinnabar_slab.json polished_deepslate_slab.json polished_diorite_slab.json polished_granite_slab.json polished_sulfur_slab.json polished_tuff_slab.json prismarine_brick_slab.json prismarine_slab.json red_nether_brick_slab.json red_sandstone_slab.json resin_brick_slab.json sandstone_slab.json smooth_quartz_slab.json smooth_stone_slab.json stone_brick_slab.json stone_slab.json sulfur_slab.json sulfur_brick_slab.json tuff_brick_slab.json tuff_slab.json weathered_cut_copper_slab.json; do
+for s in andesite_slab.json bamboo_mosaic_slab.json blackstone_slab.json brick_slab.json cinnabar_brick_slab.json cinnabar_slab.json cobbled_deepslate_slab.json cobblestone_slab.json cut_copper_slab.json dark_prismarine_slab.json deepslate_brick_slab.json deepslate_tile_slab.json diorite_slab.json end_stone_brick_slab.json exposed_cut_copper_slab.json granite_slab.json mud_brick_slab.json nether_brick_slab.json oxidized_cut_copper_slab.json polished_andesite_slab.json polished_blackstone_brick_slab.json polished_blackstone_slab.json polished_cinnabar_slab.json polished_deepslate_slab.json polished_diorite_slab.json polished_granite_slab.json polished_sulfur_slab.json polished_tuff_slab.json prismarine_brick_slab.json prismarine_slab.json purpur_slab.json red_nether_brick_slab.json red_sandstone_slab.json resin_brick_slab.json sandstone_slab.json smooth_quartz_slab.json smooth_stone_slab.json stone_brick_slab.json stone_slab.json sulfur_brick_slab.json sulfur_slab.json tuff_brick_slab.json tuff_slab.json weathered_cut_copper_slab.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' | sed 's/sulfur/sulphur/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | {\"model\": . } " $s > $DESTIN$s
@@ -354,7 +354,7 @@ done
 
 # overlay slabs
 # To avoid a bunch of unique groupings, I just crop cut, mossy etc from the same one.
-for s in cut_red_sandstone_slab.json petrified_oak_slab.json cut_sandstone_slab.json mossy_cobblestone_slab.json mossy_stone_brick_slab.json quartz_slab.json smooth_sandstone_slab.json smooth_red_sandstone_slab.json ; do
+for s in cut_red_sandstone_slab.json cut_sandstone_slab.json mossy_cobblestone_slab.json mossy_stone_brick_slab.json petrified_oak_slab.json quartz_slab.json smooth_red_sandstone_slab.json smooth_sandstone_slab.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' | sed 's/cut_//' | sed 's/mossy_//' | sed 's/smooth_//' )
 if [ "$MATERIAL" == "quartz" ]; then
@@ -385,7 +385,7 @@ done
 # ------
 # printf 'Tackling stairs.\n'
 
-for s in andesite_stairs.json bamboo_mosaic_stairs.json blackstone_stairs.json brick_stairs.json cinnabar_brick_stairs.json cinnabar_stairs.json cobbled_deepslate_stairs.json cobblestone_stairs.json cut_copper_stairs.json dark_prismarine_stairs.json deepslate_brick_stairs.json deepslate_tile_stairs.json diorite_stairs.json end_stone_brick_stairs.json exposed_cut_copper_stairs.json granite_stairs.json mud_brick_stairs.json nether_brick_stairs.json oxidized_cut_copper_stairs.json polished_andesite_stairs.json polished_blackstone_brick_stairs.json polished_blackstone_stairs.json polished_cinnabar_stairs.json polished_deepslate_stairs.json polished_diorite_stairs.json polished_granite_stairs.json polished_sulfur_stairs.json polished_tuff_stairs.json prismarine_brick_stairs.json prismarine_stairs.json purpur_stairs.json red_nether_brick_stairs.json red_sandstone_stairs.json resin_brick_stairs.json sandstone_stairs.json smooth_quartz_stairs.json sulfur_brick_stairs.json sulfur_stairs.json stone_brick_stairs.json stone_stairs.json tuff_brick_stairs.json tuff_stairs.json waxed_cut_copper_stairs.json waxed_exposed_cut_copper_stairs.json waxed_oxidized_cut_copper_stairs.json waxed_weathered_cut_copper_stairs.json weathered_cut_copper_stairs.json ; do
+for s in andesite_stairs.json bamboo_mosaic_stairs.json blackstone_stairs.json brick_stairs.json cinnabar_brick_stairs.json cinnabar_stairs.json cobbled_deepslate_stairs.json cobblestone_stairs.json cut_copper_stairs.json dark_prismarine_stairs.json deepslate_brick_stairs.json deepslate_tile_stairs.json diorite_stairs.json end_stone_brick_stairs.json exposed_cut_copper_stairs.json granite_stairs.json mud_brick_stairs.json nether_brick_stairs.json oxidized_cut_copper_stairs.json polished_andesite_stairs.json polished_blackstone_brick_stairs.json polished_blackstone_stairs.json polished_cinnabar_stairs.json polished_deepslate_stairs.json polished_diorite_stairs.json polished_granite_stairs.json polished_sulfur_stairs.json polished_tuff_stairs.json prismarine_brick_stairs.json prismarine_stairs.json purpur_stairs.json red_nether_brick_stairs.json red_sandstone_stairs.json resin_brick_stairs.json sandstone_stairs.json smooth_quartz_stairs.json stone_brick_stairs.json stone_stairs.json sulfur_brick_stairs.json sulfur_stairs.json tuff_brick_stairs.json tuff_stairs.json waxed_cut_copper_stairs.json waxed_exposed_cut_copper_stairs.json waxed_oxidized_cut_copper_stairs.json waxed_weathered_cut_copper_stairs.json weathered_cut_copper_stairs.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' | sed 's/sulfur/sulphur/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | {\"model\": . } " $s > $DESTIN$s
@@ -595,7 +595,7 @@ done
 # --------
 # trying generated to see if it gets around block_item transparency issues
 
-for s in glass.json tinted_glass.json black_stained_glass.json blue_stained_glass.json brown_stained_glass.json cyan_stained_glass.json gray_stained_glass.json green_stained_glass.json light_blue_stained_glass.json light_gray_stained_glass.json lime_stained_glass.json magenta_stained_glass.json orange_stained_glass.json pink_stained_glass.json purple_stained_glass.json red_stained_glass.json white_stained_glass.json yellow_stained_glass.json ; do
+for s in black_stained_glass.json blue_stained_glass.json brown_stained_glass.json cyan_stained_glass.json glass.json gray_stained_glass.json green_stained_glass.json light_blue_stained_glass.json light_gray_stained_glass.json lime_stained_glass.json magenta_stained_glass.json orange_stained_glass.json pink_stained_glass.json purple_stained_glass.json red_stained_glass.json tinted_glass.json white_stained_glass.json yellow_stained_glass.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | {\"model\": . } " $s > $DESTIN$s
@@ -603,7 +603,7 @@ jq -n "{ \"parent\": \"peek_flat/block_item_glass_template\", \"textures\": { \"
 printf 'Adjusting file: %s\n' "${s}"
 done
 
-for p in glass_pane.json black_stained_glass_pane.json blue_stained_glass_pane.json brown_stained_glass_pane.json cyan_stained_glass_pane.json gray_stained_glass_pane.json green_stained_glass_pane.json light_blue_stained_glass_pane.json light_gray_stained_glass_pane.json lime_stained_glass_pane.json magenta_stained_glass_pane.json orange_stained_glass_pane.json pink_stained_glass_pane.json purple_stained_glass_pane.json red_stained_glass_pane.json white_stained_glass_pane.json yellow_stained_glass_pane.json ; do
+for p in black_stained_glass_pane.json blue_stained_glass_pane.json brown_stained_glass_pane.json cyan_stained_glass_pane.json glass_pane.json gray_stained_glass_pane.json green_stained_glass_pane.json light_blue_stained_glass_pane.json light_gray_stained_glass_pane.json lime_stained_glass_pane.json magenta_stained_glass_pane.json orange_stained_glass_pane.json pink_stained_glass_pane.json purple_stained_glass_pane.json red_stained_glass_pane.json white_stained_glass_pane.json yellow_stained_glass_pane.json ; do
 REFERENCE="${p%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_pane//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item\"; \"peek_flat\") | {\"model\": . } " $p > $DESTIN$p
@@ -618,7 +618,7 @@ done
 # ---------
 # bunch of flat 2d images
 
-for g in stonecutter.json small_dripleaf.json spore_blossom.json beacon.json chorus_plant.json chorus_flower.json ladder.json damaged_anvil.json sea_pickle.json target.json lever.json pointed_dripstone.json cactus.json grindstone.json chipped_anvil.json sculk_sensor.json lectern.json large_amethyst_bud.json anvil.json dragon_egg.json flowering_azalea.json daylight_detector.json end_portal_frame.json scaffolding.json calibrated_sculk_sensor.json azalea.json small_amethyst_bud.json amethyst_cluster.json big_dripleaf.json enchanting_table.json sculk_shrieker.json frogspawn.json medium_amethyst_bud.json spawner.json debug_stick.json tripwire_hook.json end_rod.json lightning_rod.json ; do
+for g in amethyst_cluster.json anvil.json azalea.json beacon.json big_dripleaf.json cactus.json calibrated_sculk_sensor.json chipped_anvil.json chorus_flower.json chorus_plant.json damaged_anvil.json daylight_detector.json debug_stick.json dragon_egg.json enchanting_table.json end_portal_frame.json end_rod.json flowering_azalea.json frogspawn.json grindstone.json ladder.json large_amethyst_bud.json lectern.json lever.json lightning_rod.json medium_amethyst_bud.json pointed_dripstone.json scaffolding.json sculk_sensor.json sculk_shrieker.json sea_pickle.json small_amethyst_bud.json small_dripleaf.json spawner.json spore_blossom.json stonecutter.json target.json tripwire_hook.json ; do
 REFERENCE="${g%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item\"; \"peek_flat\") | .on_true.model |= sub(\"minecraft:block\"; \"peek_flat\") | .on_true.model |= sub(\"_inactive\"; \"\") | .on_true.model |= sub(\"_stable\"; \"\") | {\"model\": . } " $g > $DESTIN$g
@@ -643,7 +643,7 @@ done
 # ---------
 # > ender_chest, chest, trapped_chest need detailed changes
 
-for c in ender_chest.json trapped_chest.json chest.json decorated_pot.json copper_chest.json exposed_copper_chest.json weathered_copper_chest.json oxidized_copper_chest.json ; do
+for c in chest.json copper_chest.json decorated_pot.json ender_chest.json exposed_copper_chest.json oxidized_copper_chest.json trapped_chest.json weathered_copper_chest.json ; do
 REFERENCE="${c%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek_flat/$REFERENCE\" | {\"model\": . } " $c > $DESTIN$c
@@ -722,7 +722,7 @@ jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_tru
 printf 'Adjusting file: %s\n' "${h}"
 
 # We no longer adjust template skull but instead change the transform on the calling objects; fewer stages to cause matrix confusion
-for h in player_head.json skeleton_skull.json wither_skeleton_skull.json creeper_head.json zombie_head.json piglin_head.json; do
+for h in player_head.json skeleton_skull.json wither_skeleton_skull.json creeper_head.json zombie_head.json piglin_head.json ; do
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.base |= sub(\"minecraft:item\"; \"peek_flat\") | .on_true.transformation.right_rotation[1]=180 | .on_true.transformation.scale[2]=0.5 | .on_true.transformation.translation[1]=0.25 | .on_true.transformation.translation[2]=0.58 | {\"model\": . } " $h > $DESTIN$h
 printf 'Adjusting file: %s\n' "${h}"
 done

@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/decorated_pot"
+      "model": "peek-flat:decorated_pot"
     },
     "on_false": {
       "type": "minecraft:special",

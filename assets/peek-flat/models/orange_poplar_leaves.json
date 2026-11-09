@@ -1,5 +1,5 @@
 {
-  "parent": "peek_flat/block_item_tinted",
+  "parent": "peek-flat:block_item_tinted",
   "textures": {
     "base": "peek-flat:item/orange_poplar_leaves",
     "particle": "peek-flat:item/orange_poplar_leaves"

@@ -1,5 +1,5 @@
 {
-  "parent": "peek_flat/block_item_stairs_template",
+  "parent": "peek-flat:block_item_stairs_template",
   "textures": {
     "base": "peek-flat:item/pink_wool",
     "particle": "peek-flat:item/pink_wool"

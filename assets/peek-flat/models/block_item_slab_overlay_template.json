@@ -1,6 +1,6 @@
 {
 	"format_version": "1.21.6",
-	"parent": "peek_flat/block_item_slab_template",
+	"parent": "peek-flat:block_item_slab_template",
 	"elements": [
 		{
 			"from": [6, 1, 7.5],

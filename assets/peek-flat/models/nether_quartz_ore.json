@@ -1,5 +1,5 @@
 {
-  "parent": "peek_flat/block_item_overlay",
+  "parent": "peek-flat:block_item_overlay",
   "textures": {
     "base": "peek-flat:item/netherrack",
     "overlay": "peek-flat:item/nether_quartz_ore_overlay",

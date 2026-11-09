@@ -1,6 +1,6 @@
 {
 	"format_version": "1.21.6",
-	"parent": "peek_flat/block_item_overlay",
+	"parent": "peek-flat:block_item_overlay",
 	"elements": [
 		{
 			"from": [6, 1, 7.5],

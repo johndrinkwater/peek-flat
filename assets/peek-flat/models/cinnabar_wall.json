@@ -1,5 +1,5 @@
 {
-  "parent": "peek_flat/block_item_wall_template",
+  "parent": "peek-flat:block_item_wall_template",
   "textures": {
     "base": "peek-flat:item/cinnabar",
     "particle": "peek-flat:item/cinnabar"

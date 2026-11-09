@@ -31,7 +31,7 @@
       },
       "pattern": "MM-dd",
       "property": "minecraft:local_time",
-      "model": "peek_flat/chest"
+      "model": "peek-flat:chest"
     },
     "on_false": {
       "type": "minecraft:select",

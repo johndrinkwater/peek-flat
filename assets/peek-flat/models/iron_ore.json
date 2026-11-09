@@ -1,5 +1,5 @@
 {
-  "parent": "peek_flat/block_item_overlay",
+  "parent": "peek-flat:block_item_overlay",
   "textures": {
     "base": "peek-flat:item/stone",
     "overlay": "peek-flat:item/iron_ore_overlay",

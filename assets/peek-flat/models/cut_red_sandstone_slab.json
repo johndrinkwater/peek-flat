@@ -1,5 +1,5 @@
 {
-  "parent": "peek_flat/block_item_slab_overlay_template",
+  "parent": "peek-flat:block_item_slab_overlay_template",
   "textures": {
     "base": "peek-flat:item/red_sandstone",
     "overlay": "peek-flat:item/cut_red_sandstone_overlay",

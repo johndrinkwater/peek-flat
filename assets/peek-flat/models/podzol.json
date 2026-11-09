@@ -1,5 +1,5 @@
 {
-  "parent": "peek_flat/block_item_overlay_tinted",
+  "parent": "peek-flat:block_item_overlay_tinted",
   "textures": {
     "base": "peek-flat:item/dirt",
     "overlay": "peek-flat:item/podzol_overlay",

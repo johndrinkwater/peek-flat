@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/yellow_bed"
+      "model": "peek-flat:yellow_bed"
     },
     "on_false": {
       "type": "minecraft:composite",

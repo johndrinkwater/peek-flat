@@ -1,5 +1,5 @@
 {
-	"parent": "peek_flat/block_item_skull_template",
+	"parent": "peek-flat:block_item_skull_template",
 	"elements": [
 		{
 			"from": [3, 4, 7.5],

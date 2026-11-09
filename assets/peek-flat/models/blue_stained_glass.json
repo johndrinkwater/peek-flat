@@ -1,5 +1,5 @@
 {
-  "parent": "peek_flat/block_item_glass_template",
+  "parent": "peek-flat:block_item_glass_template",
   "textures": {
     "base": "peek-flat:item/blue_stained_glass",
     "particle": "peek-flat:item/blue_stained_glass"

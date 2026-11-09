@@ -1,5 +1,5 @@
 {
-  "parent": "peek_flat/block_item_slab_template",
+  "parent": "peek-flat:block_item_slab_template",
   "textures": {
     "base": "peek-flat:item/red_wool",
     "particle": "peek-flat:item/red_wool"

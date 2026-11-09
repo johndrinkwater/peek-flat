@@ -1,6 +1,6 @@
 {
 	"format_version": "1.21.6",
-	"parent": "peek_flat/block_item",
+	"parent": "peek-flat:block_item",
 	"textures": {
 		"particle": "peek-flat:item/acacia_wood"
 	},

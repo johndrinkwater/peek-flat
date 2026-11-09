@@ -9,42 +9,42 @@
         {
           "model": {
             "type": "minecraft:model",
-            "model": "peek_flat/bee_nest_5"
+            "model": "peek-flat:bee_nest_5"
           },
           "when": "5"
         },
         {
           "model": {
             "type": "minecraft:model",
-            "model": "peek_flat/bee_nest_4"
+            "model": "peek-flat:bee_nest_4"
           },
           "when": "4"
         },
         {
           "model": {
             "type": "minecraft:model",
-            "model": "peek_flat/bee_nest_3"
+            "model": "peek-flat:bee_nest_3"
           },
           "when": "3"
         },
         {
           "model": {
             "type": "minecraft:model",
-            "model": "peek_flat/bee_nest_2"
+            "model": "peek-flat:bee_nest_2"
           },
           "when": "2"
         },
         {
           "model": {
             "type": "minecraft:model",
-            "model": "peek_flat/bee_nest_1"
+            "model": "peek-flat:bee_nest_1"
           },
           "when": "1"
         }
       ],
       "fallback": {
         "type": "minecraft:model",
-        "model": "peek_flat/bee_nest"
+        "model": "peek-flat:bee_nest"
       },
       "property": "minecraft:block_state"
     },

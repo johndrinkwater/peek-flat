@@ -1,5 +1,5 @@
 {
-  "parent": "peek_flat/block_item",
+  "parent": "peek-flat:block_item",
   "textures": {
     "base": "peek-flat:item/black_wool"
   }

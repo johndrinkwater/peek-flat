@@ -1,4 +1,4 @@
 {
 	condition: "animatedTextures",
-	fallback: "assets/minecraft/textures/item/peek_flat_crimson_hyphae_static.png"
+	fallback: "assets/peek-flat/textures/item/crimson_hyphae_static.png"
 }

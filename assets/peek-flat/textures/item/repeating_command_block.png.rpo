@@ -1,4 +1,4 @@
 {
 	condition: "animatedTextures",
-	fallback: "assets/minecraft/textures/item/peek_flat_repeating_command_block_static.png"
+	fallback: "assets/peek-flat/textures/item/repeating_command_block_static.png"
 }

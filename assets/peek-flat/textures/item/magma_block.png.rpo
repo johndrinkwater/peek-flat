@@ -1,4 +1,4 @@
 {
 	condition: "animatedTextures",
-	fallback: "assets/minecraft/textures/item/peek_flat_magma_block_static.png"
+	fallback: "assets/peek-flat/textures/item/magma_block_static.png"
 }

@@ -1,4 +1,4 @@
 {
 	condition: "animatedTextures",
-	fallback: "assets/minecraft/textures/item/peek_flat_crying_obsidian_static.png"
+	fallback: "assets/peek-flat/textures/item/crying_obsidian_static.png"
 }

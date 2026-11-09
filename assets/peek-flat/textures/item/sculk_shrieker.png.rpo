@@ -1,4 +1,4 @@
 {
 	condition: "animatedTextures",
-	fallback: "assets/minecraft/textures/item/peek_flat_sculk_shrieker_static.png"
+	fallback: "assets/peek-flat/textures/item/sculk_shrieker_static.png"
 }

@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/sulfur_wall"
+      "model": "peek-flat:sulfur_wall"
     },
     "on_false": {
       "type": "minecraft:model",

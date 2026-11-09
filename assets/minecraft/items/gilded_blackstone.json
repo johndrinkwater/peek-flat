@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/gilded_blackstone"
+      "model": "peek-flat:gilded_blackstone"
     },
     "on_false": {
       "type": "minecraft:model",

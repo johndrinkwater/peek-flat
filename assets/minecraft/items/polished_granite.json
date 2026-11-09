@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/polished_granite"
+      "model": "peek-flat:polished_granite"
     },
     "on_false": {
       "type": "minecraft:model",

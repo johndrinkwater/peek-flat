@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/dead_tube_coral_block"
+      "model": "peek-flat:dead_tube_coral_block"
     },
     "on_false": {
       "type": "minecraft:model",

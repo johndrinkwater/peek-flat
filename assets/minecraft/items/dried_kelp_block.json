@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/dried_kelp_block"
+      "model": "peek-flat:dried_kelp_block"
     },
     "on_false": {
       "type": "minecraft:model",

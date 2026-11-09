@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/yellow_poplar_leaves"
+      "model": "peek-flat:yellow_poplar_leaves"
     },
     "on_false": {
       "type": "minecraft:model",

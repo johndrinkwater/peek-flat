@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/white_concrete_stairs"
+      "model": "peek-flat:white_concrete_stairs"
     },
     "on_false": {
       "type": "minecraft:model",

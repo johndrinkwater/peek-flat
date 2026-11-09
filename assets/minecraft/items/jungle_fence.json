@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/jungle_fence"
+      "model": "peek-flat:jungle_fence"
     },
     "on_false": {
       "type": "minecraft:model",

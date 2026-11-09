@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/chipped_anvil"
+      "model": "peek-flat:chipped_anvil"
     },
     "on_false": {
       "type": "minecraft:model",

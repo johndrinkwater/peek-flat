@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/nether_brick_fence"
+      "model": "peek-flat:nether_brick_fence"
     },
     "on_false": {
       "type": "minecraft:model",

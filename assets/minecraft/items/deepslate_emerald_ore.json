@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/deepslate_emerald_ore"
+      "model": "peek-flat:deepslate_emerald_ore"
     },
     "on_false": {
       "type": "minecraft:model",

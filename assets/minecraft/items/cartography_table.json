@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/cartography_table"
+      "model": "peek-flat:cartography_table"
     },
     "on_false": {
       "type": "minecraft:model",

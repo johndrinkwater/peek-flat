@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek_flat/cyan_stained_glass"
+      "model": "peek-flat:cyan_stained_glass"
     },
     "on_false": {
       "type": "minecraft:model",

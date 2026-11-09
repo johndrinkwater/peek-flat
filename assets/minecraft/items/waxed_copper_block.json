@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek-flat:copper_block"
+      "model": "peek-flat:waxed_copper_block"
     },
     "on_false": {
       "type": "minecraft:model",

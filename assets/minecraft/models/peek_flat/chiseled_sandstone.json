@@ -1,8 +1,8 @@
 {
   "parent": "peek_flat/block_item_overlay",
   "textures": {
-    "base": "item/peek_flat_sandstone",
-    "overlay": "item/peek_flat_chiseled_sandstone_overlay",
-    "particle": "item/peek_flat_sandstone"
+    "base": "peek-flat:item/sandstone",
+    "overlay": "peek-flat:item/chiseled_sandstone_overlay",
+    "particle": "peek-flat:item/sandstone"
   }
 }

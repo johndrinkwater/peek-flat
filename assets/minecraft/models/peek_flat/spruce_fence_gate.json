@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_spruce_fence_gate",
-    "particle": "item/peek_flat_spruce_planks"
+    "layer0": "peek-flat:item/spruce_fence_gate",
+    "particle": "peek-flat:item/spruce_planks"
   }
 }

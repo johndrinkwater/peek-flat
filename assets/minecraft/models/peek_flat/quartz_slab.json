@@ -1,8 +1,8 @@
 {
   "parent": "peek_flat/block_item_slab_overlay_template",
   "textures": {
-    "base": "item/peek_flat_smooth_quartz",
-    "overlay": "item/peek_flat_quartz_overlay",
-    "particle": "item/peek_flat_smooth_quartz"
+    "base": "peek-flat:item/smooth_quartz",
+    "overlay": "peek-flat:item/quartz_overlay",
+    "particle": "peek-flat:item/smooth_quartz"
   }
 }

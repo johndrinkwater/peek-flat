@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_slab_template",
   "textures": {
-    "base": "item/peek_flat_polished_granite",
-    "particle": "item/peek_flat_polished_granite"
+    "base": "peek-flat:item/polished_granite",
+    "particle": "peek-flat:item/polished_granite"
   }
 }

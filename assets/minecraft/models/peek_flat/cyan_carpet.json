@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_carpet_template",
   "textures": {
-    "base": "item/peek_flat_cyan_wool",
-    "particle": "item/peek_flat_cyan_wool"
+    "base": "peek-flat:item/cyan_wool",
+    "particle": "peek-flat:item/cyan_wool"
   }
 }

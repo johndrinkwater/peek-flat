@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_wall_template",
   "textures": {
-    "base": "item/peek_flat_cinnabar",
-    "particle": "item/peek_flat_cinnabar"
+    "base": "peek-flat:item/cinnabar",
+    "particle": "peek-flat:item/cinnabar"
   }
 }

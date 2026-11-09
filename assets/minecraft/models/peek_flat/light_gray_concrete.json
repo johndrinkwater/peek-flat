@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_light_gray_concrete"
+    "base": "peek-flat:item/light_gray_concrete"
   }
 }

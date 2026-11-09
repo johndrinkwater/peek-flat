@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_packed_mud"
+    "base": "peek-flat:item/packed_mud"
   }
 }

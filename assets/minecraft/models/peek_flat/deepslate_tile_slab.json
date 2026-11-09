@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_slab_template",
   "textures": {
-    "base": "item/peek_flat_deepslate_tile",
-    "particle": "item/peek_flat_deepslate_tile"
+    "base": "peek-flat:item/deepslate_tile",
+    "particle": "peek-flat:item/deepslate_tile"
   }
 }

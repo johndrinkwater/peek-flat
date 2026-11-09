@@ -1,8 +1,8 @@
 {
   "parent": "peek_flat/block_item_overlay",
   "textures": {
-    "base": "item/peek_flat_stone",
-    "overlay": "item/peek_flat_infested_stone_overlay",
-    "particle": "item/peek_flat_stone"
+    "base": "peek-flat:item/stone",
+    "overlay": "peek-flat:item/infested_stone_overlay",
+    "particle": "peek-flat:item/stone"
   }
 }

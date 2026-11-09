@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_fence_template",
   "textures": {
-    "base": "item/peek_flat_nether_brick",
-    "particle": "item/peek_flat_nether_brick"
+    "base": "peek-flat:item/nether_brick",
+    "particle": "peek-flat:item/nether_brick"
   }
 }

@@ -1,8 +1,8 @@
 {
   "parent": "peek_flat/block_item_overlay",
   "textures": {
-    "base": "item/peek_flat_oxidized_copper_bulb",
-    "overlay": "item/peek_flat_waxed_copper_overlay",
-    "particle": "item/peek_flat_oxidized_copper_bulb"
+    "base": "peek-flat:item/oxidized_copper_bulb",
+    "overlay": "peek-flat:item/waxed_copper_overlay",
+    "particle": "peek-flat:item/oxidized_copper_bulb"
   }
 }

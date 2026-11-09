@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_tripwire_hook",
-    "particle": "item/peek_flat_tripwire_hook"
+    "layer0": "peek-flat:item/tripwire_hook",
+    "particle": "peek-flat:item/tripwire_hook"
   }
 }

@@ -2,7 +2,7 @@
 	"parent": "peek_flat/block_item",
 	"textures": {
 		"base": "item/copper_door",
-		"overlay": "item/peek_flat_waxed_copper_overlay"
+		"overlay": "peek-flat:item/waxed_copper_overlay"
 	},
 	"elements": [
 		{

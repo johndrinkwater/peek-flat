@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_wall_template",
   "textures": {
-    "base": "item/peek_flat_prismarine",
-    "particle": "item/peek_flat_prismarine"
+    "base": "peek-flat:item/prismarine",
+    "particle": "peek-flat:item/prismarine"
   }
 }

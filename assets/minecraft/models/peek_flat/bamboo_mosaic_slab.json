@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_slab_template",
   "textures": {
-    "base": "item/peek_flat_bamboo_mosaic",
-    "particle": "item/peek_flat_bamboo_mosaic"
+    "base": "peek-flat:item/bamboo_mosaic",
+    "particle": "peek-flat:item/bamboo_mosaic"
   }
 }

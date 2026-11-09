@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_end_rod",
-    "particle": "item/peek_flat_end_rod"
+    "layer0": "peek-flat:item/end_rod",
+    "particle": "peek-flat:item/end_rod"
   }
 }

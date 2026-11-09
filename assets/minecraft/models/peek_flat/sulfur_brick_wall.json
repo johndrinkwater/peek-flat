@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_wall_template",
   "textures": {
-    "base": "item/peek_flat_sulphur_brick",
-    "particle": "item/peek_flat_sulphur_brick"
+    "base": "peek-flat:item/sulphur_brick",
+    "particle": "peek-flat:item/sulphur_brick"
   }
 }

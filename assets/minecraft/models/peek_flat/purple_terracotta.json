@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_purple_terracotta"
+    "base": "peek-flat:item/purple_terracotta"
   }
 }

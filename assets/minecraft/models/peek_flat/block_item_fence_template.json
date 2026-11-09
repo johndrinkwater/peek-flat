@@ -2,7 +2,7 @@
 	"format_version": "1.21.6",
 	"parent": "peek_flat/block_item",
 	"textures": {
-		"base": "item/peek_flat_oak_planks"
+		"base": "peek-flat:item/oak_planks"
 	},
 	"elements": [
 		{

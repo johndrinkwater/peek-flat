@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item_glass_pane_template",
   "textures": {
-    "base": "item/peek_flat_purple_stained_glass"
+    "base": "peek-flat:item/purple_stained_glass"
   }
 }

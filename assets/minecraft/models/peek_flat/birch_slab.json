@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_slab_template",
   "textures": {
-    "base": "item/peek_flat_birch_planks",
-    "particle": "item/peek_flat_birch_planks"
+    "base": "peek-flat:item/birch_planks",
+    "particle": "peek-flat:item/birch_planks"
   }
 }

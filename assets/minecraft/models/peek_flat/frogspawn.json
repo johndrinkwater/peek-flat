@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_frogspawn",
-    "particle": "item/peek_flat_frogspawn"
+    "layer0": "peek-flat:item/frogspawn",
+    "particle": "peek-flat:item/frogspawn"
   }
 }

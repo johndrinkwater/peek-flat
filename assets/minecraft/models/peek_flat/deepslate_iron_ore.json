@@ -1,8 +1,8 @@
 {
   "parent": "peek_flat/block_item_overlay",
   "textures": {
-    "base": "item/peek_flat_deepslate",
-    "overlay": "item/peek_flat_iron_ore_overlay",
-    "particle": "item/peek_flat_deepslate"
+    "base": "peek-flat:item/deepslate",
+    "overlay": "peek-flat:item/iron_ore_overlay",
+    "particle": "peek-flat:item/deepslate"
   }
 }

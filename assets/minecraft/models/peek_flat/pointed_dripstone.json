@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_pointed_dripstone",
-    "particle": "item/peek_flat_pointed_dripstone"
+    "layer0": "peek-flat:item/pointed_dripstone",
+    "particle": "peek-flat:item/pointed_dripstone"
   }
 }

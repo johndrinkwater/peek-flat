@@ -2,7 +2,7 @@
 	"format_version": "1.21.6",
 	"parent": "peek_flat/block_item",
 	"textures": {
-		"particle": "item/peek_flat_acacia_wood"
+		"particle": "peek-flat:item/acacia_wood"
 	},
 	"elements": [
 		{

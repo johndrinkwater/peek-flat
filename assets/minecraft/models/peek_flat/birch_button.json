@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item_button_template",
   "textures": {
-    "base": "item/peek_flat_birch_planks"
+    "base": "peek-flat:item/birch_planks"
   }
 }

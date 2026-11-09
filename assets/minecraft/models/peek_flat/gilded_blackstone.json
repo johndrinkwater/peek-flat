@@ -1,8 +1,8 @@
 {
   "parent": "peek_flat/block_item_overlay",
   "textures": {
-    "base": "item/peek_flat_blackstone",
-    "overlay": "item/peek_flat_gilded_blackstone_overlay",
-    "particle": "item/peek_flat_blackstone"
+    "base": "peek-flat:item/blackstone",
+    "overlay": "peek-flat:item/gilded_blackstone_overlay",
+    "particle": "peek-flat:item/blackstone"
   }
 }

@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_sculk_shrieker",
-    "particle": "item/peek_flat_sculk_shrieker"
+    "layer0": "peek-flat:item/sculk_shrieker",
+    "particle": "peek-flat:item/sculk_shrieker"
   }
 }

@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_fence_template",
   "textures": {
-    "base": "item/peek_flat_jungle_planks",
-    "particle": "item/peek_flat_jungle_planks"
+    "base": "peek-flat:item/jungle_planks",
+    "particle": "peek-flat:item/jungle_planks"
   }
 }

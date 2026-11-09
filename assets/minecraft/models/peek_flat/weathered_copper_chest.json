@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_weathered_copper_chest",
-    "particle": "item/peek_flat_weathered_copper_chest"
+    "layer0": "peek-flat:item/weathered_copper_chest",
+    "particle": "peek-flat:item/weathered_copper_chest"
   }
 }

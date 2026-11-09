@@ -1,8 +1,8 @@
 {
   "parent": "peek_flat/block_item_slab_overlay_template",
   "textures": {
-    "base": "item/peek_flat_oak_planks",
-    "overlay": "item/peek_flat_petrified_oak_overlay",
-    "particle": "item/peek_flat_oak_planks"
+    "base": "peek-flat:item/oak_planks",
+    "overlay": "peek-flat:item/petrified_oak_overlay",
+    "particle": "peek-flat:item/oak_planks"
   }
 }

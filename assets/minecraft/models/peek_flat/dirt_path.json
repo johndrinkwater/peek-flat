@@ -1,8 +1,8 @@
 {
   "parent": "peek_flat/block_item_overlay_tinted",
   "textures": {
-    "base": "item/peek_flat_dirt",
-    "overlay": "item/peek_flat_dirt_path_overlay",
-    "particle": "item/peek_flat_dirt"
+    "base": "peek-flat:item/dirt",
+    "overlay": "peek-flat:item/dirt_path_overlay",
+    "particle": "peek-flat:item/dirt"
   }
 }

@@ -1,8 +1,8 @@
 {
   "parent": "peek_flat/block_item_overlay",
   "textures": {
-    "base": "item/peek_flat_purpur",
-    "overlay": "item/peek_flat_purpur_pillar_overlay",
-    "particle": "item/peek_flat_purpur"
+    "base": "peek-flat:item/purpur",
+    "overlay": "peek-flat:item/purpur_pillar_overlay",
+    "particle": "peek-flat:item/purpur"
   }
 }

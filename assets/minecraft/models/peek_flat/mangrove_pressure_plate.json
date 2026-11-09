@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item_pressure_plate_template",
   "textures": {
-    "base": "item/peek_flat_mangrove_planks"
+    "base": "peek-flat:item/mangrove_planks"
   }
 }

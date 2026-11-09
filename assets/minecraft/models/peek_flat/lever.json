@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_lever",
-    "particle": "item/peek_flat_lever"
+    "layer0": "peek-flat:item/lever",
+    "particle": "peek-flat:item/lever"
   }
 }

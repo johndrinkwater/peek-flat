@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_spore_blossom",
-    "particle": "item/peek_flat_spore_blossom"
+    "layer0": "peek-flat:item/spore_blossom",
+    "particle": "peek-flat:item/spore_blossom"
   }
 }

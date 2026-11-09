@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_polished_cinnabar"
+    "base": "peek-flat:item/polished_cinnabar"
   }
 }

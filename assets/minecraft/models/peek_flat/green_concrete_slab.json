@@ -1,7 +1,7 @@
 {
   "parent": "peek_flat/block_item_slab_template",
   "textures": {
-    "base": "item/peek_flat_green_concrete",
-    "particle": "item/peek_flat_green_concrete"
+    "base": "peek-flat:item/green_concrete",
+    "particle": "peek-flat:item/green_concrete"
   }
 }

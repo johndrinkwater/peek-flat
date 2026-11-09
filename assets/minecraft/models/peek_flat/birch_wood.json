@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_birch_wood"
+    "base": "peek-flat:item/birch_wood"
   }
 }

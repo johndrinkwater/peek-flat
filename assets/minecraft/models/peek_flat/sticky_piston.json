@@ -1,8 +1,8 @@
 {
   "parent": "peek_flat/block_item_overlay",
   "textures": {
-    "base": "item/peek_flat_piston",
-    "overlay": "item/peek_flat_sticky_piston_overlay",
-    "particle": "item/peek_flat_piston"
+    "base": "peek-flat:item/piston",
+    "overlay": "peek-flat:item/sticky_piston_overlay",
+    "particle": "peek-flat:item/piston"
   }
 }

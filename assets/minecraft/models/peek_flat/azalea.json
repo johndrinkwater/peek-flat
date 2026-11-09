@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_azalea",
-    "particle": "item/peek_flat_azalea"
+    "layer0": "peek-flat:item/azalea",
+    "particle": "peek-flat:item/azalea"
   }
 }

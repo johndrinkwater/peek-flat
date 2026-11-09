@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_birch_fence_gate",
-    "particle": "item/peek_flat_birch_planks"
+    "layer0": "peek-flat:item/birch_fence_gate",
+    "particle": "peek-flat:item/birch_planks"
   }
 }

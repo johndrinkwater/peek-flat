@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "item/peek_flat_debug_stick",
-    "particle": "item/peek_flat_debug_stick"
+    "layer0": "peek-flat:item/debug_stick",
+    "particle": "peek-flat:item/debug_stick"
   }
 }

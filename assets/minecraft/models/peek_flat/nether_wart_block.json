@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_nether_wart_block"
+    "base": "peek-flat:item/nether_wart_block"
   }
 }

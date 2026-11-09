@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_weathered_copper_grate"
+    "base": "peek-flat:item/weathered_copper_grate"
   }
 }

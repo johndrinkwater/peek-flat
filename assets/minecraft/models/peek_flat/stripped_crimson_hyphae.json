@@ -1,6 +1,6 @@
 {
   "parent": "peek_flat/block_item",
   "textures": {
-    "base": "item/peek_flat_stripped_crimson_hyphae"
+    "base": "peek-flat:item/stripped_crimson_hyphae"
   }
 }

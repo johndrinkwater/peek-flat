@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_copper_trapdoor_overlay_template",
   "textures": {
-    "base": "peek-flat:item/copper_trapdoor",
-    "particle": "peek-flat:item/copper_trapdoor"
+    "base": "peek-flat:item/copper_trapdoor"
   }
 }

@@ -2,7 +2,6 @@
   "parent": "peek-flat:block_item_overlay_tinted",
   "textures": {
     "base": "peek-flat:item/dirt",
-    "overlay": "peek-flat:item/farmland_overlay",
-    "particle": "peek-flat:item/dirt"
+    "overlay": "peek-flat:item/farmland_overlay"
   }
 }

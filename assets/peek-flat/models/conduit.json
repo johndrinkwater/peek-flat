@@ -1,7 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "peek-flat:item/conduit",
-    "particle": "peek-flat:item/conduit"
+    "layer0": "peek-flat:item/conduit"
   }
 }

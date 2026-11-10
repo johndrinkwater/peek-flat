@@ -65,7 +65,7 @@ if [ "${REFERENCE:0:6}" == "nether" ]; then
 	BASE="netherrack"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $o > $DESTIN$o
-jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${BASE}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\", \"particle\": \"peek-flat:item/${BASE}\" } }" > $DESTON$o
+jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${BASE}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\" } }" > $DESTON$o
 printf '%s ' "${o}"
 done
 
@@ -129,7 +129,7 @@ if [ "$BASE" == "purpur_pillar" ]; then
 	BASE="purpur"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | .on_true.model |= sub(\"_0\"; \"\") | {\"model\": . } " $b > $DESTIN$b
-jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${BASE}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\", \"particle\": \"peek-flat:item/${BASE}\" } }" > $DESTON$b
+jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${BASE}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\" } }" > $DESTON$b
 printf '%s ' "${b}"
 done
 
@@ -141,7 +141,7 @@ REFERENCE="${b%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_block//' )
 BASE="dirt"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $b > $DESTIN$b
-jq -n "{ \"parent\": \"peek-flat:block_item_overlay_tinted\", \"textures\": { \"base\": \"peek-flat:item/${BASE}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\", \"particle\": \"peek-flat:item/${BASE}\" } }" > $DESTON$b
+jq -n "{ \"parent\": \"peek-flat:block_item_overlay_tinted\", \"textures\": { \"base\": \"peek-flat:item/${BASE}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\" } }" > $DESTON$b
 printf '%s ' "${b}"
 done
 
@@ -154,7 +154,7 @@ for w in waxed_chiseled_copper.json waxed_copper_block.json waxed_copper_bulb.js
 REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | .on_true.model |= sub(\":\"; \":waxed_\") | {\"model\": . } " $w > $DESTIN$w
-jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/waxed_copper_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
+jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/waxed_copper_overlay\" } }" > $DESTON$w
 printf '%s ' "${w}"
 done
 
@@ -163,7 +163,7 @@ for w in waxed_copper_chest.json waxed_exposed_copper_chest.json waxed_oxidized_
 REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true: { \"type\": \"minecraft:model\", \"model\": \"peek-flat:${REFERENCE}\" }, on_false: .model } | {\"model\": . } " $w > $DESTIN$w
-jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/waxed_copper_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
+jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/waxed_copper_overlay\" } }" > $DESTON$w
 printf '%s ' "${w}"
 done
 
@@ -184,7 +184,7 @@ if [ "$MATERIAL" == "cracked_stone_brick" ]; then
 	MATERIAL="stone_brick"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\":\"; \":infested_\")| {\"model\": . } " $i > $DESTIN$i
-jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$i
+jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\" } }" > $DESTON$i
 printf '%s ' "${i}"
 done
 
@@ -257,7 +257,7 @@ for l in acacia_leaves.json azalea_leaves.json birch_leaves.json cherry_leaves.j
 REFERENCE="${l%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model , on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $l > $DESTIN$l
-jq -n "{ \"parent\": \"peek-flat:block_item_tinted\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$l
+jq -n "{ \"parent\": \"peek-flat:block_item_tinted\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$l
 printf '%s ' "${l}"
 done
 
@@ -285,7 +285,7 @@ if [ "$PLANK" == "nether_brick_planks" ]; then
 	PLANK="nether_brick"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $f > $DESTIN/$f
-jq -n "{ \"parent\": \"peek-flat:block_item_fence_template\", \"textures\": { \"base\": \"peek-flat:item/${PLANK}\", \"particle\": \"peek-flat:item/${PLANK}\" } }" > $DESTON$f
+jq -n "{ \"parent\": \"peek-flat:block_item_fence_template\", \"textures\": { \"base\": \"peek-flat:item/${PLANK}\" } }" > $DESTON$f
 printf '%s ' "${f}"
 done
 
@@ -299,7 +299,7 @@ REFERENCE="${f%.*}"
 TEXTURE=$( echo $REFERENCE | sed 's/_fence_gate//' | sed 's/^/stripped_/' )
 PLANK=$( echo $REFERENCE | sed 's/_fence_gate/_planks/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $f > $DESTIN/$f
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\", \"particle\": \"peek-flat:item/${PLANK}\" } }" > $DESTON$f
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$f
 printf '%s ' "${f}"
 done
 
@@ -313,7 +313,7 @@ for w in andesite_wall.json blackstone_wall.json brick_wall.json calcite_wall.js
 REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_wall//' | sed 's/sulfur/sulphur/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $w > $DESTIN$w
-jq -n "{ \"parent\": \"peek-flat:block_item_wall_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
+jq -n "{ \"parent\": \"peek-flat:block_item_wall_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
 printf '%s ' "${w}"
 done
 
@@ -323,7 +323,7 @@ REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_wall//' | sed 's/mossy_//')
 BASE=$( echo $REFERENCE | sed 's/_wall//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $w > $DESTIN$w
-jq -n "{ \"parent\": \"peek-flat:block_item_wall_mossy_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
+jq -n "{ \"parent\": \"peek-flat:block_item_wall_mossy_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\" } }" > $DESTON$w
 printf '%s ' "${w}"
 done
 
@@ -335,7 +335,7 @@ for s in andesite_slab.json bamboo_mosaic_slab.json blackstone_slab.json brick_s
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' | sed 's/sulfur/sulphur/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_slab_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_slab_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -344,7 +344,7 @@ for s in acacia_slab.json bamboo_slab.json birch_slab.json cherry_slab.json crim
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' | sed 's/$/_planks/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_slab_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_slab_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -353,7 +353,7 @@ for s in black_wool_slab.json blue_wool_slab.json brown_wool_slab.json cyan_wool
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_slab_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_slab_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -362,7 +362,7 @@ for s in black_concrete_slab.json blue_concrete_slab.json brown_concrete_slab.js
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_slab_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_slab_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -380,7 +380,7 @@ if [ "$MATERIAL" == "petrified_oak" ]; then
 fi
 BASE=$( echo $REFERENCE | sed 's/_slab//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_slab_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_slab_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -391,7 +391,7 @@ REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' | sed 's/waxed_//' )
 BASE="waxed_copper"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\":\"; \":waxed_\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_slab_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_slab_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -404,7 +404,7 @@ for s in andesite_stairs.json bamboo_mosaic_stairs.json blackstone_stairs.json b
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' | sed 's/sulfur/sulphur/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_stairs_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_stairs_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -413,7 +413,7 @@ for s in acacia_stairs.json bamboo_stairs.json birch_stairs.json cherry_stairs.j
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' | sed 's/$/_planks/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_stairs_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_stairs_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -422,7 +422,7 @@ for s in black_wool_stairs.json blue_wool_stairs.json brown_wool_stairs.json cya
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_stairs_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_stairs_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -431,7 +431,7 @@ for s in black_concrete_stairs.json blue_concrete_stairs.json brown_concrete_sta
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_stairs_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_stairs_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -444,7 +444,7 @@ if [ "$MATERIAL" == "quartz" ]; then
 fi
 BASE=$( echo $REFERENCE | sed 's/_stairs//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_stairs_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_stairs_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -466,7 +466,7 @@ printf '\n\nBuilding trapdoors:\n'
 for t in acacia_trapdoor.json bamboo_trapdoor.json birch_trapdoor.json cherry_trapdoor.json crimson_trapdoor.json dark_oak_trapdoor.json iron_trapdoor.json jungle_trapdoor.json mangrove_trapdoor.json oak_trapdoor.json pale_oak_trapdoor.json poplar_trapdoor.json spruce_trapdoor.json warped_trapdoor.json copper_trapdoor.json exposed_copper_trapdoor.json oxidized_copper_trapdoor.json weathered_copper_trapdoor.json ; do
 REFERENCE="${t%.*}"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_bottom\"; \"\") | {\"model\": . } " $t > $DESTIN$t
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\", \"particle\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$t
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$t
 printf '%s ' "${t}"
 done
 
@@ -474,7 +474,7 @@ for w in waxed_copper_trapdoor.json waxed_exposed_copper_trapdoor.json waxed_oxi
 REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_bottom\"; \"\") | .on_true.model |= sub(\":\"; \":waxed_\") | {\"model\": . } " $w > $DESTIN$w
-jq -n "{ \"parent\": \"peek-flat:block_item_copper_trapdoor_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
+jq -n "{ \"parent\": \"peek-flat:block_item_copper_trapdoor_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
 printf '%s ' "${w}"
 done
 
@@ -486,7 +486,7 @@ done
 # REFERENCE="${w%.*}"
 # MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
 # jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\":\"; \":waxed_\") | {\"model\": . } " $w > $DESTIN$w
-# jq -n "{ \"parent\": \"peek-flat:block_item_copper_door_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
+# jq -n "{ \"parent\": \"peek-flat:block_item_copper_door_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
 # printf 'Adjusting file: %s\n' "${w}"
 # done
 
@@ -595,7 +595,7 @@ if [ "$MATERIAL" == "moss_wool" ]; then
 	MATERIAL="moss_block"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $c > $DESTIN$c
-jq -n "{ \"parent\": \"peek-flat:block_item_carpet_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$c
+jq -n "{ \"parent\": \"peek-flat:block_item_carpet_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$c
 printf '%s ' "${c}"
 done
 
@@ -603,7 +603,7 @@ for c in snow.json ; do
 REFERENCE="${c%.*}"
 MATERIAL="snow"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model = \"peek-flat:snow\" | {\"model\": . } " $c > $DESTIN$c
-jq -n "{ \"parent\": \"peek-flat:block_item_flat_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$c
+jq -n "{ \"parent\": \"peek-flat:block_item_flat_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$c
 printf '%s ' "${c}"
 done
 
@@ -614,7 +614,7 @@ done
 # for b in black_banner.json blue_banner.json brown_banner.json cyan_banner.json gray_banner.json green_banner.json light_blue_banner.json light_gray_banner.json lime_banner.json magenta_banner.json orange_banner.json pink_banner.json purple_banner.json red_banner.json white_banner.json yellow_banner.json ; do
 # REFERENCE="${b%.*}"
 # jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.base |= sub(\"minecraft:item/\"; \"peek-flat:\") " $b > $DESTIN$b
-# # jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\", \"particle\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$t
+# # jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$t
 
 # printf 'Skipping file: %s\n' "${b}"
 # done
@@ -629,7 +629,7 @@ for s in black_stained_glass.json blue_stained_glass.json brown_stained_glass.js
 REFERENCE="${s%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_glass_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_glass_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -653,7 +653,7 @@ for g in amethyst_cluster.json anvil.json azalea.json beacon.json big_dripleaf.j
 REFERENCE="${g%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item/\"; \"peek-flat:\") | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inactive\"; \"\") | .on_true.model |= sub(\"_stable\"; \"\") | {\"model\": . } " $g > $DESTIN$g
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$g
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$g
 printf '%s ' "${g}"
 done
 
@@ -670,7 +670,7 @@ if [ "$levels" == "6" ]; then
 BEFERENCE="${REFERENCE}"
 fi
 BEFILE="${BEFERENCE}.json"
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${BEFERENCE}\", \"particle\": \"peek-flat:item/${BEFERENCE}\" } }" > $DESTON$BEFILE
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${BEFERENCE}\" } }" > $DESTON$BEFILE
 done
 printf '%s ' "${b}"
 done
@@ -682,7 +682,7 @@ for g in conduit.json ; do
 REFERENCE="${g%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : {}, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:conduit\" | del( .on_true.base ) | del(.on_true.transformation) | {\"model\": . } " $g > $DESTIN$g
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$g
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$g
 printf '%s ' "${g}"
 done
 
@@ -695,7 +695,7 @@ for b in black_shulker_box.json blue_shulker_box.json brown_shulker_box.json cya
 REFERENCE="${b%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:$REFERENCE\" | del(.on_true.transformation) | {\"model\": . } " $b > $DESTIN$b
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\", \"particle\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$b
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$b
 printf '%s ' "${b}"
 done
 
@@ -708,7 +708,7 @@ for c in chest.json copper_chest.json decorated_pot.json ender_chest.json expose
 REFERENCE="${c%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:$REFERENCE\" | {\"model\": . } " $c > $DESTIN$c
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\", \"particle\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$c
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$c
 printf '%s ' "${c}"
 done
 
@@ -724,7 +724,7 @@ for b in black_bed.json blue_bed.json brown_bed.json cyan_bed.json gray_bed.json
 REFERENCE="${b%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:$REFERENCE\" | del(.on_true.models) | {\"model\": . } " $b > $DESTIN$b
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\", \"particle\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$b
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$b
 printf '%s ' "${b}"
 done
 
@@ -732,7 +732,7 @@ for g in straw_bed.json ; do
 REFERENCE="${g%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : {}, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:straw_bed\" | del( .on_true.base ) | del(.on_true.transformation) | {\"model\": . } " $g > $DESTIN$g
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$g
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$g
 printf '%s ' "${g}"
 done
 
@@ -745,7 +745,7 @@ printf '\n\nBuilding heads:\n'
 h="dragon_head.json"
 REFERENCE="${h%.*}"
 MATERIAL=$REFERENCE
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$h
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$h
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model.model, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:dragon_head\" | del (.on_true.kind) | {\"model\": . } " $h > $DESTIN$h
 printf '%s ' "${h}"
 

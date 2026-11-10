@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_flat_template",
   "textures": {
-    "base": "peek-flat:item/snow",
-    "particle": "peek-flat:item/snow"
+    "base": "peek-flat:item/snow"
   }
 }

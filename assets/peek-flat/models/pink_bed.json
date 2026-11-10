@@ -1,7 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "peek-flat:item/pink_bed",
-    "particle": "peek-flat:item/pink_bed"
+    "layer0": "peek-flat:item/pink_bed"
   }
 }

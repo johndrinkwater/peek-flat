@@ -2,7 +2,6 @@
   "parent": "peek-flat:block_item_stairs_overlay_template",
   "textures": {
     "base": "peek-flat:item/cobblestone",
-    "overlay": "peek-flat:item/mossy_cobblestone_overlay",
-    "particle": "peek-flat:item/cobblestone"
+    "overlay": "peek-flat:item/mossy_cobblestone_overlay"
   }
 }

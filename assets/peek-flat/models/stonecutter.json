@@ -1,7 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "peek-flat:item/stonecutter",
-    "particle": "peek-flat:item/stonecutter"
+    "layer0": "peek-flat:item/stonecutter"
   }
 }

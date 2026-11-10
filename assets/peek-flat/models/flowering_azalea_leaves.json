@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_tinted",
   "textures": {
-    "base": "peek-flat:item/flowering_azalea_leaves",
-    "particle": "peek-flat:item/flowering_azalea_leaves"
+    "base": "peek-flat:item/flowering_azalea_leaves"
   }
 }

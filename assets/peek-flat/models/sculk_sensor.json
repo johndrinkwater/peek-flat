@@ -1,7 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "peek-flat:item/sculk_sensor",
-    "particle": "peek-flat:item/sculk_sensor"
+    "layer0": "peek-flat:item/sculk_sensor"
   }
 }

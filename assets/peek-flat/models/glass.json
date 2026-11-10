@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_glass_template",
   "textures": {
-    "base": "peek-flat:item/glass",
-    "particle": "peek-flat:item/glass"
+    "base": "peek-flat:item/glass"
   }
 }

@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_slab_template",
   "textures": {
-    "base": "peek-flat:item/cherry_planks",
-    "particle": "peek-flat:item/cherry_planks"
+    "base": "peek-flat:item/cherry_planks"
   }
 }

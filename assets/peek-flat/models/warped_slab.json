@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_slab_template",
   "textures": {
-    "base": "peek-flat:item/warped_planks",
-    "particle": "peek-flat:item/warped_planks"
+    "base": "peek-flat:item/warped_planks"
   }
 }

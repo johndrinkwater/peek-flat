@@ -2,7 +2,6 @@
   "parent": "peek-flat:block_item_slab_overlay_template",
   "textures": {
     "base": "peek-flat:item/sandstone",
-    "overlay": "peek-flat:item/cut_sandstone_overlay",
-    "particle": "peek-flat:item/sandstone"
+    "overlay": "peek-flat:item/cut_sandstone_overlay"
   }
 }

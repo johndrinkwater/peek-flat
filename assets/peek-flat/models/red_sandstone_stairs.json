@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_stairs_template",
   "textures": {
-    "base": "peek-flat:item/red_sandstone",
-    "particle": "peek-flat:item/red_sandstone"
+    "base": "peek-flat:item/red_sandstone"
   }
 }

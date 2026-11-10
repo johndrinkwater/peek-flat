@@ -23,6 +23,9 @@
 			"rotation": [0, 180, 0]
 		}
 	},
+	"textures": {
+		"particle": "#base"
+	},
 	"elements": [
 		{
 			"from": [14, 4, 7.5],

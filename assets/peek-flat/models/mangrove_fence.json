@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_fence_template",
   "textures": {
-    "base": "peek-flat:item/mangrove_planks",
-    "particle": "peek-flat:item/mangrove_planks"
+    "base": "peek-flat:item/mangrove_planks"
   }
 }

@@ -2,7 +2,6 @@
   "parent": "peek-flat:block_item_overlay",
   "textures": {
     "base": "peek-flat:item/stone",
-    "overlay": "peek-flat:item/diamond_ore_overlay",
-    "particle": "peek-flat:item/stone"
+    "overlay": "peek-flat:item/diamond_ore_overlay"
   }
 }

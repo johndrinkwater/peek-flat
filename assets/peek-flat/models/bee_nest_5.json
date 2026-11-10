@@ -1,7 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "peek-flat:item/bee_nest_5",
-    "particle": "peek-flat:item/bee_nest_5"
+    "layer0": "peek-flat:item/bee_nest_5"
   }
 }

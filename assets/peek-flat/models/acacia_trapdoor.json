@@ -1,7 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "peek-flat:item/acacia_trapdoor",
-    "particle": "peek-flat:item/acacia_trapdoor"
+    "layer0": "peek-flat:item/acacia_trapdoor"
   }
 }

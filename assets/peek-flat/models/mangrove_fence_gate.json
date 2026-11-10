@@ -1,7 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "peek-flat:item/mangrove_fence_gate",
-    "particle": "peek-flat:item/mangrove_planks"
+    "layer0": "peek-flat:item/mangrove_fence_gate"
   }
 }

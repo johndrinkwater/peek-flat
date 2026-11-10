@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_tinted",
   "textures": {
-    "base": "peek-flat:item/oak_leaves",
-    "particle": "peek-flat:item/oak_leaves"
+    "base": "peek-flat:item/oak_leaves"
   }
 }

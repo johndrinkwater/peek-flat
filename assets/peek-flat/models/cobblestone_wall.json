@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_wall_template",
   "textures": {
-    "base": "peek-flat:item/cobblestone",
-    "particle": "peek-flat:item/cobblestone"
+    "base": "peek-flat:item/cobblestone"
   }
 }

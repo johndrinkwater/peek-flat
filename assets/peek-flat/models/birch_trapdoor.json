@@ -1,7 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "peek-flat:item/birch_trapdoor",
-    "particle": "peek-flat:item/birch_trapdoor"
+    "layer0": "peek-flat:item/birch_trapdoor"
   }
 }

@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_wall_template",
   "textures": {
-    "base": "peek-flat:item/polished_calcite_brick",
-    "particle": "peek-flat:item/polished_calcite_brick"
+    "base": "peek-flat:item/polished_calcite_brick"
   }
 }

@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_slab_template",
   "textures": {
-    "base": "peek-flat:item/smooth_stone",
-    "particle": "peek-flat:item/smooth_stone"
+    "base": "peek-flat:item/smooth_stone"
   }
 }

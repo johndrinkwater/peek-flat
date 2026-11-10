@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_slab_template",
   "textures": {
-    "base": "peek-flat:item/diorite",
-    "particle": "peek-flat:item/diorite"
+    "base": "peek-flat:item/diorite"
   }
 }

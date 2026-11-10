@@ -1,7 +1,6 @@
 {
   "parent": "peek-flat:block_item_stairs_template",
   "textures": {
-    "base": "peek-flat:item/polished_cinnabar",
-    "particle": "peek-flat:item/polished_cinnabar"
+    "base": "peek-flat:item/polished_cinnabar"
   }
 }

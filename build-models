@@ -57,15 +57,15 @@ printf '\n\nBuilding overlay orc:\n'
 for o in coal_ore.json copper_ore.json deepslate_coal_ore.json deepslate_copper_ore.json deepslate_diamond_ore.json deepslate_emerald_ore.json deepslate_gold_ore.json deepslate_iron_ore.json deepslate_lapis_ore.json deepslate_redstone_ore.json diamond_ore.json emerald_ore.json gold_ore.json iron_ore.json lapis_ore.json nether_gold_ore.json nether_quartz_ore.json redstone_ore.json ; do
 REFERENCE="${o%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/deepslate_//' | sed 's/nether_gold/gold/' )
-MMATERIAL="stone"
+BASE="stone"
 if [ "${REFERENCE:0:9}" == "deepslate" ]; then
-	MMATERIAL="deepslate"
+	BASE="deepslate"
 fi
 if [ "${REFERENCE:0:6}" == "nether" ]; then
-	MMATERIAL="netherrack"
+	BASE="netherrack"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $o > $DESTIN$o
-jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${MMATERIAL}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\", \"particle\": \"peek-flat:item/${MMATERIAL}\" } }" > $DESTON$o
+jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${BASE}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\", \"particle\": \"peek-flat:item/${BASE}\" } }" > $DESTON$o
 printf '%s ' "${o}"
 done
 
@@ -75,7 +75,6 @@ done
 printf '\n\nBuilding blocks:\n'
 for b in amethyst_block.json ancient_debris.json andesite.json barrel.json basalt.json bedrock.json blackstone.json blast_furnace.json blue_ice.json bone_block.json bookshelf.json brain_coral_block.json bricks.json brittle_ice.json brown_mushroom_block.json bubble_coral_block.json budding_amethyst.json calcite.json calcite_pillar.json cartography_table.json chain_command_block.json chiseled_bookshelf.json chiseled_cinnabar.json chiseled_copper.json chiseled_packed_ice.json chiseled_polished_blackstone.json chiseled_resin_bricks.json chiseled_soulshale.json chiseled_stone_bricks.json chiseled_sulfur.json cinnabar.json cinnabar_bricks.json clay.json coarse_dirt.json cobbled_deepslate.json cobblestone.json command_block.json composter.json copper_block.json copper_bulb.json copper_grate.json crafter.json crafting_table.json crying_obsidian.json cut_copper.json dark_prismarine.json dead_brain_coral_block.json dead_bubble_coral_block.json dead_fire_coral_block.json dead_horn_coral_block.json dead_tube_coral_block.json deepslate.json deepslate_bricks.json deepslate_tiles.json diorite.json dirt.json dispenser.json dried_kelp_block.json dripstone_block.json dropper.json end_stone.json end_stone_bricks.json exposed_chiseled_copper.json exposed_copper.json exposed_copper_bulb.json exposed_copper_grate.json exposed_cut_copper.json fire_coral_block.json fletching_table.json furnace.json glowstone.json granite.json gravel.json hay_block.json heavy_core.json honey_block.json honeycomb_block.json horn_coral_block.json ice.json jigsaw.json lodestone.json loom.json magma_block.json mangrove_roots.json melon.json moss_block.json mud.json mud_bricks.json muddy_mangrove_roots.json mushroom_stem.json nether_bricks.json nether_wart_block.json netherrack.json note_block.json observer.json obsidian.json ochre_froglight.json oxidized_chiseled_copper.json oxidized_copper.json oxidized_copper_bulb.json oxidized_copper_grate.json oxidized_cut_copper.json packed_ice.json packed_ice_bricks.json packed_mud.json pale_moss_block.json pearlescent_froglight.json piston.json polished_andesite.json polished_basalt.json polished_blackstone.json polished_blackstone_bricks.json polished_calcite.json polished_calcite_bricks.json polished_cinnabar.json polished_deepslate.json polished_diorite.json polished_granite.json polished_sulfur.json polished_tuff.json potent_sulfur.json prismarine.json prismarine_bricks.json pumpkin.json purpur_block.json red_mushroom_block.json red_nether_bricks.json red_sand.json red_sandstone.json redstone_lamp.json reinforced_deepslate.json repeating_command_block.json resin_block.json resin_bricks.json respawn_anchor.json sand.json sandstone.json sculk.json sculk_catalyst.json sea_lantern.json shroomlight.json slime_block.json smithing_table.json smoker.json smooth_basalt.json smooth_quartz.json smooth_stone.json snow_block.json snow_bricks.json soul_sand.json soul_soil.json sponge.json stone.json stone_bricks.json structure_block.json sulfur.json sulfur_bricks.json tnt.json trial_spawner.json tube_coral_block.json tuff.json tuff_bricks.json vault.json verdant_froglight.json warped_wart_block.json weathered_chiseled_copper.json weathered_copper.json weathered_copper_bulb.json weathered_copper_grate.json weathered_cut_copper.json wet_sponge.json ; do
 REFERENCE="${b%.*}"
-	# Just no, we’re not having that for our files.
 MATERIAL=$( echo $REFERENCE | sed 's/bricks/brick/' | sed 's/tiles/tile/' | sed 's/sulfur/sulphur/' )
 if [ "$MATERIAL" == "purpur_block" ]; then
 	MATERIAL="purpur"
@@ -92,45 +91,45 @@ printf '\n\nBuilding overlay blocks:\n'
 for b in carved_pumpkin.json chiseled_deepslate.json chiseled_nether_bricks.json chiseled_quartz_block.json chiseled_red_sandstone.json chiseled_sandstone.json chiseled_tuff.json chiseled_tuff_bricks.json cracked_deepslate_bricks.json cracked_deepslate_tiles.json cracked_nether_bricks.json cracked_polished_blackstone_bricks.json cracked_stone_bricks.json crimson_nylium.json cut_red_sandstone.json cut_sandstone.json gilded_blackstone.json jack_o_lantern.json jukebox.json mossy_cobblestone.json mossy_stone_bricks.json purpur_pillar.json quartz_block.json quartz_bricks.json quartz_pillar.json smooth_red_sandstone.json smooth_sandstone.json sticky_piston.json suspicious_gravel.json suspicious_sand.json warped_nylium.json ; do
 REFERENCE="${b%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/bricks/brick/' | sed 's/_block//' | sed 's/tiles/tile/' )
-MMATERIAL=$( echo $MATERIAL | sed 's/mossy_//' | sed 's/chiseled_//' | sed 's/cracked_//' | sed 's/smooth_//' | sed 's/cut_//' | sed 's/gilded_//' | sed 's/suspicious_//')
+BASE=$( echo $MATERIAL | sed 's/mossy_//' | sed 's/chiseled_//' | sed 's/cracked_//' | sed 's/smooth_//' | sed 's/cut_//' | sed 's/gilded_//' | sed 's/suspicious_//')
 if [ "$MATERIAL" == "cracked_deepslate_tile" ]; then
 	MATERIAL="cracked_deepslate"
 fi
 if [ "$MATERIAL" == "cracked_deepslate_brick" ]; then
 	MATERIAL="cracked_deepslate"
 fi
-if [ "$MMATERIAL" == "crimson_nylium" ]; then
-	MMATERIAL="netherrack"
+if [ "$BASE" == "crimson_nylium" ]; then
+	BASE="netherrack"
 fi
-if [ "$MMATERIAL" == "warped_nylium" ]; then
-	MMATERIAL="netherrack"
+if [ "$BASE" == "warped_nylium" ]; then
+	BASE="netherrack"
 fi
-if [ "$MMATERIAL" == "sticky_piston" ]; then
-	MMATERIAL="piston"
+if [ "$BASE" == "sticky_piston" ]; then
+	BASE="piston"
 fi
-if [ "$MMATERIAL" == "carved_pumpkin" ]; then
-	MMATERIAL="pumpkin"
+if [ "$BASE" == "carved_pumpkin" ]; then
+	BASE="pumpkin"
 fi
-if [ "$MMATERIAL" == "jack_o_lantern" ]; then
-	MMATERIAL="pumpkin"
+if [ "$BASE" == "jack_o_lantern" ]; then
+	BASE="pumpkin"
 fi
-if [ "$MMATERIAL" == "jukebox" ]; then
-	MMATERIAL="note_block"
+if [ "$BASE" == "jukebox" ]; then
+	BASE="note_block"
 fi
-if [ "$MMATERIAL" == "quartz" ]; then
-	MMATERIAL="smooth_quartz"
+if [ "$BASE" == "quartz" ]; then
+	BASE="smooth_quartz"
 fi
-if [ "$MMATERIAL" == "quartz_brick" ]; then
-	MMATERIAL="smooth_quartz"
+if [ "$BASE" == "quartz_brick" ]; then
+	BASE="smooth_quartz"
 fi
-if [ "$MMATERIAL" == "quartz_pillar" ]; then
-	MMATERIAL="smooth_quartz"
+if [ "$BASE" == "quartz_pillar" ]; then
+	BASE="smooth_quartz"
 fi
-if [ "$MMATERIAL" == "purpur_pillar" ]; then
-	MMATERIAL="purpur"
+if [ "$BASE" == "purpur_pillar" ]; then
+	BASE="purpur"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | .on_true.model |= sub(\"_0\"; \"\") | {\"model\": . } " $b > $DESTIN$b
-jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${MMATERIAL}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\", \"particle\": \"peek-flat:item/${MMATERIAL}\" } }" > $DESTON$b
+jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${BASE}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\", \"particle\": \"peek-flat:item/${BASE}\" } }" > $DESTON$b
 printf '%s ' "${b}"
 done
 
@@ -140,9 +139,9 @@ printf '\n\nBuilding tinted blocks:\n'
 for b in dirt_path.json farmland.json grass_block.json mycelium.json podzol.json rooted_dirt.json ; do
 REFERENCE="${b%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_block//' )
-MMATERIAL="dirt"
+BASE="dirt"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $b > $DESTIN$b
-jq -n "{ \"parent\": \"peek-flat:block_item_overlay_tinted\", \"textures\": { \"base\": \"peek-flat:item/${MMATERIAL}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\", \"particle\": \"peek-flat:item/${MMATERIAL}\" } }" > $DESTON$b
+jq -n "{ \"parent\": \"peek-flat:block_item_overlay_tinted\", \"textures\": { \"base\": \"peek-flat:item/${BASE}\", \"overlay\": \"peek-flat:item/${MATERIAL}_overlay\", \"particle\": \"peek-flat:item/${BASE}\" } }" > $DESTON$b
 printf '%s ' "${b}"
 done
 
@@ -175,17 +174,17 @@ printf '\n\nBuilding infested overlays:\n'
 for i in infested_chiseled_stone_bricks.json infested_cobblestone.json infested_cracked_stone_bricks.json infested_deepslate.json infested_mossy_stone_bricks.json infested_stone_bricks.json infested_stone.json ; do
 REFERENCE="${i%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/infested_//' | sed 's/bricks/brick/' )
-MMATERIAL="infested_stone"
+BASE="infested_stone"
 if [ "$MATERIAL" == "mossy_stone_brick" ]; then
-	MMATERIAL="infested_mossy_stone_brick"
+	BASE="infested_mossy_stone_brick"
 	MATERIAL="stone_brick"
 fi
 if [ "$MATERIAL" == "cracked_stone_brick" ]; then
-	MMATERIAL="infested_cracked_stone_brick"
+	BASE="infested_cracked_stone_brick"
 	MATERIAL="stone_brick"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\":\"; \":infested_\")| {\"model\": . } " $i > $DESTIN$i
-jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${MMATERIAL}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$i
+jq -n "{ \"parent\": \"peek-flat:block_item_overlay\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$i
 printf '%s ' "${i}"
 done
 
@@ -322,9 +321,9 @@ printf '\n\nBuilding mossy wall:\n'
 for w in mossy_cobblestone_wall.json mossy_stone_brick_wall.json ; do
 REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_wall//' | sed 's/mossy_//')
-MMATERIAL=$( echo $REFERENCE | sed 's/_wall//' )
+BASE=$( echo $REFERENCE | sed 's/_wall//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $w > $DESTIN$w
-jq -n "{ \"parent\": \"peek-flat:block_item_wall_mossy_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${MMATERIAL}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
+jq -n "{ \"parent\": \"peek-flat:block_item_wall_mossy_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
 printf '%s ' "${w}"
 done
 
@@ -379,9 +378,9 @@ fi
 if [ "$MATERIAL" == "petrified_oak" ]; then
 	MATERIAL="oak_planks"
 fi
-MMATERIAL=$( echo $REFERENCE | sed 's/_slab//' )
+BASE=$( echo $REFERENCE | sed 's/_slab//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_slab_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${MMATERIAL}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_slab_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -390,9 +389,9 @@ done
 for s in waxed_cut_copper_slab.json waxed_exposed_cut_copper_slab.json waxed_oxidized_cut_copper_slab.json waxed_weathered_cut_copper_slab.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' | sed 's/waxed_//' )
-MMATERIAL="waxed_copper"
+BASE="waxed_copper"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\":\"; \":waxed_\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_slab_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${MMATERIAL}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_slab_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 
@@ -443,9 +442,9 @@ MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' | sed 's/mossy_//' | sed 's/smoo
 if [ "$MATERIAL" == "quartz" ]; then
 	MATERIAL="smooth_quartz"
 fi
-MMATERIAL=$( echo $REFERENCE | sed 's/_stairs//' )
+BASE=$( echo $REFERENCE | sed 's/_stairs//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_stairs_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${MMATERIAL}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
+jq -n "{ \"parent\": \"peek-flat:block_item_stairs_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\", \"overlay\": \"peek-flat:item/${BASE}_overlay\", \"particle\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
 printf '%s ' "${s}"
 done
 

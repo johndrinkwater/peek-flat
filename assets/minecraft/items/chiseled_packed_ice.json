@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:chiseled_packed_ice"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:block/chiseled_packed_ice"
+    }
+  }
+}

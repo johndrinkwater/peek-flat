@@ -1,0 +1,6 @@
+{
+  "parent": "peek-flat:block_item",
+  "textures": {
+    "base": "peek-flat:item/calcite_pillar"
+  }
+}

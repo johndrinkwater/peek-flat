@@ -1,5 +1,6 @@
 {
 	"format_version": "1.21.6",
+	"parent": "peek-flat:block_item",
 	"textures": {
 		"particle": "#base"
 	},
@@ -151,28 +152,5 @@
 				"south": {"uv": [9, 3, 12, 4], "texture": "#base"}
 			}
 		}
-	],
-	"gui_light": "front",
-	"display": {
-		"thirdperson_righthand": {
-			"translation": [0, 3, 1],
-			"scale": [0.55, 0.55, 0.55]
-		},
-		"firstperson_righthand": {
-			"rotation": [0, -90, 25],
-			"translation": [0, 3, 1],
-			"scale": [0.55, 0.55, 0.55]
-		},
-		"ground": {
-			"translation": [0, 2, 0],
-			"scale": [0.5, 0.5, 0.5]
-		},
-		"head": {
-			"rotation": [0, -180, 0],
-			"translation": [0, 0, -7]
-		},
-		"fixed": {
-			"rotation": [0, -180, 0]
-		}
-	}
+	]
 }

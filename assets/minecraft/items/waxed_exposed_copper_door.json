@@ -1,1 +1,14 @@
-{"parent":"minecraft:item/exposed_copper_door","overrides":[{"predicate":{"peek:shulker_item":1},"model":"peek_flat/waxed_exposed_copper_door"},{"predicate":{"custom_model_data":1702},"model":"peek_flat/waxed_exposed_copper_door"}]}
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:waxed_exposed_copper_door"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/exposed_copper_door"
+    }
+  }
+}

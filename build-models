@@ -480,15 +480,15 @@ done
 
 # DOOR
 # --------
-# for some reason, I made a template for copper doors.. maybe use it?
 
-# for w in waxed_copper_door.json waxed_exposed_copper_door.json waxed_oxidized_copper_door.json waxed_weathered_copper_door.json ; do
-# REFERENCE="${w%.*}"
-# MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
-# jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\":\"; \":waxed_\") | {\"model\": . } " $w > $DESTIN$w
-# jq -n "{ \"parent\": \"peek-flat:block_item_copper_door_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
-# printf 'Adjusting file: %s\n' "${w}"
-# done
+printf '\n\nBuilding waxed doors:\n'
+for w in waxed_copper_door.json waxed_exposed_copper_door.json waxed_oxidized_copper_door.json waxed_weathered_copper_door.json ; do
+REFERENCE="${w%.*}"
+MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item/\"; \"peek-flat:\") | .on_true.model |= sub(\":\"; \":waxed_\") | {\"model\": . } " $w > $DESTIN$w
+jq -n "{ \"parent\": \"peek-flat:block_item_copper_door_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
+printf '%s ' "${w}"
+done
 
 # PRESSURE PLATE
 # --------

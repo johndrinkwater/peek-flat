@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:iron_door"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/iron_door"
+    }
+  }
+}

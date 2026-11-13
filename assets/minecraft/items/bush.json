@@ -1,0 +1,28 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:bush",
+      "tints": [
+        {
+          "type": "minecraft:grass",
+          "downfall": 1,
+          "temperature": 0.5
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/bush",
+      "tints": [
+        {
+          "type": "minecraft:grass",
+          "downfall": 1,
+          "temperature": 0.5
+        }
+      ]
+    }
+  }
+}

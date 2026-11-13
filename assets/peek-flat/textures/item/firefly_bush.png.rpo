@@ -1,0 +1,4 @@
+{
+	condition: "animatedTextures",
+	fallback: "assets/peek-flat/textures/item/firefly_bush_static.png"
+}

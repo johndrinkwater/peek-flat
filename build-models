@@ -475,15 +475,23 @@ jq -n "{ \"parent\": \"peek-flat:block_item_copper_trapdoor_overlay_template\", 
 printf '%s ' "${w}"
 done
 
-# DOOR
+# COPPER THINGS
 # --------
 
-printf '\n\nBuilding waxed doors:\n'
+printf '\n\nBuilding waxed copper:\n'
 for w in waxed_copper_door.json waxed_exposed_copper_door.json waxed_oxidized_copper_door.json waxed_weathered_copper_door.json ; do
 REFERENCE="${w%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item/\"; \"peek-flat:\") | .on_true.model |= sub(\":\"; \":waxed_\") | {\"model\": . } " $w > $DESTIN$w
 jq -n "{ \"parent\": \"peek-flat:block_item_copper_door_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
+printf '%s ' "${w}"
+done
+
+for w in waxed_lightning_rod.json waxed_weathered_lightning_rod.json waxed_exposed_lightning_rod.json waxed_oxidized_lightning_rod.json ; do
+REFERENCE="${w%.*}"
+MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' )
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\":\"; \":waxed_\") | {\"model\": . } " $w > $DESTIN$w
+jq -n "{ \"parent\": \"peek-flat:block_item_lightning_rod_overlay_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$w
 printf '%s ' "${w}"
 done
 
@@ -646,7 +654,7 @@ done
 # bunch of flat 2d images
 
 printf '\n\nBuilding uniques:\n'
-for g in amethyst_cluster.json anvil.json azalea.json beacon.json brown_mushroom.json big_dripleaf.json bush.json cactus.json calibrated_sculk_sensor.json chipped_anvil.json chorus_flower.json chorus_plant.json comparator.json copper_torch.json crimson_fungus.json damaged_anvil.json daylight_detector.json debug_stick.json {acacia_,bamboo_,birch_,cherry_,copper_,crimson_,dark_oak_,exposed_copper_,iron_,jungle_,mangrove_,oak_,oxidized_copper_,pale_oak_,poplar_,spruce_,warped_,weathered_copper_}door.json dragon_egg.json enchanting_table.json end_portal_frame.json end_rod.json firefly_bush.json flowering_azalea.json frogspawn.json grindstone.json ladder.json large_amethyst_bud.json lectern.json lever.json lightning_rod.json weathered_lightning_rod.json exposed_lightning_rod.json oxidized_lightning_rod.json medium_amethyst_bud.json painting.json pointed_dripstone.json red_mushroom.json redstone_torch.json repeater.json rose_bush.json scaffolding.json sculk_sensor.json sculk_shrieker.json sculk_vein.json sea_pickle.json shelf_mushroom.json small_amethyst_bud.json small_dripleaf.json soul_torch.json spawner.json spore_blossom.json stonecutter.json sulfur_spike.json target.json torch.json tripwire_hook.json warped_fungus.json waxed_lightning_rod.json waxed_weathered_lightning_rod.json waxed_exposed_lightning_rod.json waxed_oxidized_lightning_rod.json ; do
+for g in amethyst_cluster.json anvil.json azalea.json beacon.json brown_mushroom.json big_dripleaf.json bush.json cactus.json calibrated_sculk_sensor.json chipped_anvil.json chorus_flower.json chorus_plant.json comparator.json copper_torch.json crimson_fungus.json damaged_anvil.json daylight_detector.json debug_stick.json {acacia_,bamboo_,birch_,cherry_,copper_,crimson_,dark_oak_,exposed_copper_,iron_,jungle_,mangrove_,oak_,oxidized_copper_,pale_oak_,poplar_,spruce_,warped_,weathered_copper_}door.json dragon_egg.json enchanting_table.json end_portal_frame.json end_rod.json firefly_bush.json flowering_azalea.json frogspawn.json grindstone.json ladder.json large_amethyst_bud.json lectern.json lever.json lightning_rod.json weathered_lightning_rod.json exposed_lightning_rod.json oxidized_lightning_rod.json medium_amethyst_bud.json painting.json pointed_dripstone.json red_mushroom.json redstone_torch.json repeater.json rose_bush.json scaffolding.json sculk_sensor.json sculk_shrieker.json sculk_vein.json sea_pickle.json shelf_mushroom.json small_amethyst_bud.json small_dripleaf.json soul_torch.json spawner.json spore_blossom.json stonecutter.json sulfur_spike.json target.json torch.json tripwire_hook.json warped_fungus.json  ; do
 REFERENCE="${g%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' | sed 's/sulfur/sulphur/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item/\"; \"peek-flat:\") | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"shelf_mushroom_stage0\"; \"shelf_mushroom\") | .on_true.model |= sub(\"_inactive\"; \"\") | .on_true.model |= sub(\"_stable\"; \"\") | {\"model\": . } " $g > $DESTIN$g

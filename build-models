@@ -691,6 +691,19 @@ jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat
 printf '%s ' "${g}"
 done
 
+# BUNDLES
+# ---------
+
+printf '\n\nBuilding bundles:\n'
+for g in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_,}bundle.json ; do
+REFERENCE="${g%.*}"
+MATERIAL=$REFERENCE
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : {}, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:${REFERENCE}\" | {\"model\": . } " $g > $DESTIN$g
+# jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item/\"; \"peek-flat:\") | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"shelf_mushroom_stage0\"; \"shelf_mushroom\") | .on_true.model |= sub(\"_inactive\"; \"\") | .on_true.model |= sub(\"_stable\"; \"\") | {\"model\": . } " $g > $DESTIN$g
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$g
+printf '%s ' "${g}"
+done
+
 # SHULKER
 # ---------
 # Technically impossible, to house a shulker in a shulker. but it can be used in data strings, or if the user /gives themself an item with the right property

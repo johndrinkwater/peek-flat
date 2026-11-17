@@ -7,39 +7,8 @@ ORIGIN="$ASSETN/assets/minecraft/items/"
 DESTIN="assets/minecraft/items/"
 DESTON="assets/peek-flat/models/"
 
-# jq -c '.id, .assetIndex.url, .downloads.client.url' ~/.minecraft/versions/$VERSIN/$VERSIN.json
-# "1.21.9"
-# "https://piston-meta.mojang.com/v1/packages/113cf6b7b169de516477f83a63e64c6f57f4597e/27.json"
-# "https://piston-data.mojang.com/v1/objects/ce92fd8d1b2460c41ceda07ae7b3fe863a80d045/client.jar"
-
-# read -r clientjar <<< "`jq -c '.downloads.client.url' ~/.minecraft/versions/$VERSIN/$VERSIN.json`"
-# mkdir $ASSETN
-# cd $ASSETN
-# eval wget $clientjar
-# unzip client.jar 'assets/minecraft/items/*' 'assets/minecraft/models/*' 'assets/minecraft/textures/*'
-
-# Need to work through a system to do every block, and remove that from the list. A python script maybe?
-
 printf 'Running update script for ‘%s’\n' "${VERSIN}"
 cd $ORIGIN
-
-# take a "complete" listing of files we want to redirect
-# ITEMS=(
-#	*.json
-# )
-# printf '%s\n' "${ITEMS[@]}"
-# printf 'Number of items %d\n' "${#ITEMS[@]}"
-# ITEMDONE="acacia_planks.json"
-# this edit sets the value blank, without removing
-# ITEMS=( "${ITEMS[@]/$ITEMDONE}" )
-# TODO this doesnt work, if you call it before a variant is removed, youll get "stripped_" "waxed_" entries remaining. Doesnt use the variable as a "whole" match
-
-# need to test if value is "", then unset
-# for array_idx in "${!array[@]}"; do
-#	unset "array[$array_idx]"
-# done
-# in theory this is meant to rebuild array without the blanks?
-# ITEMS=( "${ITEMS[@]}" )
 
 # ORES
 # ------
@@ -189,7 +158,8 @@ done
 # ------
 
 printf '\n\nBuilding wood:\n'
-for w in acacia_wood.json bamboo_block.json bamboo_mosaic.json birch_wood.json cherry_wood.json crimson_hyphae.json dark_oak_wood.json jungle_wood.json mangrove_wood.json oak_wood.json pale_oak_wood.json poplar_wood.json spruce_wood.json warped_hyphae.json ; do
+
+for w in {acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_wood.json bamboo_block.json bamboo_mosaic.json crimson_hyphae.json warped_hyphae.json ; do
 REFERENCE="${w%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $w > $DESTIN$w
@@ -198,7 +168,8 @@ printf '%s ' "${w}"
 done
 
 printf '\n\nBuilding stripped wood:\n'
-for s in stripped_acacia_wood.json stripped_birch_wood.json stripped_cherry_wood.json stripped_crimson_hyphae.json stripped_dark_oak_wood.json stripped_jungle_wood.json stripped_mangrove_wood.json stripped_oak_wood.json stripped_pale_oak_wood.json stripped_poplar_wood.json stripped_spruce_wood.json stripped_warped_hyphae.json ; do
+
+for s in stripped_{acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_wood.json stripped_crimson_hyphae.json stripped_warped_hyphae.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -210,7 +181,7 @@ done
 # ------
 
 printf '\n\nBuilding log:\n'
-for l in acacia_log.json birch_log.json cherry_log.json crimson_stem.json dark_oak_log.json jungle_log.json mangrove_log.json oak_log.json pale_oak_log.json poplar_log.json spruce_log.json warped_stem.json ; do
+for l in {acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_log.json crimson_stem.json warped_stem.json ; do
 REFERENCE="${l%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $l > $DESTIN$l
@@ -219,7 +190,7 @@ printf '%s ' "${l}"
 done
 
 printf '\n\nBuilding stripped log:\n'
-for s in stripped_acacia_log.json stripped_bamboo_block.json stripped_birch_log.json stripped_cherry_log.json stripped_crimson_stem.json stripped_dark_oak_log.json stripped_jungle_log.json stripped_mangrove_log.json stripped_oak_log.json stripped_pale_oak_log.json stripped_poplar_log.json stripped_spruce_log.json stripped_warped_stem.json ; do
+for s in stripped_{acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_log.json stripped_bamboo_block.json stripped_crimson_stem.json stripped_warped_stem.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -231,7 +202,7 @@ done
 # ------
 
 printf '\n\nBuilding leaves:\n'
-for l in acacia_leaves.json azalea_leaves.json birch_leaves.json cherry_leaves.json dark_oak_leaves.json flowering_azalea_leaves.json jungle_leaves.json mangrove_leaves.json oak_leaves.json pale_oak_leaves.json spruce_leaves.json orange_poplar_leaves.json yellow_poplar_leaves.json red_poplar_leaves.json ; do
+for l in {acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,spruce}_leaves.json azalea_leaves.json flowering_azalea_leaves.json orange_poplar_leaves.json yellow_poplar_leaves.json red_poplar_leaves.json ; do
 REFERENCE="${l%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model , on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $l > $DESTIN$l
@@ -243,7 +214,7 @@ done
 # ------
 
 printf '\n\nBuilding planks:\n'
-for p in acacia_planks.json bamboo_planks.json birch_planks.json cherry_planks.json crimson_planks.json dark_oak_planks.json jungle_planks.json mangrove_planks.json oak_planks.json pale_oak_planks.json poplar_planks.json spruce_planks.json warped_planks.json ; do
+for p in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_planks.json ; do
 REFERENCE="${p%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $p > $DESTIN$p
@@ -255,7 +226,7 @@ done
 # ------
 
 printf '\n\nBuilding fences:\n'
-for f in acacia_fence.json bamboo_fence.json birch_fence.json cherry_fence.json crimson_fence.json dark_oak_fence.json jungle_fence.json mangrove_fence.json nether_brick_fence.json oak_fence.json pale_oak_fence.json poplar_fence.json spruce_fence.json warped_fence.json ; do
+for f in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_fence.json nether_brick_fence.json ; do
 [ -f "$f" ] || break
 REFERENCE="${f%.*}"
 PLANK=$( echo $REFERENCE | sed 's/_fence/_planks/' )
@@ -271,7 +242,7 @@ done
 # -----------
 
 printf '\n\nBuilding fence gates:\n'
-for f in acacia_fence_gate.json bamboo_fence_gate.json birch_fence_gate.json cherry_fence_gate.json crimson_fence_gate.json dark_oak_fence_gate.json jungle_fence_gate.json mangrove_fence_gate.json oak_fence_gate.json pale_oak_fence_gate.json poplar_fence_gate.json spruce_fence_gate.json warped_fence_gate.json ; do
+for f in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_fence_gate.json ; do
 [ -f "$f" ] || break
 REFERENCE="${f%.*}"
 TEXTURE=$( echo $REFERENCE | sed 's/_fence_gate//' | sed 's/^/stripped_/' )
@@ -318,7 +289,7 @@ printf '%s ' "${s}"
 done
 
 # wood slabs are planks
-for s in acacia_slab.json bamboo_slab.json birch_slab.json cherry_slab.json crimson_slab.json dark_oak_slab.json jungle_slab.json mangrove_slab.json oak_slab.json pale_oak_slab.json poplar_slab.json spruce_slab.json warped_slab.json ; do
+for s in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_slab.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' | sed 's/$/_planks/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -327,7 +298,7 @@ printf '%s ' "${s}"
 done
 
 # wool
-for s in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}wool_slab.json ; do
+for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_wool_slab.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -336,7 +307,7 @@ printf '%s ' "${s}"
 done
 
 # concrete
-for s in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}concrete_slab.json ; do
+for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete_slab.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -387,7 +358,7 @@ printf '%s ' "${s}"
 done
 
 # wood
-for s in acacia_stairs.json bamboo_stairs.json birch_stairs.json cherry_stairs.json crimson_stairs.json dark_oak_stairs.json jungle_stairs.json mangrove_stairs.json oak_stairs.json pale_oak_stairs.json poplar_stairs.json spruce_stairs.json warped_stairs.json ; do
+for s in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_stairs.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' | sed 's/$/_planks/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -396,7 +367,7 @@ printf '%s ' "${s}"
 done
 
 # wool
-for s in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}wool_stairs.json ; do
+for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_wool_stairs.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -405,7 +376,7 @@ printf '%s ' "${s}"
 done
 
 # concrete
-for s in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}concrete_stairs.json ; do
+for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete_stairs.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -441,7 +412,7 @@ done
 # --------
 
 printf '\n\nBuilding trapdoors:\n'
-for t in acacia_trapdoor.json bamboo_trapdoor.json birch_trapdoor.json cherry_trapdoor.json crimson_trapdoor.json dark_oak_trapdoor.json iron_trapdoor.json jungle_trapdoor.json mangrove_trapdoor.json oak_trapdoor.json pale_oak_trapdoor.json poplar_trapdoor.json spruce_trapdoor.json warped_trapdoor.json copper_trapdoor.json exposed_copper_trapdoor.json oxidized_copper_trapdoor.json weathered_copper_trapdoor.json ; do
+for t in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_trapdoor.json iron_trapdoor.json copper_trapdoor.json exposed_copper_trapdoor.json oxidized_copper_trapdoor.json weathered_copper_trapdoor.json ; do
 REFERENCE="${t%.*}"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_bottom\"; \"\") | {\"model\": . } " $t > $DESTIN$t
 jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$t
@@ -480,7 +451,7 @@ done
 # --------
 
 printf '\n\nBuilding pressure plates:\n'
-for p in acacia_pressure_plate.json bamboo_pressure_plate.json birch_pressure_plate.json cherry_pressure_plate.json crimson_pressure_plate.json dark_oak_pressure_plate.json heavy_weighted_pressure_plate.json jungle_pressure_plate.json light_weighted_pressure_plate.json mangrove_pressure_plate.json oak_pressure_plate.json pale_oak_pressure_plate.json polished_blackstone_pressure_plate.json poplar_pressure_plate.json spruce_pressure_plate.json stone_pressure_plate.json warped_pressure_plate.json ; do
+for p in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_pressure_plate.json heavy_weighted_pressure_plate.json light_weighted_pressure_plate.json polished_blackstone_pressure_plate.json stone_pressure_plate.json  ; do
 REFERENCE="${p%.*}"
 PLANK=$( echo $REFERENCE | sed 's/_pressure_plate/_planks/' )
 if [ "$PLANK" == "stone_planks" ]; then
@@ -505,7 +476,7 @@ done
 # --------
 
 printf '\n\nBuilding buttons:\n'
-for b in acacia_button.json bamboo_button.json birch_button.json cherry_button.json crimson_button.json dark_oak_button.json jungle_button.json mangrove_button.json oak_button.json pale_oak_button.json polished_blackstone_button.json poplar_button.json spruce_button.json stone_button.json warped_button.json ; do
+for b in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_button.json polished_blackstone_button.json stone_button.json ; do
 REFERENCE="${b%.*}"
 PLANK=$( echo $REFERENCE | sed 's/_button/_planks/' )
 if [ "$PLANK" == "stone_planks" ]; then
@@ -523,16 +494,15 @@ done
 # CONCRETE
 # --------
 # (+ powder)
-
 printf '\n\nBuilding concrete:\n'
-for c in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}concrete.json ; do
+for c in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete.json ; do
 REFERENCE="${c%.*}"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $c > $DESTIN$c
 jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$c
 printf '%s ' "${c}"
 done
 
-for p in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}concrete_powder.json ; do
+for p in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete_powder.json ; do
 REFERENCE="${p%.*}"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $p > $DESTIN$p
 jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$p
@@ -544,14 +514,14 @@ done
 # (+ glazed)
 
 printf '\n\nBuilding terracotta:\n'
-for t in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}terracotta.json terracotta.json ; do
+for t in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_terracotta.json terracotta.json ; do
 REFERENCE="${t%.*}"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $t > $DESTIN$t
 jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$t
 printf '%s ' "${t}"
 done
 
-for g in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}glazed_terracotta.json ; do
+for g in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_glazed_terracotta.json ; do
 REFERENCE="${g%.*}"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $g > $DESTIN$g
 jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$g
@@ -564,14 +534,14 @@ done
 # (+ carpet) (which includes the moss carpets lol)
 
 printf '\n\nBuilding wool:\n'
-for t in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}wool.json ; do
+for t in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_wool.json ; do
 REFERENCE="${t%.*}"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $t > $DESTIN$t
 jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$t
 printf '%s ' "${t}"
 done
 
-for c in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}carpet.json moss_carpet.json pale_moss_carpet.json ; do
+for c in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_carpet.json moss_carpet.json pale_moss_carpet.json ; do
 REFERENCE="${c%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_carpet/_wool/' )
 if [ "$MATERIAL" == "pale_moss_wool" ]; then
@@ -611,7 +581,7 @@ done
 # trying generated to see if it gets around block_item transparency issues
 
 printf '\n\nBuilding glass:\n'
-for s in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}stained_glass.json glass.json tinted_glass.json ; do
+for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_stained_glass.json glass.json tinted_glass.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -619,7 +589,7 @@ jq -n "{ \"parent\": \"peek-flat:block_item_glass_template\", \"textures\": { \"
 printf '%s ' "${s}"
 done
 
-for p in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}stained_glass_pane.json glass_pane.json ; do
+for p in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_stained_glass_pane.json glass_pane.json ; do
 REFERENCE="${p%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_pane//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item/\"; \"peek-flat:\") | {\"model\": . } " $p > $DESTIN$p
@@ -635,7 +605,7 @@ done
 # bunch of flat 2d images
 
 printf '\n\nBuilding uniques:\n'
-for g in amethyst_cluster.json anvil.json azalea.json beacon.json brown_mushroom.json big_dripleaf.json bush.json cactus.json calibrated_sculk_sensor.json {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_,}candle.json chipped_anvil.json chorus_flower.json chorus_plant.json comparator.json copper_torch.json crimson_fungus.json {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}cushion.json damaged_anvil.json daylight_detector.json debug_stick.json {acacia_,bamboo_,birch_,cherry_,copper_,crimson_,dark_oak_,exposed_copper_,iron_,jungle_,mangrove_,oak_,oxidized_copper_,pale_oak_,poplar_,spruce_,warped_,weathered_copper_}door.json dragon_egg.json {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}dye.json enchanting_table.json end_portal_frame.json end_rod.json firefly_bush.json flowering_azalea.json frogspawn.json grindstone.json {acacia_,birch_,cherry_,dark_oak_,jungle_,mangrove_,oak_,pale_oak_,poplar_,spruce_,bamboo_,crimson_,warped_}hanging_sign.json {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}harness.json ladder.json large_amethyst_bud.json lectern.json lever.json lightning_rod.json weathered_lightning_rod.json exposed_lightning_rod.json oxidized_lightning_rod.json medium_amethyst_bud.json painting.json pointed_dripstone.json red_mushroom.json redstone_torch.json repeater.json rose_bush.json scaffolding.json sculk_sensor.json sculk_shrieker.json sculk_vein.json sea_pickle.json shelf_mushroom.json {acacia_,birch_,cherry_,dark_oak_,jungle_,mangrove_,oak_,pale_oak_,poplar_,spruce_,bamboo_,crimson_,warped_}sign.json small_amethyst_bud.json small_dripleaf.json soul_torch.json spawner.json spore_blossom.json stonecutter.json sulfur_spike.json target.json torch.json tripwire_hook.json warped_fungus.json ; do
+for g in amethyst_cluster.json anvil.json azalea.json beacon.json brown_mushroom.json big_dripleaf.json bush.json cactus.json calibrated_sculk_sensor.json {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_candle.json candle.json chipped_anvil.json chorus_flower.json chorus_plant.json comparator.json copper_torch.json crimson_fungus.json {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_cushion.json damaged_anvil.json daylight_detector.json debug_stick.json {acacia,bamboo,birch,cherry,copper,crimson,dark_oak,exposed_copper,iron,jungle,mangrove,oak,oxidized_copper,pale_oak,poplar,spruce,warped,weathered_copper}_door.json dragon_egg.json {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_dye.json enchanting_table.json end_portal_frame.json end_rod.json firefly_bush.json flowering_azalea.json frogspawn.json grindstone.json {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_hanging_sign.json {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_harness.json ladder.json large_amethyst_bud.json lectern.json lever.json lightning_rod.json weathered_lightning_rod.json exposed_lightning_rod.json oxidized_lightning_rod.json medium_amethyst_bud.json painting.json pointed_dripstone.json red_mushroom.json redstone_torch.json repeater.json rose_bush.json scaffolding.json sculk_sensor.json sculk_shrieker.json sculk_vein.json sea_pickle.json shelf_mushroom.json {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_sign.json small_amethyst_bud.json small_dripleaf.json soul_torch.json spawner.json spore_blossom.json stonecutter.json sulfur_spike.json target.json torch.json tripwire_hook.json warped_fungus.json ; do
 REFERENCE="${g%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/waxed_//' | sed 's/sulfur/sulphur/' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item/\"; \"peek-flat:\") | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"shelf_mushroom_stage0\"; \"shelf_mushroom\") | .on_true.model |= sub(\"_inactive\"; \"\") | .on_true.model |= sub(\"_stable\"; \"\") | {\"model\": . } " $g > $DESTIN$g
@@ -676,7 +646,7 @@ done
 # ---------
 
 printf '\n\nBuilding bundles:\n'
-for g in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_,}bundle.json ; do
+for g in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_bundle.json bundle.json ; do
 REFERENCE="${g%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : {}, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:${REFERENCE}\" | {\"model\": . } " $g > $DESTIN$g
@@ -690,7 +660,7 @@ done
 # Technically impossible, to house a shulker in a shulker. but it can be used in data strings, or if the user /gives themself an item with the right property
 
 printf '\n\nBuilding shulkers:\n'
-for b in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}shulker_box.json shulker_box.json ; do
+for b in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_shulker_box.json shulker_box.json ; do
 REFERENCE="${b%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:$REFERENCE\" | del(.on_true.transformation) | {\"model\": . } " $b > $DESTIN$b
@@ -719,7 +689,7 @@ done
 # ---------
 
 printf '\n\nBuilding beds:\n'
-for b in {black_,blue_,brown_,cyan_,gray_,green_,light_blue_,light_gray_,lime_,magenta_,orange_,pink_,purple_,red_,white_,yellow_}bed.json ; do
+for b in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_bed.json ; do
 REFERENCE="${b%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:$REFERENCE\" | del(.on_true.models) | {\"model\": . } " $b > $DESTIN$b

@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:vine",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -12012264
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/vine",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -12012264
+        }
+      ]
+    }
+  }
+}

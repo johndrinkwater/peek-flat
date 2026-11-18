@@ -11,7 +11,7 @@ printf 'Running update script for ‘%s’\n' "${VERSIN}"
 cd $ORIGIN
 
 # ORES
-# ------
+# --------
 
 printf '\nBuilding ore:\n'
 for o in coal_block.json diamond_block.json emerald_block.json gold_block.json iron_block.json lapis_block.json netherite_block.json raw_copper_block.json raw_gold_block.json raw_iron_block.json redstone_block.json ; do
@@ -39,7 +39,7 @@ printf '%s ' "${o}"
 done
 
 # BLOCKS
-# ------
+# --------
 
 printf '\n\nBuilding blocks:\n'
 for b in amethyst_block.json ancient_debris.json andesite.json barrel.json basalt.json bedrock.json blackstone.json blast_furnace.json blue_ice.json bone_block.json bookshelf.json brain_coral_block.json bricks.json brittle_ice.json brown_mushroom_block.json bubble_coral_block.json budding_amethyst.json calcite.json calcite_pillar.json cartography_table.json chain_command_block.json chiseled_bookshelf.json chiseled_cinnabar.json chiseled_copper.json chiseled_packed_ice.json chiseled_polished_blackstone.json chiseled_resin_bricks.json chiseled_soulshale.json chiseled_stone_bricks.json chiseled_sulfur.json cinnabar.json cinnabar_bricks.json clay.json coarse_dirt.json cobbled_deepslate.json cobblestone.json command_block.json composter.json copper_block.json copper_bulb.json copper_grate.json crafter.json crafting_table.json crying_obsidian.json cut_copper.json dark_prismarine.json dead_brain_coral_block.json dead_bubble_coral_block.json dead_fire_coral_block.json dead_horn_coral_block.json dead_tube_coral_block.json deepslate.json deepslate_bricks.json deepslate_tiles.json diorite.json dirt.json dispenser.json dried_kelp_block.json dripstone_block.json dropper.json end_stone.json end_stone_bricks.json exposed_chiseled_copper.json exposed_copper.json exposed_copper_bulb.json exposed_copper_grate.json exposed_cut_copper.json fire_coral_block.json fletching_table.json furnace.json glowstone.json granite.json gravel.json hay_block.json heavy_core.json honey_block.json honeycomb_block.json horn_coral_block.json ice.json jigsaw.json jukebox.json lodestone.json loom.json magma_block.json mangrove_roots.json melon.json moss_block.json mud.json mud_bricks.json muddy_mangrove_roots.json mushroom_stem.json nether_bricks.json nether_wart_block.json netherrack.json note_block.json observer.json obsidian.json ochre_froglight.json oxidized_chiseled_copper.json oxidized_copper.json oxidized_copper_bulb.json oxidized_copper_grate.json oxidized_cut_copper.json packed_ice.json packed_ice_bricks.json packed_mud.json pale_moss_block.json pearlescent_froglight.json piston.json polished_andesite.json polished_basalt.json polished_blackstone.json polished_blackstone_bricks.json polished_calcite.json polished_calcite_bricks.json polished_cinnabar.json polished_deepslate.json polished_diorite.json polished_granite.json polished_sulfur.json polished_tuff.json potent_sulfur.json prismarine.json prismarine_bricks.json pumpkin.json purpur_block.json red_mushroom_block.json red_nether_bricks.json red_sand.json red_sandstone.json redstone_lamp.json reinforced_deepslate.json repeating_command_block.json resin_block.json resin_bricks.json respawn_anchor.json sand.json sandstone.json sculk.json sculk_catalyst.json sea_lantern.json shroomlight.json slime_block.json smithing_table.json smoker.json smooth_basalt.json smooth_quartz.json smooth_stone.json snow_block.json snow_bricks.json soul_sand.json soul_soil.json sponge.json stone.json stone_bricks.json structure_block.json sulfur.json sulfur_bricks.json tnt.json trial_spawner.json tube_coral_block.json tuff.json tuff_bricks.json vault.json verdant_froglight.json warped_wart_block.json weathered_chiseled_copper.json weathered_copper.json weathered_copper_bulb.json weathered_copper_grate.json weathered_cut_copper.json wet_sponge.json ; do
@@ -112,7 +112,7 @@ printf '%s ' "${b}"
 done
 
 # WAXED
-# ------
+# --------
 # Waxed copper, special case all these items as they use overlay templates
 
 printf '\n\nBuilding waxed:\n'
@@ -134,7 +134,7 @@ printf '%s ' "${w}"
 done
 
 # INFESTED
-# ------
+# --------
 
 printf '\n\nBuilding infested overlays:\n'
 for i in infested_chiseled_stone_bricks.json infested_cobblestone.json infested_cracked_stone_bricks.json infested_deepslate.json infested_mossy_stone_bricks.json infested_stone_bricks.json infested_stone.json ; do
@@ -155,7 +155,7 @@ printf '%s ' "${i}"
 done
 
 # WOOD
-# ------
+# --------
 
 printf '\n\nBuilding wood:\n'
 
@@ -178,7 +178,7 @@ printf '%s ' "${s}"
 done
 
 # LOG
-# ------
+# --------
 
 printf '\n\nBuilding log:\n'
 for l in {acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_log.json crimson_stem.json warped_stem.json ; do
@@ -199,7 +199,7 @@ printf '%s ' "${s}"
 done
 
 # LEAVES
-# ------
+# --------
 
 printf '\n\nBuilding leaves:\n'
 for l in {acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,spruce}_leaves.json azalea_leaves.json flowering_azalea_leaves.json orange_poplar_leaves.json yellow_poplar_leaves.json red_poplar_leaves.json ; do
@@ -211,7 +211,7 @@ printf '%s ' "${l}"
 done
 
 # PLANKS
-# ------
+# --------
 
 printf '\n\nBuilding planks:\n'
 for p in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_planks.json ; do
@@ -223,7 +223,7 @@ printf '%s ' "${p}"
 done
 
 # FENCES
-# ------
+# --------
 
 printf '\n\nBuilding fences:\n'
 for f in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_fence.json nether_brick_fence.json ; do
@@ -239,7 +239,7 @@ printf '%s ' "${f}"
 done
 
 # FENCE GATES
-# -----------
+# --------
 
 printf '\n\nBuilding fence gates:\n'
 for f in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_fence_gate.json ; do
@@ -253,7 +253,7 @@ done
 
 
 # WALLS
-# ------
+# --------
 # mossy walls need a different peek_flat template, but they have the _same_ redirect file style.
 
 printf '\n\nBuilding wall:\n'
@@ -276,7 +276,7 @@ printf '%s ' "${w}"
 done
 
 # SLABS
-# ------
+# --------
 
 printf '\n\nBuilding slabs:\n'
 for s in andesite_slab.json bamboo_mosaic_slab.json blackstone_slab.json brick_slab.json calcite_slab.json cinnabar_brick_slab.json cinnabar_slab.json cobbled_deepslate_slab.json cobblestone_slab.json cut_copper_slab.json dark_prismarine_slab.json deepslate_brick_slab.json deepslate_tile_slab.json diorite_slab.json end_stone_brick_slab.json exposed_cut_copper_slab.json granite_slab.json mud_brick_slab.json nether_brick_slab.json oxidized_cut_copper_slab.json packed_ice_brick_slab.json polished_andesite_slab.json polished_blackstone_brick_slab.json polished_blackstone_slab.json polished_calcite_brick_slab.json polished_calcite_slab.json polished_cinnabar_slab.json polished_deepslate_slab.json polished_diorite_slab.json polished_granite_slab.json polished_sulfur_slab.json polished_tuff_slab.json prismarine_brick_slab.json prismarine_slab.json purpur_slab.json red_nether_brick_slab.json red_sandstone_slab.json resin_brick_slab.json sandstone_slab.json smooth_quartz_slab.json smooth_stone_slab.json snow_brick_slab.json stone_brick_slab.json stone_slab.json sulfur_brick_slab.json sulfur_slab.json tuff_brick_slab.json tuff_slab.json weathered_cut_copper_slab.json ; do
@@ -345,7 +345,7 @@ done
 
 
 # STAIRS
-# ------
+# --------
 
 printf '\n\nBuilding stairs:\n'
 for s in andesite_stairs.json bamboo_mosaic_stairs.json blackstone_stairs.json brick_stairs.json calcite_stairs.json cinnabar_brick_stairs.json cinnabar_stairs.json cobbled_deepslate_stairs.json cobblestone_stairs.json cut_copper_stairs.json dark_prismarine_stairs.json deepslate_brick_stairs.json deepslate_tile_stairs.json diorite_stairs.json end_stone_brick_stairs.json exposed_cut_copper_stairs.json granite_stairs.json mud_brick_stairs.json nether_brick_stairs.json oxidized_cut_copper_stairs.json packed_ice_brick_stairs.json polished_andesite_stairs.json polished_blackstone_brick_stairs.json polished_blackstone_stairs.json polished_calcite_brick_stairs.json polished_calcite_stairs.json polished_cinnabar_stairs.json polished_deepslate_stairs.json polished_diorite_stairs.json polished_granite_stairs.json polished_sulfur_stairs.json polished_tuff_stairs.json prismarine_brick_stairs.json prismarine_stairs.json purpur_stairs.json red_nether_brick_stairs.json red_sandstone_stairs.json resin_brick_stairs.json sandstone_stairs.json smooth_quartz_stairs.json snow_brick_stairs.json stone_brick_stairs.json stone_stairs.json sulfur_brick_stairs.json sulfur_stairs.json tuff_brick_stairs.json tuff_stairs.json weathered_cut_copper_stairs.json ; do
@@ -562,19 +562,6 @@ jq -n "{ \"parent\": \"peek-flat:block_item_flat_template\", \"textures\": { \"b
 printf '%s ' "${c}"
 done
 
-# BANNER
-# --------
-# apparently these are /more/ inbuilt now
-
-# for b in black_banner.json blue_banner.json brown_banner.json cyan_banner.json gray_banner.json green_banner.json light_blue_banner.json light_gray_banner.json lime_banner.json magenta_banner.json orange_banner.json pink_banner.json purple_banner.json red_banner.json white_banner.json yellow_banner.json ; do
-# REFERENCE="${b%.*}"
-# jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.base |= sub(\"minecraft:item/\"; \"peek-flat:\") " $b > $DESTIN$b
-# # jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$t
-
-# printf 'Skipping file: %s\n' "${b}"
-# done
-
-
 # GLASS
 # --------
 # trying generated to see if it gets around block_item transparency issues
@@ -600,7 +587,7 @@ done
 
 
 # MISC
-# ---------
+# --------
 # bunch of flat 2d images
 
 printf '\n\nBuilding uniques:\n'
@@ -613,7 +600,7 @@ printf '%s ' "${g}"
 done
 
 # BEEEEEEEEES
-# ---------
+# --------
 
 for b in beehive.json bee_nest.json ; do
 REFERENCE="${b%.*}"
@@ -631,7 +618,7 @@ printf '%s ' "${b}"
 done
 
 # CONDUIT
-# ---------
+# --------
 
 for g in conduit.json ; do
 REFERENCE="${g%.*}"
@@ -642,20 +629,19 @@ printf '%s ' "${g}"
 done
 
 # BUNDLES
-# ---------
+# --------
 
 printf '\n\nBuilding bundles:\n'
 for g in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_bundle.json bundle.json ; do
 REFERENCE="${g%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : {}, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:${REFERENCE}\" | {\"model\": . } " $g > $DESTIN$g
-# jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:item/\"; \"peek-flat:\") | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"shelf_mushroom_stage0\"; \"shelf_mushroom\") | .on_true.model |= sub(\"_inactive\"; \"\") | .on_true.model |= sub(\"_stable\"; \"\") | {\"model\": . } " $g > $DESTIN$g
 jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$g
 printf '%s ' "${g}"
 done
 
 # SHULKER
-# ---------
+# --------
 # Technically impossible, to house a shulker in a shulker. but it can be used in data strings, or if the user /gives themself an item with the right property
 
 printf '\n\nBuilding shulkers:\n'
@@ -668,7 +654,7 @@ printf '%s ' "${b}"
 done
 
 # CHESTS
-# ---------
+# --------
 # > ender_chest, chest, trapped_chest need detailed changes
 
 printf '\n\nBuilding chests:\n'
@@ -681,11 +667,11 @@ printf '%s ' "${c}"
 done
 
 # BANNER
-# ---------
+# --------
 # For now, tweaked template_banner display settings.
 
 # BED
-# ---------
+# --------
 
 printf '\n\nBuilding beds:\n'
 for b in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_bed.json ; do
@@ -705,7 +691,7 @@ printf '%s ' "${g}"
 done
 
 # SKULLS
-# ---------
+# --------
 # This includes player heads, mob heads, etc
 printf '\n\nBuilding heads:\n'
 

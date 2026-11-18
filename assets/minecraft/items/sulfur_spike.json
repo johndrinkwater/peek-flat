@@ -4,7 +4,7 @@
     "property": "peek:shulker_item",
     "on_true": {
       "type": "minecraft:model",
-      "model": "peek-flat:sulfur_spike"
+      "model": "peek-flat:sulphur_spike"
     },
     "on_false": {
       "type": "minecraft:model",

@@ -599,6 +599,16 @@ jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat
 printf '%s ' "${g}"
 done
 
+# POTIONS
+# --------
+for c in {,lingering_,splash_}potion.json ; do
+REFERENCE="${c%.*}"
+MATERIAL=$REFERENCE
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | del(.on_true.base) | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:$REFERENCE\" | {\"model\": . } " $c > $DESTIN$c
+jq -n "{ \"parent\": \"minecraft:item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/potion_overlay\", \"layer1\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$c
+printf '%s ' "${c}"
+done
+
 # BEEEEEEEEES
 # --------
 
@@ -693,6 +703,7 @@ done
 # SKULLS
 # --------
 # This includes player heads, mob heads, etc
+
 printf '\n\nBuilding heads:\n'
 
 # Dragon head is the only one we skip a loop block for, because I doubt they’ll ever add more heads like this. (shush about piglins)

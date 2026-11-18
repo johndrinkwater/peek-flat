@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:lily_pad",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -9321636
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/lily_pad",
+      "tints": [
+        {
+          "type": "minecraft:constant",
+          "value": -9321636
+        }
+      ]
+    }
+  }
+}

@@ -229,12 +229,12 @@ printf '\n\nBuilding fences:\n'
 for f in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_fence.json nether_brick_fence.json ; do
 [ -f "$f" ] || break
 REFERENCE="${f%.*}"
-PLANK=$( echo $REFERENCE | sed 's/_fence/_planks/' )
-if [ "$PLANK" == "nether_brick_planks" ]; then
-	PLANK="nether_brick"
+MATERIAL=$( echo $REFERENCE | sed 's/_fence/_planks/' )
+if [ "$MATERIAL" == "nether_brick_planks" ]; then
+	MATERIAL="nether_brick"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $f > $DESTIN/$f
-jq -n "{ \"parent\": \"peek-flat:block_item_fence_template\", \"textures\": { \"base\": \"peek-flat:item/${PLANK}\" } }" > $DESTON$f
+jq -n "{ \"parent\": \"peek-flat:block_item_fence_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$f
 printf '%s ' "${f}"
 done
 
@@ -245,10 +245,9 @@ printf '\n\nBuilding fence gates:\n'
 for f in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_fence_gate.json ; do
 [ -f "$f" ] || break
 REFERENCE="${f%.*}"
-TEXTURE=$( echo $REFERENCE | sed 's/_fence_gate//' | sed 's/^/stripped_/' )
-PLANK=$( echo $REFERENCE | sed 's/_fence_gate/_planks/' )
+MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $f > $DESTIN/$f
-jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$f
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$f
 printf '%s ' "${f}"
 done
 
@@ -453,21 +452,21 @@ done
 printf '\n\nBuilding pressure plates:\n'
 for p in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_pressure_plate.json heavy_weighted_pressure_plate.json light_weighted_pressure_plate.json polished_blackstone_pressure_plate.json stone_pressure_plate.json  ; do
 REFERENCE="${p%.*}"
-PLANK=$( echo $REFERENCE | sed 's/_pressure_plate/_planks/' )
-if [ "$PLANK" == "stone_planks" ]; then
-	PLANK="stone"
+MATERIAL=$( echo $REFERENCE | sed 's/_pressure_plate/_planks/' )
+if [ "$MATERIAL" == "stone_planks" ]; then
+	MATERIAL="stone"
 fi
-if [ "$PLANK" == "light_weighted_planks" ]; then
-	PLANK="gold_block"
+if [ "$MATERIAL" == "light_weighted_planks" ]; then
+	MATERIAL="gold_block"
 fi
-if [ "$PLANK" == "heavy_weighted_planks" ]; then
-	PLANK="iron_block"
+if [ "$MATERIAL" == "heavy_weighted_planks" ]; then
+	MATERIAL="iron_block"
 fi
-if [ "$PLANK" == "polished_blackstone_planks" ]; then
-	PLANK="polished_blackstone"
+if [ "$MATERIAL" == "polished_blackstone_planks" ]; then
+	MATERIAL="polished_blackstone"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $p > $DESTIN$p
-jq -n "{ \"parent\": \"peek-flat:block_item_pressure_plate_template\", \"textures\": { \"base\": \"peek-flat:item/${PLANK}\" } }" > $DESTON$p
+jq -n "{ \"parent\": \"peek-flat:block_item_pressure_plate_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$p
 printf '%s ' "${p}"
 done
 
@@ -478,15 +477,15 @@ done
 printf '\n\nBuilding buttons:\n'
 for b in {acacia,bamboo,birch,cherry,crimson,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce,warped}_button.json polished_blackstone_button.json stone_button.json ; do
 REFERENCE="${b%.*}"
-PLANK=$( echo $REFERENCE | sed 's/_button/_planks/' )
-if [ "$PLANK" == "stone_planks" ]; then
-	PLANK="stone"
+MATERIAL=$( echo $REFERENCE | sed 's/_button/_planks/' )
+if [ "$MATERIAL" == "stone_planks" ]; then
+	MATERIAL="stone"
 fi
-if [ "$PLANK" == "polished_blackstone_planks" ]; then
-	PLANK="polished_blackstone"
+if [ "$MATERIAL" == "polished_blackstone_planks" ]; then
+	MATERIAL="polished_blackstone"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | .on_true.model |= sub(\"_inventory\"; \"\") | {\"model\": . } " $b > $DESTIN$b
-jq -n "{ \"parent\": \"peek-flat:block_item_button_template\", \"textures\": { \"base\": \"peek-flat:item/${PLANK}\" } }" > $DESTON$b
+jq -n "{ \"parent\": \"peek-flat:block_item_button_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$b
 printf '%s ' "${b}"
 done
 

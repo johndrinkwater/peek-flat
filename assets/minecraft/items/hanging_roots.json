@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:hanging_roots"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/hanging_roots"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:milk_bucket"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/milk_bucket"
+    }
+  }
+}

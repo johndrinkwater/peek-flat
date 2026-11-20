@@ -159,7 +159,7 @@ done
 
 printf '\n\nBuilding wood:\n'
 
-for w in {acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_wood.json bamboo_block.json bamboo_mosaic.json crimson_hyphae.json warped_hyphae.json ; do
+for w in {acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_wood.json bamboo_block.json bamboo_mosaic.json crimson_hyphae.json warped_hyphae.json stripped_{acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_wood.json stripped_crimson_hyphae.json stripped_warped_hyphae.json ; do
 REFERENCE="${w%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $w > $DESTIN$w
@@ -167,35 +167,16 @@ jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-
 printf '%s ' "${w}"
 done
 
-printf '\n\nBuilding stripped wood:\n'
-
-for s in stripped_{acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_wood.json stripped_crimson_hyphae.json stripped_warped_hyphae.json ; do
-REFERENCE="${s%.*}"
-MATERIAL=$REFERENCE
-jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
-printf '%s ' "${s}"
-done
-
 # LOG
 # --------
 
 printf '\n\nBuilding log:\n'
-for l in {acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_log.json crimson_stem.json warped_stem.json ; do
+for l in {acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_log.json crimson_stem.json warped_stem.json stripped_{acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_log.json stripped_bamboo_block.json stripped_crimson_stem.json stripped_warped_stem.json ; do
 REFERENCE="${l%.*}"
 MATERIAL=$REFERENCE
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $l > $DESTIN$l
 jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$l
 printf '%s ' "${l}"
-done
-
-printf '\n\nBuilding stripped log:\n'
-for s in stripped_{acacia,birch,cherry,dark_oak,jungle,mangrove,oak,pale_oak,poplar,spruce}_log.json stripped_bamboo_block.json stripped_crimson_stem.json stripped_warped_stem.json ; do
-REFERENCE="${s%.*}"
-MATERIAL=$REFERENCE
-jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
-printf '%s ' "${s}"
 done
 
 # LEAVES
@@ -296,17 +277,8 @@ jq -n "{ \"parent\": \"peek-flat:block_item_slab_template\", \"textures\": { \"b
 printf '%s ' "${s}"
 done
 
-# wool
-for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_wool_slab.json ; do
-REFERENCE="${s%.*}"
-MATERIAL=$( echo $REFERENCE | sed 's/_slab//' )
-jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_slab_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
-printf '%s ' "${s}"
-done
-
-# concrete
-for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete_slab.json ; do
+# wool + concrete
+for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_wool_slab.json {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete_slab.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_slab//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -365,17 +337,8 @@ jq -n "{ \"parent\": \"peek-flat:block_item_stairs_template\", \"textures\": { \
 printf '%s ' "${s}"
 done
 
-# wool
-for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_wool_stairs.json ; do
-REFERENCE="${s%.*}"
-MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' )
-jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
-jq -n "{ \"parent\": \"peek-flat:block_item_stairs_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$s
-printf '%s ' "${s}"
-done
-
-# concrete
-for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete_stairs.json ; do
+# wool + concrete
+for s in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_wool_stairs.json {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete_stairs.json ; do
 REFERENCE="${s%.*}"
 MATERIAL=$( echo $REFERENCE | sed 's/_stairs//' )
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $s > $DESTIN$s
@@ -494,18 +457,11 @@ done
 # --------
 # (+ powder)
 printf '\n\nBuilding concrete:\n'
-for c in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete.json ; do
+for c in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete.json {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete_powder.json ; do
 REFERENCE="${c%.*}"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $c > $DESTIN$c
 jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$c
 printf '%s ' "${c}"
-done
-
-for p in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_concrete_powder.json ; do
-REFERENCE="${p%.*}"
-jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $p > $DESTIN$p
-jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$p
-printf '%s ' "${p}"
 done
 
 # TERRACOTTA
@@ -513,20 +469,12 @@ done
 # (+ glazed)
 
 printf '\n\nBuilding terracotta:\n'
-for t in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_terracotta.json terracotta.json ; do
+for t in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_terracotta.json terracotta.json {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_glazed_terracotta.json ; do
 REFERENCE="${t%.*}"
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $t > $DESTIN$t
 jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$t
 printf '%s ' "${t}"
 done
-
-for g in {black,blue,brown,cyan,gray,green,light_blue,light_gray,lime,magenta,orange,pink,purple,red,white,yellow}_glazed_terracotta.json ; do
-REFERENCE="${g%.*}"
-jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $g > $DESTIN$g
-jq -n "{ \"parent\": \"peek-flat:block_item\", \"textures\": { \"base\": \"peek-flat:item/${REFERENCE}\" } }" > $DESTON$g
-printf '%s ' "${g}"
-done
-
 
 # WOOL
 # --------

@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:fermented_spider_eye"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/fermented_spider_eye"
+    }
+  }
+}

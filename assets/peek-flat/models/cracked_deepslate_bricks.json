@@ -1,7 +1,7 @@
 {
   "parent": "peek-flat:block_item_overlay",
   "textures": {
-    "base": "peek-flat:item/deepslate_brick",
+    "base": "peek-flat:item/deepslate_bricks",
     "overlay": "peek-flat:item/cracked_deepslate_overlay"
   }
 }

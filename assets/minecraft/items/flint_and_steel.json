@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:flint_and_steel"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/flint_and_steel"
+    }
+  }
+}

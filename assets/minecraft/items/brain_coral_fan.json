@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:brain_coral_fan"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/brain_coral_fan"
+    }
+  }
+}

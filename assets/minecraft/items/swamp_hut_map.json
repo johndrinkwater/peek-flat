@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:swamp_hut_map"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/swamp_hut_map"
+    }
+  }
+}

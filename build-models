@@ -550,7 +550,7 @@ printf '%s ' "${MODEL}"
 done
 
 # Items that have complex conditions like range dispatch (brushes et al), and that also don’t have tints (quite a few organics get their greens from computation/LUT)
-for g in brush.json {copper,chainmail,golden,diamond,iron,netherite}_boots.json {copper,chainmail,golden,diamond,iron,netherite}_chestplate.json {copper,chainmail,golden,diamond,iron,turtle,netherite}_helmet.json {copper,chainmail,golden,diamond,iron,netherite}_leggings.json {copper,golden,diamond,iron,netherite}_horse_armor.json ; do
+for g in brush.json {copper,chainmail,golden,diamond,iron,netherite}_boots.json {copper,chainmail,golden,diamond,iron,netherite}_chestplate.json {copper,chainmail,golden,diamond,iron,turtle,netherite}_helmet.json {copper,chainmail,golden,diamond,iron,netherite}_leggings.json {copper,golden,diamond,iron,netherite}_horse_armor.json {copper,golden,diamond,iron,netherite}_nautilus_armor.json ; do
 REFERENCE="${g%.*}"
 MATERIAL=$( echo $REFERENCE )
 BASE=$( echo $MATERIAL )

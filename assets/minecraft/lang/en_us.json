@@ -1,5 +1,7 @@
 {
 	"rpo.jdwpeekflat": "Peek Flat Shulker Icons",
 	"rpo.jdwpeekflat.animatedTextures": "Enable animated textures",
-	"rpo.jdwpeekflat.animatedTextures.tooltip": "Crying obsidian, nether wood, end rods, and other misc items"
+	"rpo.jdwpeekflat.animatedTextures.tooltip": "Crying obsidian, nether wood, end rods, and other misc items",
+	"rpo.jdwpeekflat.wearableTextures": "Disable wearable models",
+	"rpo.jdwpeekflat.wearableTextures.tooltip": "Use your armour & pumpkin resource pack choices (better integration with other packs)"
 }

@@ -2,7 +2,8 @@
     'id': 'jdwpeekflat',
     'version': 12,
     'conf': {
-		'animatedTextures': true
+		'animatedTextures': true,
+		'wearableTextures': false,
 	}
 }
 

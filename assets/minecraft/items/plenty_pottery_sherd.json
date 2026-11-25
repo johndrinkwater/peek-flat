@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:plenty_pottery_sherd"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/plenty_pottery_sherd"
+    }
+  }
+}

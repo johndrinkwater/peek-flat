@@ -550,7 +550,7 @@ printf '%s ' "${MODEL}"
 done
 
 # Items that have complex conditions like range dispatch (brushes et al), and that also don’t have tints (quite a few organics get their greens from computation/LUT)
-for g in brush.json turtle_helmet.json ; do
+for g in brush.json {copper,chainmail,golden,diamond,iron,netherite}_boots.json {copper,chainmail,golden,diamond,iron,netherite}_chestplate.json {copper,chainmail,golden,diamond,iron,turtle,netherite}_helmet.json {copper,chainmail,golden,diamond,iron,netherite}_leggings.json {copper,golden,diamond,iron,netherite}_horse_armor.json ; do
 REFERENCE="${g%.*}"
 MATERIAL=$( echo $REFERENCE )
 BASE=$( echo $MATERIAL )
@@ -560,8 +560,33 @@ jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat
 printf '%s ' "${MODEL}"
 done
 
+# LEATHER
+# --------
+
+for g in leather_boots.json leather_chestplate.json leather_helmet.json leather_leggings.json ; do
+REFERENCE="${g%.*}"
+MATERIAL=$( echo $REFERENCE )
+BASE=$( echo $MATERIAL )
+MODEL="${MATERIAL}.json"
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : { tints: .model.fallback.tints }, on_false: .model } | .on_true.type = \"minecraft:model\" | .on_true.model = \"peek-flat:${MATERIAL}\" | {\"model\": . } " $g > $DESTIN$g
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${BASE}\", \"layer1\": \"peek-flat:item/${BASE}_overlay\" } }" > $DESTON$MODEL
+printf '%s ' "${MODEL}"
+done
+
+# horse armour doesn’t have trim like rest of leather, so another edge case
+for g in leather_horse_armor.json ; do
+REFERENCE="${g%.*}"
+MATERIAL=$( echo $REFERENCE )
+BASE=$( echo $MATERIAL )
+MODEL="${MATERIAL}.json"
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model = \"peek-flat:${MATERIAL}\" | {\"model\": . } " $g > $DESTIN$g
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${BASE}\", \"layer1\": \"peek-flat:item/${BASE}_overlay\" } }" > $DESTON$MODEL
+printf '%s ' "${MODEL}"
+done
+
 # POTIONS
 # --------
+
 for c in {,lingering_,splash_}potion.json ; do
 REFERENCE="${c%.*}"
 MATERIAL=$REFERENCE

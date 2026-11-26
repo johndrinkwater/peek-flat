@@ -584,6 +584,17 @@ jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat
 printf '%s ' "${MODEL}"
 done
 
+for g in elytra.json ; do
+REFERENCE="${g%.*}"
+MATERIAL=$( echo $REFERENCE )
+BASE=$( echo $MATERIAL )
+MODEL="${MATERIAL}.json"
+MODEL_BORK="${MATERIAL}_broken.json"
+jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.on_false.model = \"peek-flat:${MATERIAL}\" | .on_true.on_true.model = \"peek-flat:${MATERIAL}_broken\" | {\"model\": . } " $g > $DESTIN$g
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${BASE}_broken\" } }" > $DESTON$MODEL_BORK
+jq -n "{ \"parent\": \"item/generated\", \"textures\": { \"layer0\": \"peek-flat:item/${BASE}\" } }" > $DESTON$MODEL
+printf '%s ' "${MODEL}"
+done
 
 # POTIONS
 # --------

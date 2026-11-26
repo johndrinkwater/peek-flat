@@ -1,0 +1,22 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:goat_horn"
+    },
+    "on_false": {
+      "type": "minecraft:condition",
+      "on_false": {
+        "type": "minecraft:model",
+        "model": "minecraft:item/goat_horn"
+      },
+      "on_true": {
+        "type": "minecraft:model",
+        "model": "minecraft:item/tooting_goat_horn"
+      },
+      "property": "minecraft:using_item"
+    }
+  }
+}

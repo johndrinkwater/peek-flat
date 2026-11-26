@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "peek-flat:item/tipped_arrow_overlay",
+    "layer1": "peek-flat:item/tipped_arrow"
+  }
+}

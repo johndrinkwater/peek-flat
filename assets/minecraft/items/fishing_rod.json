@@ -1,0 +1,22 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "peek:shulker_item",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "peek-flat:fishing_rod"
+    },
+    "on_false": {
+      "type": "minecraft:condition",
+      "on_false": {
+        "type": "minecraft:model",
+        "model": "minecraft:item/fishing_rod"
+      },
+      "on_true": {
+        "type": "minecraft:model",
+        "model": "minecraft:item/fishing_rod_cast"
+      },
+      "property": "minecraft:fishing_rod/cast"
+    }
+  }
+}

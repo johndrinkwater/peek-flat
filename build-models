@@ -429,7 +429,7 @@ if [ "$MATERIAL" == "polished_blackstone_planks" ]; then
 	MATERIAL="polished_blackstone"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $p > $DESTIN$p
-jq -n "{ \"parent\": \"peek-flat:block_item_pressure_plate_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$p
+jq -n "{ \"parent\": \"peek-flat:block_item_flat_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$p
 printf '%s ' "${p}"
 done
 
@@ -498,7 +498,7 @@ if [ "$MATERIAL" == "moss_wool" ]; then
 	MATERIAL="moss_block"
 fi
 jq ". | { type: \"minecraft:condition\", property: \"peek:shulker_item\", on_true : .model, on_false: .model } | .on_true.model |= sub(\"minecraft:block/\"; \"peek-flat:\") | {\"model\": . } " $c > $DESTIN$c
-jq -n "{ \"parent\": \"peek-flat:block_item_carpet_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$c
+jq -n "{ \"parent\": \"peek-flat:block_item_flat_template\", \"textures\": { \"base\": \"peek-flat:item/${MATERIAL}\" } }" > $DESTON$c
 printf '%s ' "${c}"
 done
 

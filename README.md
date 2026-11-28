@@ -18,23 +18,20 @@ Here's a shot of it in action:
 
 ![Various supported blocks shown](Screenshots/example.png)
 
-Or while organising your storage you kinda make a shulker floor monster:
-![](Screenshots/example-simplanet.png)
-
 With | Without
 --- | ---
 ![](Screenshots/preview-with.png) | ![](Screenshots/preview-without.png)
 
+Recently added new blocks:
 
 ![New copper block variants for 1.21](Screenshots/example-1-21-copper.png)
 
 We support disabling animations and armour parts of the resourcepack with [respackopts](https://www.curseforge.com/minecraft/mc-mods/respackopts)
+
 ![](Screenshots/example-respackopts.png)
 
-Alternatively, here's a brief list of items to suggest what is in the pack (not up to date):
-![](Screenshots/long.png)
-
 Author’s test world for verifying everything is working as intended
+
 ![](Screenshots/testing-world.png)
 
 Installation

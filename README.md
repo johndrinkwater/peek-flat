@@ -18,6 +18,13 @@ Here's a shot of it in action:
 
 ![Various supported blocks shown](Screenshots/example.png)
 
+Or while organising your storage you kinda make a shulker floor monster:
+![](Screenshots/example-simplanet.png)
+
+With | Without
+--- | ---
+![](Screenshots/preview-with.png) | ![](Screenshots/preview-without.png)
+
 
 ![New copper block variants for 1.21](Screenshots/example-1-21-copper.png)
 

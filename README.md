@@ -27,6 +27,9 @@ We support disabling animations and armour parts of the resourcepack with [respa
 Alternatively, here's a brief list of items to suggest what is in the pack (not up to date):
 ![](Screenshots/long.png)
 
+Author’s test world for verifying everything is working as intended
+![](Screenshots/testing-world.png)
+
 Installation
 ------------
 
